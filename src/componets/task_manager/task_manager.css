@@ -1,0 +1,310 @@
+
+
+/*-------------------------------------*/
+/*  SHEARED STYLES */
+/*-------------------------------------*/
+.icon{
+    display: inline-block;
+    border-radius: 60px;
+    width:48px;
+    height:48px;
+
+}
+
+ul {
+    padding-left: 1%;
+    margin-left: 1%;
+}
+
+li {
+    list-style-type: none;
+
+}
+/*-------------------------------------*/
+/*  TASK-LOG-CONTAINER */
+/*-------------------------------------*/
+.task-log-container {
+    background: #F6F7F9;
+    height: 80vh;
+    padding: 0% 1% 0% 0%;
+    border-radius: 3px;
+    display: flex;
+}
+
+.task-log-container ul {
+    padding-top: 0;
+    margin-top: 1%;
+}
+
+.task-log-main {
+    flex: 7;
+    flex-direction: column;
+}
+
+.task-log-sidebar {
+    flex: 2;
+    padding-top: 1%;
+    background-color: white;
+    border-left: 1px solid lightgray;
+    flex-direction: column;
+}
+
+
+/*-------------------------------------*/
+/* --- task-input-window-container --- */
+/*-------------------------------------*/
+.task-input-window-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 15%;
+    bottom: 3%;
+    right: 2%;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.show-hide{
+    margin-left: auto;
+}
+
+.show-hide button{
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    vertical-align:middle;
+    font-size: 2em;
+}
+
+.show-hide button:active{
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    vertical-align:middle;
+    transform: scale(1.3,1.3);
+}
+
+
+.task-input-window {
+    justify-content: space-around;
+    background-color: white;
+    border: 1px solid #073648;
+    border-radius: 5px;
+    height: 105%;
+    padding: 2%;
+
+
+}
+.task-input-window .icons,.task-input-window input {
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
+.icons .material-icons:hover{
+    background-color: white;
+
+}
+
+.icons input {
+    height: 50%;
+    border-radius: 40px;
+    font-size: 100%;
+    padding-left: 1%;
+    box-shadow: inset 0 0 0 0 white;
+    /*background-color:transparent;*/
+    /*background:none;*/
+
+    -webkit-appearance: none;
+}
+
+.material-icons.send{
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    margin-left: 4%;
+    vertical-align:middle;
+
+
+}
+.material-icons.send:active{
+    border: 0;
+    background-color: deepskyblue;
+    outline: none;
+    margin-left: 4%;
+    vertical-align:middle;
+    transform: scale(1.1,1.1);
+    border-radius: 6px;
+    width :calc(100% - 34px);
+
+}
+
+/*-------------------------------------*/
+/* status closed*/
+/*-------------------------------------*/
+
+.task-input-window-container-closed {
+    position: fixed;
+    height: 1%;
+    bottom: 10%;
+    right: 2%;
+    width: 50%;
+}
+
+.task-input-window-container-closed > .edit-icon{
+    width: 100%;
+
+}
+.task-input-window-container-closed > .edit-icon > button{
+    margin-left: auto;
+
+}
+
+/* to make button circle */
+.task-input-window-container-closed .material-icons{
+    display: inline-block;
+    border-radius: 60px;
+    width:48px;
+    height:48px;
+
+}
+
+
+/*-------------------------------------*/
+/*  chat messages */
+/*-------------------------------------*/
+
+.task-log-container {
+    background: #F6F7F9;
+    height: 80vh;
+    padding: 0 1% 0 0;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.message-container, .my-message-container{
+    margin-top: 7%;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding:5px;
+    width:400px;
+    border-radius: 2px 15px 15px 15px /1px 15px 15px 15px;
+    background-color: white;
+
+}
+
+.message.with-process{
+    border-bottom: 1px solid black;
+}
+
+/* to make my messages's position on right side */
+.my-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin:1% 3% 1% auto;
+    padding:1%;
+    width:70%;
+    height: 25%;
+    border-radius: 8px 2px 8px 8px /8px 1px 8px 8px;
+    background-color: #073648;
+    color: white;
+
+
+}
+
+.message .header{
+    display: flex;
+    margin-top: -10%;
+}
+.my-message .header{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10%;
+}
+
+.message .header .detail, .my-message .header .detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.message .header .detail .username{
+    /*background-color: white;*/
+    width:17em;
+}
+
+.message .header .material-icons.toggle{
+    margin-left: 100px;
+    text-align:right;
+}
+
+.my-message .header .detail .username{
+    background-color: #073648;
+    width:17em;
+    margin-left: auto;
+}
+.my-message .header .detail .timestamp{
+    color: black;
+}
+
+.edit-icon button{
+    background-color: deeppink;
+    outline: none;
+    border: 1px solid black;
+
+}
+
+/*-------------------------------------*/
+/*  PROCESSES */
+/*-------------------------------------*/
+
+.process{
+    margin-left: 50px;
+    border-left: 2px solid black;
+}
+
+.process-unit-container{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding-top:2%;
+}
+
+.process-unit .icon .material-icons.p-types{
+    margin-left: -22px;
+    background-color: white;
+    font-size: 30px;
+    border: 5px solid #F6F7F9;
+    border-radius: 50%;
+}
+
+.process-unit .icon{
+    float: left;
+    width: 10%;
+
+}
+
+.process-unit .detail{
+   margin: 0 auto;
+    padding: 0;
+
+}
+
+.p-state span{
+    color: white;
+    border: 1px solid #CB2431;
+    background-color: #CB2431;
+    border-radius: 2px;
+    width:3em;
+    height: 50px;
+    vertical-align: middle;
+}
