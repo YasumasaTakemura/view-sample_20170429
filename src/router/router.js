@@ -29,9 +29,9 @@ export default class App extends Component {
 
                 <Router history={history}>
                     <NavigationRoot>
-
+                        {/*<Route path='/' component={renderNavigation}/>*/}
                         <Route exact path='/tasks' component={TaskManager}/>
-                        <Route path='/' component={renderNavigation}/>
+
                     </NavigationRoot>
 
 

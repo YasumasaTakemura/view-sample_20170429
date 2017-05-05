@@ -3,9 +3,10 @@
 /*-------------------------------------*/
 /*  SHEARED STYLES */
 /*-------------------------------------*/
+
+
 .icon{
-    display: inline-block;
-    border-radius: 60px;
+    border-radius: 50%;
     width:48px;
     height:48px;
 
@@ -20,15 +21,137 @@ li {
     list-style-type: none;
 
 }
+
+/*-------------------------------------*/
+/*  TASK-LIST */
+/*-------------------------------------*/
+
+li{
+    margin: 5px;
+}
+li.task-list{
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    display: block;
+    padding: 0;
+    margin: 0;
+    /*margin-bottom: 3%;*/
+}
+
+li.task-list{
+    background-color: white;
+    width:100%;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+li.task-list.on{
+    background-color: #F6F7F9;
+    width:100%;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+li.task-list:hover{
+    background-color: #F6F7F9;
+    width:100%;
+    transform: scale(1.1,1.1);
+    z-index: 100;
+    /*border-bottom:0px solid cornflowerblue ;*/
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+li.task-list:active{
+    background-color: #F6F7F9;
+    width:100%;
+    transform: scale(0.95,0.95);
+    z-index: auto;
+    margin-bottom:5px;
+}
+
+
+li.task-list, li.task-list.on{
+    /*display: block;*/
+    padding: 5px;
+    height: 50%;
+}
+
+/* header */
+ul li.task-list.on .header,li.task-list .header{
+    display: inline-block;
+    font-size: 12px;
+}
+
+li.task-list .detail, li.task-list.on .detail{
+    display: block;
+    font-size: 12px;
+}
+
+li.task-list.on .header .type,
+li.task-list .header .type{
+    float: right;
+    text-align: center;
+    color: white;
+    background-color: #F9DF2C;
+    width: 5em;
+    border-radius: 5px;
+    /*border: 1px solid black;*/
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+li.task-list.on .header .username,
+li.task-list .header .username {
+    text-align: center;
+    float: right;
+    /*margin-left: 30px;*/
+    background-color: white;
+    width: 10em;
+    border-radius: 5px;
+    /*border: 1px solid black;*/
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+li.task-list.on .header .timestamp,
+li.task-list .header .timestamp {
+    text-align: center;
+    float: right;
+    /*margin-left: 30px;*/
+    /*background-color: white;*/
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+li.task-list.on .detail .title,
+li.task-list .detail .title {
+    /*text-align: center;*/
+    /*float: right;*/
+    /*margin-left: 30px;*/
+    /*background-color: white;*/
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
 /*-------------------------------------*/
 /*  TASK-LOG-CONTAINER */
 /*-------------------------------------*/
 .task-log-container {
-    background: #F6F7F9;
-    height: 80vh;
+    background-color: white;
+    height: 100vh;
     padding: 0% 1% 0% 0%;
-    border-radius: 3px;
     display: flex;
+    flex-direction: column;
+    overflow: auto;
+
 }
 
 .task-log-container ul {
@@ -36,18 +159,6 @@ li {
     margin-top: 1%;
 }
 
-.task-log-main {
-    flex: 7;
-    flex-direction: column;
-}
-
-.task-log-sidebar {
-    flex: 2;
-    padding-top: 1%;
-    background-color: white;
-    border-left: 1px solid lightgray;
-    flex-direction: column;
-}
 
 
 /*-------------------------------------*/
@@ -57,7 +168,7 @@ li {
     display: flex;
     flex-direction: column;
     position: fixed;
-    height: 15%;
+    height: 8%;
     bottom: 3%;
     right: 2%;
     justify-content: space-around;
@@ -171,20 +282,12 @@ li {
 
 
 /*-------------------------------------*/
-/*  chat messages */
+/*  Log messages */
 /*-------------------------------------*/
 
-.task-log-container {
-    background: #F6F7F9;
-    height: 80vh;
-    padding: 0 1% 0 0;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-}
+
 .message-container, .my-message-container{
-    margin-top: 7%;
+    margin-top: 10%;
 }
 
 .message{
@@ -192,19 +295,25 @@ li {
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: 15px;
+    margin-left: 8px;
     margin-bottom: 5px;
     margin-top: 5px;
     padding:5px;
     width:400px;
-    border-radius: 2px 15px 15px 15px /1px 15px 15px 15px;
-    background-color: white;
+    border-radius: 1px 8px 8px 1px /1px 8px 8px 1px;
+    background-color: #F6F7F9;
 
 }
 
 .message.with-process{
-    border-bottom: 1px solid black;
+    border-left: 3px solid #073648;
 }
+
+
+.my-message.with-process{
+    border-left: 3px solid white;
+}
+
 
 /* to make my messages's position on right side */
 .my-message{
@@ -216,21 +325,23 @@ li {
     padding:1%;
     width:70%;
     height: 25%;
-    border-radius: 8px 2px 8px 8px /8px 1px 8px 8px;
+    border-radius: 8px 1px 1px 8px /8px 1px 1px 8px;
     background-color: #073648;
     color: white;
 
 
 }
 
+
 .message .header{
     display: flex;
-    margin-top: -10%;
+    margin-top: -48px;
 }
 .my-message .header{
     display: flex;
     justify-content: flex-end;
     margin-top: -10%;
+    background-color: transparent;
 }
 
 .message .header .detail, .my-message .header .detail{
@@ -240,7 +351,7 @@ li {
 
 .message .header .detail .username{
     /*background-color: white;*/
-    width:17em;
+    /*width:17em;*/
 }
 
 .message .header .material-icons.toggle{
@@ -249,18 +360,20 @@ li {
 }
 
 .my-message .header .detail .username{
-    background-color: #073648;
-    width:17em;
-    margin-left: auto;
+    color: #000;
 }
 .my-message .header .detail .timestamp{
     color: black;
 }
 
+
+/* Floating button*/
 .edit-icon button{
-    background-color: deeppink;
+    float: right;
+    background-color: #073648;
+    color: white;
     outline: none;
-    border: 1px solid black;
+    border: 3px solid white;
 
 }
 
@@ -307,4 +420,63 @@ li {
     width:3em;
     height: 50px;
     vertical-align: middle;
+}
+
+
+
+
+
+/*-------------------------------------*/
+/*  REGISTER  */
+/*-------------------------------------*/
+.register-container{
+    display: flex;
+}
+
+.register-container input{
+    width: 50%;
+}
+
+.register-container .register-input{
+    display: block;
+}
+
+.register-group{
+    float: right;
+}
+.register-type .query{
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    width: 50px;
+    border: 0;
+    outline: none;
+}
+
+.register-type .order{
+    background-color: #CB2431;
+    color: white;
+    border-radius: 5px;
+    width: 50px;
+    border: 0;
+    outline: none;
+}
+
+/*-------------------------------------*/
+/*  Selector  */
+/*-------------------------------------*/
+.group-selector{
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+    background-color: #F9DF2C;
+    width: 300px;
+    left:0px;
+    margin-top: 0;
+    padding: 0;
+    outline: none;
+}
+
+.group-selector input{
+    width: 80%;
 }

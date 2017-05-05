@@ -3,25 +3,35 @@
  */
 import React, {Component, PropTypes} from 'react';
 import Moment from 'moment'
-import {
 
-    TaskLog,
+import {
     TaskLogWithChat,
     TaskList,
-    Register,
+    TaskRegister,
+    GroupSelectorModal,
     TaskInputWindow
 } from '../../componets/task_manager/task_manager'
 import './task_manager.css'
 
 let moment = new Moment()
+// let formatForList = "YYYY年MM月DD日 HH:mm:ss dddd"
+let JP_formatForList = "YYYY年MM月DD日 HH:mm"
 export class TaskManager extends Component {
 
     constructor() {
         super();
         this.state = {
+            index: 0,
+            slider: false,
+            open: true,
+            processTimeline: true,
             data: [
                 {
-                    title: 'tasks', icon: <div className="material-icons">forward</div>,
+                    title: 'tasks',
+                    username: 'jake',
+                    icon: 'forward',
+                    timestamp: moment.format(JP_formatForList),
+                    type: 'query',
                     log: [
                         {
                             text: 'this is a test',
@@ -89,52 +99,52 @@ export class TaskManager extends Component {
                         }]
                 },
                 {
-                    title: 'a', icon: <div className="material-icons">forward</div>,
+                    title: 'a',
+                    icon: 'forward',
+                    username: 'cathy',
+                    timestamp: moment.format(JP_formatForList),
+                    type: 'query',
                     log: [{
                         text: 'this is 2',
                         timestamp: '2017-0430-00:01'
                     }]
                 },
                 {
-                    title: 'bb', icon: <div className="material-icons">forward</div>,
+                    title: 'bb',
+                    icon: 'forward',
+                    username: 'ashleyford',
+                    timestamp: moment.format(JP_formatForList),
+                    type: 'order',
                     log: [{
                         text: 'this is 3',
                         timestamp: '2017-0430-00:02'
                     }]
                 },
                 {
-                    title: 'vv', icon: <div className="material-icons">forward</div>,
+                    title: 'vv',
+                    icon: 'forward',
+                    username: 'devid',
+                    timestamp: moment.format(JP_formatForList),
+                    type: 'order',
                     log: [{
                         text: 'this is 4',
                         timestamp: '2017-0430-00:03'
                     }]
                 },
                 {
-                    title: 'ta', icon: <div className="material-icons">forward</div>,
+                    title: 'ta',
+                    icon: 'forward',
+                    username: 'ashleyford',
+                    timestamp: moment.format(JP_formatForList),
+                    type: 'order',
                     log: [{
                         text: 'this is 5',
                         timestamp: '2017-0430-00:04'
                     }]
                 },
-                {
-                    title: 'aadd', icon: <div className="material-icons">forward</div>,
-                    log: [{
-                        text: 'this is 6',
-                        timestamp: '2017-0430-00:05'
-                    }]
-                },
-                {
-                    title: 'dfadfa', icon: <div className="material-icons">forward</div>,
-                    log: [{
-                        text: 'this is 7',
-                        timestamp: '2017-0430-00:06'
-                    }]
-                },
 
             ],
-            index: 0,
-            open: true,
-            processTimeline: true,
+
         }
     }
 
@@ -147,6 +157,20 @@ export class TaskManager extends Component {
         })
 
 
+    }
+
+    ////////////////////////////
+    // -- toggle -- //
+    ////////////////////////////
+    toggleSliderOpen() {
+
+        this.setState({slider: true})
+        console.log(this.state.slider)
+    }
+
+    toggleSliderClose() {
+        this.setState({slider: false})
+        console.log(this.state.slider)
     }
 
     toggleOpen() {
@@ -168,18 +192,28 @@ export class TaskManager extends Component {
 
 
     render() {
-        return <div>
-
-            <div className="task-register">
-                <Register/>
-                <button/>
-                <button/>
+        return <div className="task-root">
 
 
-            </div>
+
+            <GroupSelectorModal
+                slider={this.state.slider}
+                toggleSliderOpen={this.toggleSliderOpen.bind(this)}
+                toggleSliderClose={this.toggleSliderClose.bind(this)}
+            />
+
+
+
 
             <div className="task-container">
                 <div className="left">
+
+                    <div className="task-register">
+                        <TaskRegister
+                            toggleSliderOpen={this.toggleSliderOpen.bind(this)}
+                        />
+                    </div>
+
                     <TaskList
                         data={this.state.data}
                         index={this.state.index}
