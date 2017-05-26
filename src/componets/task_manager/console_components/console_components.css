@@ -88,3 +88,8 @@
 .taskList-container{
     color: white;
 }
+
+.list:focus,.logs:focus{
+    background-color: white;
+    color: #025268;
+}

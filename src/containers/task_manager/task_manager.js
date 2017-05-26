@@ -7,18 +7,14 @@ import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same ti
 import {Motion, spring} from 'react-motion';
 import SearchInput, {createFilter} from 'react-search-input'
 import {NavigationBar} from '../../componets/navigationBar/navigationBar'
+import {TaskList} from '../../componets/task_manager/tasklist/tasklist'
+import {TaskLogTimeLine} from '../../componets/task_manager/tasklog_timeline/tasklog_timeline'
+
 import {
-    TaskTimeLine,
-    TaskList,
-    GroupSelectorModal,
-} from '../../componets/task_manager/task_manager'
-import {
-    ConsoleContainer,
     ConsoleSwitcher,
     DraggableConsoleContainer
 }  from '../../componets/task_manager/console_components/console_components'
 import './task_manager.css'
-import Slider from 'react-slick';
 
 let moment = new Moment()
 // let formatForList = "YYYY年MM月DD日 HH:mm:ss dddd"
@@ -77,6 +73,7 @@ export class TaskManager extends Component {
                                     timestamp: moment.format(JP_formatForList),
                                     types: 'edit',
                                     message: 'change the 131th line of documentation "Media Guides" ',
+                                    state: 'done',
 
 
                                 }, {
@@ -84,6 +81,7 @@ export class TaskManager extends Component {
                                     timestamp: moment.format(JP_formatForList),
                                     types: 'add',
                                     message: 'add new documentation',
+                                    state: 'done',
 
 
                                 }, {
@@ -131,12 +129,14 @@ export class TaskManager extends Component {
                             text: 'i want you to do this',
                             timestamp: moment.format(JP_formatForList),
                             documents: '',
-                            attachments: ''
+                            attachments: '',
+                            processes: [],
                         }, {
                             username: 'system',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg',
                             text: 'system message',
-                            timestamp: moment.format(JP_formatForList)
+                            timestamp: moment.format(JP_formatForList),
+                            processes: [],
                         }]
                 },
                 {
@@ -185,19 +185,19 @@ export class TaskManager extends Component {
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                             text: 'this is a test message by ashleyford',
                             timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            messages: [],
+                            processes: [],
                         }, {
                             username: 'adellecharles',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg',
                             text: 'this is a test message by adellecharles',
                             timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            messages: [],
+                            processes: [],
                         }, {
                             username: 'me',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg',
                             text: 'i want you to do this',
                             timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            messages: [],
+                            processes: [],
                             documents: '',
                             attachments: ''
                         }, {
@@ -205,7 +205,7 @@ export class TaskManager extends Component {
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg',
                             text: 'system message',
                             timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            messages: [],
+                            processes: [],
                         }]
                 },
                 {
@@ -214,6 +214,9 @@ export class TaskManager extends Component {
                     username: 'ashleyford',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
+                    messages: [
+                        {processes: [],}
+                    ],
                     log: [{
                         text: 'this is 3',
                         timestamp: '2017-0430-00:02'
@@ -225,6 +228,9 @@ export class TaskManager extends Component {
                     username: 'devid',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
+                    messages: [
+                        {processes: [],}
+                    ],
                     log: [{
                         text: 'this is 4',
                         timestamp: '2017-0430-00:03'
@@ -236,6 +242,9 @@ export class TaskManager extends Component {
                     username: 'ashleyford',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
+                    messages: [
+                        {processes: [],}
+                    ],
                     log: [{
                         text: 'this is 5',
                         timestamp: '2017-0430-00:04'
@@ -319,6 +328,17 @@ export class TaskManager extends Component {
 
     }
 
+    filterMessages() {
+
+        // change {item[key]} to what it need to be
+        let list = this.state.data.filter((item, index) => item['messages']['username'] === this.state.messageInput)
+
+        // [] returns all
+        if (list.length === 0) return []
+        return list
+
+    }
+
     keywordFilterForMessages(index, key) {
         const {data} = this.state
         let list = []
@@ -344,11 +364,11 @@ export class TaskManager extends Component {
         return <div className="task-root">
 
 
-            <GroupSelectorModal
-                slider={this.state.slider}
-                toggleSliderOpen={this.toggleSliderOpen.bind(this)}
-                toggleSliderClose={this.toggleSliderClose.bind(this)}
-            />
+            {/*<GroupSelectorModal*/}
+                {/*slider={this.state.slider}*/}
+                {/*toggleSliderOpen={this.toggleSliderOpen.bind(this)}*/}
+                {/*toggleSliderClose={this.toggleSliderClose.bind(this)}*/}
+            {/*/>*/}
 
             <div className="task-container">
 
@@ -364,10 +384,9 @@ export class TaskManager extends Component {
 
 
                 <div className="right">
-
-                    <TaskTimeLine
+                    <TaskLogTimeLine
                         data={this.state.data}
-                        filteredData={this.keywordFilterForMessages.bind(this)}
+                        filterMessages={this.filterMessages.bind(this)}
                         input={this.state.messageInput}
                         index={this.state.index}
                         processTimeline={this.state.processTimeline}
@@ -380,7 +399,6 @@ export class TaskManager extends Component {
 
 
             <div className="console-container">
-
                 <DraggableConsoleContainer
                     handle=".draggable"
                     defaultPosition={{x: 0, y: 0}}
@@ -400,6 +418,7 @@ export class TaskManager extends Component {
                         <ConsoleSwitcher
                             path={this.state.path}
                             updater={this.searchUpdatedForList.bind(this)}
+                            taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
                             input={this.state.input}
                             data={this.state.data}
                         />
