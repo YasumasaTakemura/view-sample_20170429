@@ -1,81 +1,167 @@
 /**
  * Created by YasumasaTakemura on 2017/04/30.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import axios from 'axios'
 import Modal from 'react-modal'
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import {Motion, spring} from 'react-motion'
+import SearchInput, {createFilter} from 'react-search-input'
 import './task_manager.css'
-
 
 // to render lists of user tasks
 export class TaskList extends Component {
 
+    renderContainer() {
+        //1st arg is for targeting term
+        let data = this.props.filteredList('title')
 
-    renderContainer(items) {
+        // no filtered data exist
+        if (data.length === 0) {
 
-        return <ul>
-            {
-                items.map((item, index) => {
-                    if (this.props.index === index) return <li key={index}
-                                                               onClick={() => this.props.showLogs(item, index)}
-                                                               className="task-list on">
+            let {data} = this.props
+            
+            return (
+            //if filtered data exist 
+            <ul>
+                
+                { data.map((item, index) => {
 
+                    // this.props.index is for a selecting index
+                    if (this.props.index === index) 
+                        return (
+                            <li
+                                key={index}
+                                onClick={() => this.props.showLogs(item, index)}
+                                className="task-list on">
 
-                        <div className="header">
-                            {/*<i className="material-icon icon">{item.icon}</i>*/}
-                            <div className="timestamp"> {item.timestamp} </div>
-                            <div className="type"> {item.type} </div>
-                            <div className="username"> @{item.username} </div>
+                                <div className="header">
+                                    {/*<i className="material-icon icon">{item.icon}</i>*/}
+                                    <div className="timestamp">
+                                        {item.timestamp}
+                                    </div>
+                                    <div className="type">
+                                        {item.type}
+                                    </div>
+                                    <div className="username">
+                                        @{item.username}
+                                    </div>
+                                </div>
 
+                                <div className="detail">
+                                    <div className="title">
+                                        {item.title}
+                                    </div>
+                                </div>
 
-                        </div>
+                            </li>
+                        );
+                    
+                    // if not selected
+                    return (
+                        <li
+                            key={index}
+                            onClick={() => this.props.showLogs(item, index)}
+                            className="task-list">
+                            <div className="header">
+                                {/*<i className="material-icon icon">{item.icon}</i>*/}
+                                <div className="timestamp">
+                                    {item.timestamp}
+                                </div>
+                                <div className="type">
+                                    {item.type}
+                                </div>
+                                <div className="username">
+                                    @{item.username}
+                                </div>
 
-                        <div className="detail">
+                            </div>
 
-                            <div className="title"> {item.title} </div>
+                            <div className="detail">
+                                <div className="title">
+                                    {item.title}
+                                </div>
+                            </div>
+                        </li>
+                    )
+                })}
+            </ul>
+            )
+        } else {
+            return <ul>
+                {data.map((item, index) => {
+                    if (this.props.index === index) 
+                        return <li
+                            key={index}
+                            onClick={() => this.props.showLogs(item, index)}
+                            className="task-list on">
 
-                        </div>
+                            <div className="header">
+                                {/*<i className="material-icon icon">{item.icon}</i>*/}
+                                <div className="timestamp">
+                                    {item.timestamp}
+                                </div>
+                                <div className="type">
+                                    {item.type}
+                                </div>
+                                <div className="username">
+                                    @{item.username}
+                                </div>
 
-                    </li>;
+                            </div>
 
-                    // if selected turn background-color active
+                            <div className="detail">
+                                <div className="title">
+                                    {item.title}
+                                </div>
+                            </div>
 
+                        </li>;
+                    
                     // not selected
-                    return <li key={index} onClick={() => this.props.showLogs(item, index)} className="task-list">
+                    return <li
+                        key={index}
+                        onClick={() => this.props.showLogs(item, index)}
+                        className="task-list">
                         <div className="header">
                             {/*<i className="material-icon icon">{item.icon}</i>*/}
-                            <div className="timestamp"> {item.timestamp} </div>
-                            <div className="type"> {item.type} </div>
-                            <div className="username"> @{item.username} </div>
+                            <div className="timestamp">
+                                {item.timestamp}
+                            </div>
+                            <div className="type">
+                                {item.type}
+                            </div>
+                            <div className="username">
+                                @{item.username}
+                            </div>
 
                         </div>
 
                         <div className="detail">
-
-                            <div className="title"> {item.title} </div>
-
+                            <div className="title">
+                                {item.title}
+                            </div>
                         </div>
                     </li>
                 })}
-        </ul>
+            </ul>
+        }
     }
 
     render() {
-        let {data} = this.props
-        return this.renderContainer(data)
+        let {filteredList} = this.props
+        return this.renderContainer(filteredList)
     }
 
 }
 
-
-export class TaskLogWithChat extends Component {
+export class TaskTimeLine extends Component {
 
     switchProcess(message, i) {
-        if (this.props.processTimeline) return <div
-            className="processes"> {this.renderProcess(message.processes, i)}</div>
+        if (this.props.processTimeline) 
+            return <div className="processes">
+                {this.renderProcess(message.processes, i)}</div>
         return <div className="processes"></div>
 
     }
@@ -92,15 +178,16 @@ export class TaskLogWithChat extends Component {
                     </div>
                 </div>
 
-
                 <div className="body">
-                    <div className="text"> {
-                        //split text into multi-line
-                        message.text.split("\n").map((t, i) => {
-                            return <div key={i}>{t}</div>;
-                        })}</div>
+                    <div className="text">
+                        {//split text into multi-line
+                        message
+                            .text
+                            .split("\n")
+                            .map((t, i) => {
+                                return <div key={i}>{t}</div>;
+                            })}</div>
                 </div>
-
 
             </div>
         </div>
@@ -109,9 +196,7 @@ export class TaskLogWithChat extends Component {
 
     // messages with processes branch
     renderMessageWithProcess(message, i) {
-
-        return <div
-            key={i} className="message-container">
+        return <div key={i} className="message-container">
             <div key={i} className="message with-process">
                 <div className="header">
                     <div><img className="icon" src={message.img}/></div>
@@ -128,15 +213,16 @@ export class TaskLogWithChat extends Component {
 
                 </div>
 
-
                 <div className="body">
-                    <div className="text"> {
-                        //split text into multi-line
-                        message.text.split("\n").map((t, i) => {
-                            return <div key={i}>{t}</div>;
-                        })}</div>
+                    <div className="text">
+                        {//split text into multi-line
+                        message
+                            .text
+                            .split("\n")
+                            .map((t, i) => {
+                                return <div key={i}>{t}</div>;
+                            })}</div>
                 </div>
-
 
             </div>
 
@@ -148,7 +234,6 @@ export class TaskLogWithChat extends Component {
 
     renderMyMessage(message, i) {
 
-
         return <div key={i} className="my-message-container">
             <div key={i} className="my-message">
                 <div className="header">
@@ -159,14 +244,13 @@ export class TaskLogWithChat extends Component {
                     <div><img className="icon" src={message.img}/></div>
                 </div>
 
-
                 <div className="body">
-                    <div className="text"> {
-
+                    <div className="text">
+                        {
                         //split text into multi-line
                         message.text.split("\n").map((t, i) => {
-                            return <div key={i}>{t}</div>;
-                        })}</div>
+                                return <div key={i}>{t}</div>;
+                            })}</div>
                 </div>
 
             </div>
@@ -176,8 +260,7 @@ export class TaskLogWithChat extends Component {
     // messages with processes branch
     renderMyMessageWithProcess(message, processes, i) {
 
-        return <div
-            key={i} className="my-message-container">
+        return <div key={i} className="my-message-container">
             <div key={i} className="my-message with-process">
                 <div className="header">
                     <div><img className="icon" src={message.img}/></div>
@@ -193,15 +276,16 @@ export class TaskLogWithChat extends Component {
                     </div>
                 </div>
 
-
                 <div className="body">
-                    <div className="text"> {
-                        //split text into multi-line
-                        message.text.split("\n").map((t, i) => {
-                            return <div key={i}>{t}</div>;
-                        })}</div>
+                    <div className="text">
+                        {//split text into multi-line
+                        message
+                            .text
+                            .split("\n")
+                            .map((t, i) => {
+                                return <div key={i}>{t}</div>;
+                            })}</div>
                 </div>
-
 
             </div>
 
@@ -210,50 +294,45 @@ export class TaskLogWithChat extends Component {
         </div>
     }
 
-
     //Parent
     renderProcess(processes, i) {
 
         return <div key={i} className="process-container">
-            <div className="process-line">
-
-            </div>
+            <div className="process-line"></div>
             <div key={i} className="process">
 
                 {processes.map((process, index) => this.renderProcessUnit(process, index))}
-
 
             </div>
         </div>
     }
 
-
     //Children
     renderProcessUnit(process, i) {
 
+        //validate object has state state-full
+        if (process.state !== undefined) 
+            return <div key={i} className="process-unit-container">
+                <div key={i} className="process-unit">
 
-        //validate object has state
-        // state-full
-        if (process.state !== undefined) return <div key={i} className="process-unit-container">
-            <div key={i} className="process-unit">
+                    <div className="icon">
+                        <i className="material-icons p-types">{process.types}</i>
+                    </div>
+                    <div className="detail">
 
-                <div className="icon">
-                    <i className="material-icons p-types">{process.types}</i>
+                        <div className="p-timestamp">{process.timestamp}</div>
+                        <div className="p-username">@{process.username}</div>
+                        <div className="p-messages">{process.message}</div>
+                        <div className="p-state">
+                            <span>{process.state}</span>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div className="detail">
-
-                    <div className="p-timestamp">{process.timestamp}</div>
-                    <div className="p-username">@{process.username}</div>
-                    <div className="p-messages">{process.message}</div>
-                    <div className="p-state"><span>{process.state}</span></div>
-
-                </div>
-
-
             </div>
-        </div>
 
-        // state-less
+            // state-less
         return <div key={i} className="process-unit-container">
             <div key={i} className="process-unit">
                 <div className="icon">
@@ -270,7 +349,11 @@ export class TaskLogWithChat extends Component {
 
     }
 
-    renderMessages(data) {
+    //top level component
+    renderMessages(index) {
+
+        let data = this.props.data
+        data = data[index]
         let messages = data.messages
 
         //validate messages exit
@@ -280,38 +363,66 @@ export class TaskLogWithChat extends Component {
             </div>
 
         } else {
-            return <div className="task-log-container">{
+            return <div className="task-log-container">{messages.map((message, i) => {
 
-                messages.map((mesasge, i) => {
+                    // validate messages for me or others
+                    if (message.username !== 'me' && message.processes !== undefined) 
+                        return this.renderMessageWithProcess(message, i)
+                    else if (message.username !== 'me') 
+                        return this.renderMessage(message, i)
+                    else if (message.processes !== undefined) 
+                        return this.renderMyMessageWithProcess(message, i)
+                    return this.renderMyMessage(message, i)
 
-                        // validate messages for me or others
-                        if (mesasge.username !== 'me' && mesasge.processes !== undefined) return this.renderMessageWithProcess(mesasge, i)
-                        else if (mesasge.username !== 'me') return this.renderMessage(mesasge)
-                        else if (mesasge.processes !== undefined) return this.renderMyMessageWithProcess(mesasge, i)
-                        return this.renderMyMessage(mesasge, i)
-
-
-                    }
-                )
-            }
+                })
+}
             </div>
         }
     }
 
+    renderFilteredMessages(index) {
 
-    renderLogs() {
+        let data = this
+            .props
+            .filteredData(index, 'username')
+        data = data[index]
+        let messages = data.messages
 
+        //validate messages exit
+        if (messages === undefined) {
+            return <div className="task-log-container">
+                <div className="no-messages">no messages</div>
+            </div>
+
+        } else {
+            return <div className="task-log-container">{messages.map((message, i) => {
+
+                    // validate messages for me or others
+                    if (message.username !== 'me' && message.processes !== undefined) 
+                        return this.renderMessageWithProcess(message, i)
+                    else if (message.username !== 'me') 
+                        return this.renderMessage(message, i)
+                    else if (message.processes !== undefined) 
+                        return this.renderMyMessageWithProcess(message, i)
+                    return this.renderMyMessage(message, i)
+
+                })
+}
+            </div>
+        }
     }
 
+    renderLogs() {}
 
     render() {
-        let {data, index} = this.props
-        return this.renderMessages(data[index])
+        let {data, index, input, filteredData} = this.props
+        if (data.length !== 0) 
+            return this.renderMessages(index)
+        return this.renderFilteredMessages(index)
     }
 }
 
 export class GroupSelectorModal extends Component {
-
 
     style = {
         overlay: {
@@ -331,44 +442,35 @@ export class GroupSelectorModal extends Component {
             left: '0',
             top: '0',
             outline: 'none',
-            borderRadius:'0'
-            // transition: '2.8s ease-out',
-            // marginRight           : '-50%',
+            borderRadius: '0'
+            // transition: '2.8s ease-out', marginRight           : '-50%',
             // transform:'translateX(500px)'
         }
     }
 
-
     afterOpen() {
         console.log('---------------')
-        return <Motion defaultStyle={{x: 0}} style={{x: spring(3)}}>
+        return <Motion
+            defaultStyle={{
+            x: 0
+        }}
+            style={{
+            x: spring(3)
+        }}>
 
             {interpolatedStyle => {
                 console.log(interpolatedStyle.x);
                 return <div>{interpolatedStyle.x}</div>
             }
-            }
+}
         </Motion>
-
 
     }
 
-
-    ////////////////////////////
-    // -- component -- //
-    ////////////////////////////
+    //////////////////////////// -- component -- // //////////////////////////
     modal(motion) {
-
-        console.log(motion)
-        return <Modal
-            isOpen={this.props.slider}
-            onAfterOpen={() => this.afterOpen()}
-            onRequestClose={() => this.props.toggleSliderClose()}
-            closeTimeoutMS={100}
-            style={ this.style }
-            // className ='group-selector'
-            contentLabel="Modal"
-        >
+        return <Modal isOpen={this.props.slider} onAfterOpen={() => this.afterOpen()} onRequestClose={() => this.props.toggleSliderClose()} closeTimeoutMS={100} style={this.style} // className ='group-selector'
+    contentLabel="Modal">
             <h1>Modal Content</h1>
             <button onClick={() => this.props.toggleSliderClose()}>toggle</button>
             <input/>
@@ -380,7 +482,6 @@ export class GroupSelectorModal extends Component {
         return <div>
             {this.modal()}
 
-
         </div>
 
     }
@@ -388,169 +489,6 @@ export class GroupSelectorModal extends Component {
 }
 
 
-// to render log data of each list of user tasks
-export class TaskRegister extends Component {
-
-    state = {
-        toggle: true,
-    }
-
-    componentWillMount() {
-        // this.registerButton()
-    }
-
-    toggleType() {
-        this.setState({toggle: !this.state.toggle})
-
-    }
-
-    ////////////////////////////
-    // -- component -- //
-    ////////////////////////////
-
-    openGroupSelectorModal() {
-        return <div className="register-group">
-            <button onClick={() => this.props.toggleSliderOpen()} className="group">group</button>
-        </div>
-
-    }
-
-    toggle(n){
-        return n+1
-    }
-
-    type(){
-
-        let query = 'query'
-        let order = 'order'
-        let toggle=true
-        let button
-        let n=0
-
-        if (toggle) {
-            console.log(toggle)
-            return <div className="register-type">
-                <button onClick={()=>toggle(n)} className="toggle query">query + {}</button>
-            </div>
-        }
-        console.log(toggle)
-        return <div className="register-type">
-            <button onClick={() => toggle = true} className="toggle order">order</button>
-        </div>
-
-    }
-
-
-    buttons(){
-
-        if (this.state.toggle) {
-            return <div className="register-type">
-                <button onClick={() => this.toggleType()} className="toggle query">query</button>
-            </div>
-        }
-        return <div className="register-type">
-            <button onClick={() => this.toggleType()} className="toggle order">order</button>
-        </div>
-
-
-    }
-
-    submit() {
-
-        return <div className="register-submit">
-            <button type="submit">register</button>
-        </div>
-
-    }
-
-    input() {
-        return <div className="register-input">
-            <input/>
-        </div>
-
-    }
-
-    registerButton() {
-
-        let endpoint = 'https://facebook.github.io/react-native/movies.json'
-        return axios(endpoint).then((response) =>
-            console.log(response.data))
-            .catch((error) => {
-                console.error(error);
-            });
-
-    }
-
-
-    container() {
-        return <div className="register-container">
-            {this.buttons()}
-            {this.openGroupSelectorModal()}
-            {this.submit()}
-            {this.input()}
-
-        </div>
-
-    }
-
-    render() {
-        let {data, index} = this.props
-        return this.container()
-    }
-}
-
-export function register() {
-    return <input/>
-
-}
-
-export class TaskInputWindow extends Component {
-
-    inputWindow() {
-
-        return <div className="task-input-window-container">
-
-            <div onDoubleClick={() => this.props.toggleOpen()} className="task-input-window">
-
-                <div className="icons">
-                    <div className="material-icons">grid_on</div>
-                    <div className="material-icons">content_paste</div>
-                    <div className="material-icons">attach_file</div>
-                </div>
-
-                <div className="title-input">
-                    <input/>
-                    <button className="material-icons send">send</button>
-                </div>
-
-            </div>
-
-        </div>
-
-    }
-
-    inputClosedWindow() {
-        return <div className="task-input-window-container-closed">
-
-            <div className="edit-icon" onClick={() => this.props.toggleOpen()}>
-                <button className="material-icons">edit</button>
-            </div>
-
-
-        </div>
-
-    }
-
-
-    render() {
-
-        if (this.props.open) {
-            return this.inputWindow()
-        }
-        return this.inputClosedWindow()
-
-    }
-}
 
 
 export class GroupSelector extends Component {
@@ -561,8 +499,7 @@ export class GroupSelector extends Component {
                 name="group-selector"
                 value="one"
                 options={this.props.options}
-                onChange={()=>this.props.logChange()}
-            />
+                onChange={() => this.props.logChange()}/>
         </div>
 
     }

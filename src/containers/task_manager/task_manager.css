@@ -12,35 +12,39 @@ input{
 
 
 .task-root{
-    position: relative;
+    /*position: relative;*/
     margin: 0;
     height: 100vh;
 }
 
 .task-register{
-    width: 90%;
-    margin-top:10%;
-    margin-left:3%;
+    padding: 25px 10px 10px 10px;
+    width: 100%;
 
-    display: flex;
-    justify-content: space-between;
+
 
 }
 
 .task-container{
+    /*display:inline-block;*/
     display: flex;
-    justify-content: space-around;
+    justify-content: inherit;
+    /*justify-content: space-around;*/
     height: 100vh;
+    padding-top: 25px;
 }
 
 .task-container .left{
-    top:100px;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin-left: 2%;
-    margin-right: 2%;
-    /*background-color: yellow;*/
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     flex: 3;
+    overflow: auto;
+    width: 100%;
+
+
 }
 
 .task-container .left .task-register{
@@ -49,13 +53,12 @@ input{
 }
 
 .task-container .right{
-    /*top:100px;*/
-    /*padding-left: 1%;*/
-    /*padding-right: 1%;*/
-    /*margin-left: 2%;*/
-    /*margin-right: 2%;*/
     flex:7;
+    float: right;
+    margin-left: auto;
+
 }
+
 
 .task-container > .left > ul{
     padding: 0 0 0 0;
@@ -64,39 +67,10 @@ input{
     margin-bottom: 3%;
 }
 
-/*.task-container > .left > ul > li{*/
-    /*background-color: white;*/
-    /*width:100%;*/
-    /*!*border-bottom:1px solid cornflowerblue ;*!*/
-    /*border-radius: 5px;*/
-    /*margin-bottom: 2px;*/
-/*}*/
-
-/*.task-container > .left > ul > li.on{*/
-    /*background-color: #F6F7F9;*/
-    /*width:100%;*/
-    /*!*border-bottom:1px solid cornflowerblue ;*!*/
-    /*border-radius: 5px;*/
-    /*margin-bottom: 2px;*/
-/*}*/
-
-/*.task-container > .left > ul > li:hover{*/
-    /*background-color: #F6F7F9;*/
-    /*width:100%;*/
-    /*transform: scale(1.1,1.1);*/
-    /*z-index: 100;*/
-    /*!*border-bottom:0px solid cornflowerblue ;*!*/
-    /*margin-bottom: 10px;*/
-/*}*/
-
-/*.task-container > .left > ul > li:active{*/
-    /*background-color: #F6F7F9;*/
-    /*width:100%;*/
-    /*transform: scale(0.95,0.95);*/
-    /*z-index: auto;*/
-    /*margin-bottom:5px;*/
-/*}*/
-
 .task-slider{
     position: relative;
+}
+
+.console-container.draggable{
+
 }

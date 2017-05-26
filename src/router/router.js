@@ -10,6 +10,7 @@ import {createStore, compose, combineReducers} from 'redux'
 
 import {data} from '../store/reducer/data'
 import  renderNavigation, {NavigationRoot} from '../containers/navigation/navigation'
+import  {NavigationBar} from '../componets/navigationBar/navigationBar'
 import  {TaskManager} from '../store/connects'
 
 
@@ -24,6 +25,7 @@ export let store = createStore(reducers,
 
 export default class App extends Component {
     render() {
+        console.log(this.props)
         return (
             <Provider store={store}>
 
@@ -31,6 +33,7 @@ export default class App extends Component {
                     <NavigationRoot>
                         {/*<Route path='/' component={renderNavigation}/>*/}
                         <Route exact path='/tasks' component={TaskManager}/>
+                        <Route exact path='/navi' component={TaskManager}/>
 
                     </NavigationRoot>
 

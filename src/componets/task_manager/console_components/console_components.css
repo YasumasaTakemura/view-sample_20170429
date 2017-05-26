@@ -1,0 +1,90 @@
+
+
+/*-------------------------------------*/
+/* --- Main Components--- */
+/*-------------------------------------*/
+/* --- task console--- */
+/*-------------------------------------*/
+/* --- opening--- */
+/*-------------------------------------*/
+
+.draggable .console-container.opening{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 2%;
+    bottom: 50px;
+    justify-content: space-around;
+    width: 800px;
+    height: 100px;
+    /*overflow:auto;*/
+    resize:horizontal;
+}
+
+.console-container-body {
+    display: flex;
+    justify-content: space-between;
+    color: #073648;
+    background-color: #2D4150;
+    /*border: 1px solid #073648;*/
+    border-radius:5px;
+    height: 150px;
+    padding: 0;
+    /*width: 100%;*/
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4);
+
+
+}
+
+/*-------------------------------------*/
+/* --- closing--- */
+/*-------------------------------------*/
+
+.console-container.closing {
+    position: fixed;
+    height: 1%;
+    bottom: 100px;
+    right: 2%;
+    width: 50%;
+}
+
+/* for icon */
+.console-container.closing > .edit-icon{
+    width: 100%;
+
+}
+.console-container.closing  > .edit-icon > button{
+    margin-left: auto;
+}
+
+/* to make button circle */
+.console-container.closing  .material-icons{
+    display: inline-block;
+    border-radius: 60px;
+    width:48px;
+    height:48px;
+
+}
+
+
+/*-------------------------------------*/
+/* --- specified Components--- */
+/*-------------------------------------*/
+/* --- task list--- */
+/*-------------------------------------*/
+.taskList-container button{
+    outline: none;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+    border: solid 1px white;
+    color: white;
+    width: 100px;
+
+}
+
+.taskList-container{
+    color: white;
+}

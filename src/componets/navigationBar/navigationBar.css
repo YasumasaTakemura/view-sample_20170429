@@ -1,0 +1,58 @@
+.navigationBar-container{
+    width: 100%;
+    background-color: #025268;
+    height: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigationBar-item{
+    /*color:#00B5E2;*/
+    color:#b3ffff;
+    text-shadow: 0px 0px 0px white, 0px 0px 10px white;
+}
+.navigationBar-item:hover{
+    /*color:#00B5E2;*/
+    color:white;
+    text-shadow: 0px 0px 0px #b3ffff, 0px 0px 10px #b3ffff;
+    font-size: 30px;
+}
+.navigationBar-item:active{
+    /*color:#00B5E2;*/
+    color:white;
+    text-shadow: 0px 0px 0px #b3ffff, 0px 0px 10px #b3ffff;
+    font-size: 24px;
+}
+
+button.navigationBar-item{
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+
+.slick-item{
+    margin-left:50px;
+    margin-right:50px;
+}
+
+button.arrow{
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color:white;
+
+}
+
+button.arrow:active{
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color:white;
+    transform: scale(1.3,1.3);
+
+}
