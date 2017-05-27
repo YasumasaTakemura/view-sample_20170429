@@ -10,12 +10,52 @@ import {Motion, spring} from 'react-motion'
 import SearchInput, {createFilter} from 'react-search-input'
 import './console_components.css'
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
-
+import {NavigationBar} from '../../navigationBar/navigationBar'
+import {Sticky} from '../../shared_components/shared_components'
 
 // Bundled Component
+
+
+export let ConsoleContainerSwitcher = (props) => {
+    return props.sticky ? <StickyConsoleContainer {...props}/> : <DraggableConsoleContainer {...props}/>;
+}
+
+
+export class StickyConsoleContainer extends Component {
+    render() {
+        return (
+            <Sticky>
+                <div className="draggable console-container">
+                    <ConsoleContainer
+                        width={800}
+                        height={150}
+                        open={this.props.open}
+                        toggleOpen={this.props.toggleOpen.bind(this)}
+                    >
+                        <NavigationBar labels={this.props.labels}/>
+
+                        <ConsoleSwitcher
+                            path={this.props.path}
+                            taskListUpdater={this.props.taskListUpdater}
+                            taskLogUpdater={this.props.taskLogUpdater}
+                            input={this.props.input}
+                            data={this.props.data}
+
+                        >
+                        </ConsoleSwitcher>
+                    </ConsoleContainer>
+                </div>
+            </Sticky>
+
+
+
+        )
+    }
+}
+
 export class DraggableConsoleContainer extends Component {
 
-    render(){
+    render() {
         return (
             <Draggable
                 // axis="x"
@@ -27,21 +67,77 @@ export class DraggableConsoleContainer extends Component {
                 position={null}
                 grid={[1, 1]}
             >
-
                 <div className="draggable console-container">
                     <ConsoleContainer
-                        width ={800}
-                        height ={150}
+                        width={800}
+                        height={150}
                         open={this.props.open}
                         toggleOpen={this.props.toggleOpen.bind(this)}
                     >
-
-                        {this.props.children}
-
+                        <NavigationBar labels={this.props.labels}/>
+                        <ConsoleSwitcher
+                            path={this.props.path}
+                            taskListUpdater={this.props.taskListUpdater}
+                            taskLogUpdater={this.props.searchUpdatedForMessages}
+                            input={this.props.input}
+                            data={this.props.data}
+                        >
+                        </ConsoleSwitcher>
                     </ConsoleContainer>
                 </div>
             </Draggable>
-            )
+        )
+    }
+}
+
+
+class OpenedConsole extends Component {
+    render() {
+        return <div className="console-container opening">
+            <div className="console-container-body">
+                <label className="console-container-minimizer material-icons"
+                       onClick={() => this.props.toggleOpen()}
+                >
+                    expand_more
+                </label>
+                {this.props.children}
+
+            </div>
+        </div>
+        // return <Motion
+        //     defaultStyle={startingParams}
+        //     style={finishingParams}>
+        //     {value => <div
+        //         style={{
+        //             width: value.x,
+        //             height: value.y,
+        //         }}
+        //         className="console-container opening">
+        //
+        //         <div className="console-container-body">
+        //             {this.props.children}
+        //         </div>
+        //
+        //     </div>
+        //     }
+        // </Motion>
+    }
+}
+
+class ClosedConsole extends Component {
+    render() {
+        return (
+            <div className="console-container closing">
+                <div
+                    className="edit-icon"
+                    onClick={() => this.props.toggleOpen()}
+                >
+                    <button className="material-icons">videogame_asset</button>
+                </div>
+
+            </div>
+        )
+
     }
 }
 
@@ -59,8 +155,7 @@ export class ConsoleContainer extends Component {
         this.height = this.props.height;
     }
 
-    // when console is opening this method is called
-    renderConsole() {
+    render() {
 
         this.validateProps();
         let startingParams = {x: 0, y: 0};
@@ -69,45 +164,8 @@ export class ConsoleContainer extends Component {
             y: spring(this.height)
         };
 
-        return <Motion
-            defaultStyle={startingParams}
-            style={finishingParams}>
-            {value => <div
-                style={{
-                    width: value.x,
-                    height: value.y,
-                }}
-                className="console-container opening">
-
-                <div className="console-container-body">
-                    {this.props.children}
-                </div>
-
-            </div>
-            }
-        </Motion>
-
-    }
-
-    // when console is closing  this method is called
-    renderClosedConsole() {
-        return <div className="console-container closing">
-
-            <div
-                className="edit-icon"
-                onDoubleClick={() => this.props.toggleOpen()}
-            >
-                <button className="material-icons">edit</button>
-            </div>
-
-        </div>
-
-    }
-
-    render() {
-
-        if (this.props.open)return this.renderConsole();
-        return this.renderClosedConsole()
+        if (this.props.open)return <OpenedConsole {...this.props}/>;
+        return <ClosedConsole {...this.props}/>
 
     }
 }
@@ -116,7 +174,7 @@ export class ConsoleContainer extends Component {
 export class ConsoleSwitcher extends Component {
 
     render() {
-        let { path } = this.props;
+        let {path} = this.props;
         if (path === 'tasks') return <TaskListSearcher {...this.props}/>;
         else if (path === 'navi') return <NaviConsole {...this.props}/>;
         // else if(this.props.path === 'navi') return <TaskListSearcher {...this.props}/>
@@ -130,11 +188,11 @@ export class ConsoleSwitcher extends Component {
 
 class NaviConsole extends Component {
     render() {
-        const {updater} = this.props
+        const {taskListUpdater} = this.props
 
         return <div>
             NABVITIME
-            <input onChange={e => updater(e.target.value)}/>
+            <input onChange={e => taskListUpdater(e.target.value)}/>
         </div>
 
     }
@@ -158,11 +216,11 @@ class TaskListSearcher extends Component {
     _listTextColor = 'white'
     _logTextColor = 'black'
 
-    list = {backgroundColor:this.listBackgroundColor,color:this.listTextColor}
-    log = {backgroundColor:this.logBackgroundColor,color:this.logTextColor}
+    list = {backgroundColor: this.listBackgroundColor, color: this.listTextColor}
+    log = {backgroundColor: this.logBackgroundColor, color: this.logTextColor}
 
-    _list = {backgroundColor:this._listBackgroundColor,color:this._listTextColor}
-    _log = {backgroundColor:this._logBackgroundColor,color:this._logTextColor}
+    _list = {backgroundColor: this._listBackgroundColor, color: this._listTextColor}
+    _log = {backgroundColor: this._logBackgroundColor, color: this._logTextColor}
 
     constructor() {
         super();
@@ -176,7 +234,7 @@ class TaskListSearcher extends Component {
 
     }
 
-    renderListComponent(){
+    renderListComponent() {
 
         return <div className="taskList-container">
 
@@ -184,11 +242,11 @@ class TaskListSearcher extends Component {
                 <button className="list" style={this.list} onClick={() => this.changeStatus('list')}>list</button>
                 <button className="log" style={this.log} onClick={() => this.changeStatus('log')}>logs</button>
             </div>
-            <input onChange={e => this.props.updater(e.target.value)}/>
+            <input onChange={e => this.props.taskListUpdater(e.target.value)}/>
         </div>
     }
 
-    renderLogsComponent(){
+    renderLogsComponent() {
         return <div className="taskList-container">
 
             <div>
@@ -200,8 +258,8 @@ class TaskListSearcher extends Component {
     }
 
     render() {
-        if(this.state.on === 'list')return this.renderListComponent();
-        if(this.state.on === 'log')return this.renderLogsComponent();
+        if (this.state.on === 'list')return this.renderListComponent();
+        if (this.state.on === 'log')return this.renderLogsComponent();
 
     }
 }

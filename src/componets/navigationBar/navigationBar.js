@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
 import './navigationBar.css'
 
 export class NavigationBar extends Component{
@@ -18,7 +19,9 @@ export class NavigationBar extends Component{
 
                 {labels.map((label)=>{
                     return <button className="navigationBar-item material-icons">
-                        {label}
+                        <Link to={label.path}>
+                        {label.icon}
+                        </Link>
                     </button>
                 })}
 

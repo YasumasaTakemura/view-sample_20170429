@@ -23,6 +23,7 @@
     "react-search-input": "^0.11.1",
     "react-select": "^1.0.0-rc.3",
     "react-slick": "^0.14.11",
+    "react-sticky": "^6.0.1",
     "redux": "^3.6.0"
   },
   "devDependencies": {

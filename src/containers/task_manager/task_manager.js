@@ -7,10 +7,11 @@ import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same ti
 import {Motion, spring} from 'react-motion';
 import SearchInput, {createFilter} from 'react-search-input'
 import {NavigationBar} from '../../componets/navigationBar/navigationBar'
-import {TaskList} from '../../componets/task_manager/tasklist/tasklist'
+import {TaskList,TaskListContainer} from '../../componets/task_manager/tasklist/tasklist'
 import {TaskLogTimeLine} from '../../componets/task_manager/tasklog_timeline/tasklog_timeline'
-
+import { StickyContainer, Sticky } from 'react-sticky';
 import {
+    ConsoleContainerSwitcher,
     ConsoleSwitcher,
     DraggableConsoleContainer
 }  from '../../componets/task_manager/console_components/console_components'
@@ -47,6 +48,7 @@ export class TaskManager extends Component {
                 {
                     title: 'tasks',
                     username: 'jake',
+                    photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
                     icon: 'forward',
                     timestamp: moment.format(JP_formatForList),
                     type: 'query',
@@ -143,6 +145,7 @@ export class TaskManager extends Component {
                     title: 'a',
                     icon: 'forward',
                     username: 'cathy',
+                    photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'query',
                     log: [{
@@ -212,6 +215,7 @@ export class TaskManager extends Component {
                     title: 'bb',
                     icon: 'forward',
                     username: 'ashleyford',
+                    photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
                     messages: [
@@ -226,6 +230,7 @@ export class TaskManager extends Component {
                     title: 'vv',
                     icon: 'forward',
                     username: 'devid',
+                    photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
                     messages: [
@@ -240,6 +245,7 @@ export class TaskManager extends Component {
                     title: 'ta',
                     icon: 'forward',
                     username: 'ashleyford',
+                    photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
                     messages: [
@@ -361,19 +367,35 @@ export class TaskManager extends Component {
 
     render() {
 
+        let path = [
+            {path: 'tasks', icon: "code"},
+            {path: 'navi', icon: "menu"},
+            {path: 'tasks', icon: "mail_outline"},
+            {path: 'navi', icon: "cloud"},
+        ]
+
         return <div className="task-root">
 
 
             {/*<GroupSelectorModal*/}
-                {/*slider={this.state.slider}*/}
-                {/*toggleSliderOpen={this.toggleSliderOpen.bind(this)}*/}
-                {/*toggleSliderClose={this.toggleSliderClose.bind(this)}*/}
+            {/*slider={this.state.slider}*/}
+            {/*toggleSliderOpen={this.toggleSliderOpen.bind(this)}*/}
+            {/*toggleSliderClose={this.toggleSliderClose.bind(this)}*/}
             {/*/>*/}
 
-            <div className="task-container">
+            <div className="task-manager-header">
 
-                <div className="left">
-                    <TaskList
+            </div>
+
+            <div className="task-manager-navigator">
+
+            </div>
+
+
+            <div className="task-manager-container">
+
+                <div className="task-list-container">
+                    <TaskListContainer
                         input={this.state.listInput}
                         index={this.state.index}
                         showLogs={this.showLogs.bind(this)}
@@ -383,7 +405,7 @@ export class TaskManager extends Component {
                 </div>
 
 
-                <div className="right">
+                <div className="task-log-container">
                     <TaskLogTimeLine
                         data={this.state.data}
                         filterMessages={this.filterMessages.bind(this)}
@@ -395,11 +417,15 @@ export class TaskManager extends Component {
 
                     />
                 </div>
+
+                <div className="task-manager-sidebar">
+                </div>
+
             </div>
 
 
             <div className="console-container">
-                <DraggableConsoleContainer
+                <ConsoleContainerSwitcher
                     handle=".draggable"
                     defaultPosition={{x: 0, y: 0}}
                     position={null}
@@ -408,24 +434,20 @@ export class TaskManager extends Component {
                     height={150}
                     open={this.state.open}
                     toggleOpen={this.toggleOpen.bind(this)}
-                >
-                    <NavigationBar
-                        labels={["code", "menu", "mail_outline", "cloud", "code", "menu", "mail_outline", "cloud"]}/>
+                    sticky={true}
 
-                    <div className="task-register handle"
-                         onDoubleClick={this.toggleOpen.bind(this)}
-                    >
-                        <ConsoleSwitcher
-                            path={this.state.path}
-                            updater={this.searchUpdatedForList.bind(this)}
-                            taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
-                            input={this.state.input}
-                            data={this.state.data}
-                        />
-                    </div>
-                </DraggableConsoleContainer>
+                    labels={path}
 
+                    path={this.state.path}
+                    taskListUpdater={this.searchUpdatedForList.bind(this)}
+                    taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
+                    input={this.state.listInput}
+                    data={this.state.data}
+
+                />
             </div>
+
+
 
 
         </div>

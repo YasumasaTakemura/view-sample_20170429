@@ -1,4 +1,14 @@
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.material-icons {
+ line-height: 1;
+    /*background-color: #black;*/
+}
+
+
 
 /*-------------------------------------*/
 /* --- Main Components--- */
@@ -13,10 +23,10 @@
     flex-direction: column;
     position: fixed;
     right: 2%;
-    bottom: 50px;
+    bottom: 10px;
     justify-content: space-around;
     width: 800px;
-    height: 100px;
+    height: 150px;
     /*overflow:auto;*/
     resize:horizontal;
 }
@@ -26,6 +36,7 @@
     justify-content: space-between;
     color: #073648;
     background-color: #2D4150;
+    background-color: #D1D5DA;
     /*border: 1px solid #073648;*/
     border-radius:5px;
     height: 150px;
@@ -43,7 +54,7 @@
 .console-container.closing {
     position: fixed;
     height: 1%;
-    bottom: 100px;
+    bottom: 50px;
     right: 2%;
     width: 50%;
 }
@@ -92,4 +103,19 @@
 .list:focus,.logs:focus{
     background-color: white;
     color: #025268;
+}
+
+.console-container-minimizer{
+    right: 4px;
+    bottom: 12px;
+    position: absolute;
+    /*background-color: #2D4150;*/
+    border-radius: 0 0 3px 0;
+    height:20px;
+    width:30px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 36px;
 }

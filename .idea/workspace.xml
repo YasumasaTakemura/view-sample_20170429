@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789b4267-4484-4c8a-9fd4-16e2a7cf0d9b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css" afterPath="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js" afterPath="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css" afterPath="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js" afterPath="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/task_manager.css" afterPath="$PROJECT_DIR$/src/componets/task_manager/task_manager.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/componets/task_manager/task_manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css" afterPath="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" afterPath="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css" afterPath="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js" afterPath="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" afterPath="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="sample_20170429.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,45 +35,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tasklog_timeline.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css">
+      <file leaf-file-name="task_manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1560">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="397" column="33" lean-forward="false" selection-start-line="397" selection-start-column="33" selection-end-line="397" selection-end-column="33" />
+              <folding>
+                <element signature="e#54#93#0" expanded="true" />
+                <element signature="e#205#249#0" expanded="true" />
+                <element signature="e#6515#9578#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasklist.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasklog_timeline.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="106" column="14" lean-forward="true" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-              <folding>
-                <element signature="e#54#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task_manager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-              <folding>
-                <element signature="e#54#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="task_manager.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/task_manager/task_manager.css">
+        <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2074">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="596">
+              <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasklist.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -75,23 +84,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>message</find>
-      <find>toggle</find>
-      <find>formatForList</find>
-      <find>fetch</find>
-      <find>;</find>
-      <find>task-root</find>
       <find>8</find>
       <find>15</find>
       <find>float</find>
-      <find>p-ty</find>
       <find>border-radius</find>
       <find>&quot;YYYY年MM月DD日 HH:mm:ss dddd&quot;</find>
       <find>timestamp</find>
@@ -112,12 +114,20 @@
       <find>updaterrr</find>
       <find>shadow</find>
       <find>console.log</find>
+      <find>message-container</find>
+      <find>icon</find>
+      <find>process</find>
+      <find>process-unit</find>
+      <find>task-log</find>
+      <find>task-list</find>
+      <find>p-ty</find>
     </findStrings>
     <replaceStrings>
       <replace>4</replace>
       <replace>,</replace>
       <replace>JP_formatForList</replace>
       <replace>8</replace>
+      <replace>task-list-item</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -131,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/store/reducer/data.js" />
         <option value="$PROJECT_DIR$/src/containers/task_manager.js" />
         <option value="$PROJECT_DIR$/src/Router/app.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/containers/navigation/navigation.js" />
         <option value="$PROJECT_DIR$/src/store/connects.js" />
         <option value="$PROJECT_DIR$/src/componets/navigation/navigation.js" />
@@ -139,21 +148,23 @@
         <option value="$PROJECT_DIR$/src/componets/task_manager/DnD.js" />
         <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css'.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog/tasklog.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/task_manager.js" />
+        <option value="$PROJECT_DIR$/src/db/data.json" />
         <option value="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js" />
         <option value="$PROJECT_DIR$/src/router/router.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/task_manager.css" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css" />
         <option value="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css" />
         <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog/tasklog.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/task_manager.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/task_manager.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js" />
         <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
-        <option value="$PROJECT_DIR$/src/db/data.json" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" />
+        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css" />
       </list>
     </option>
   </component>
@@ -458,6 +469,24 @@
               <option name="myItemId" value="componets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="componets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="navigationBar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -539,7 +568,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.tasklog_timeline.js">
+    <configuration default="false" name="tasklog_timeline.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="tasklog_timeline.js" working-dir="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -606,6 +638,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.tasklog_timeline.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.tasklog_timeline.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -625,17 +665,18 @@
       <workItem from="1493892588354" duration="56736000" />
       <workItem from="1494340748738" duration="581000" />
       <workItem from="1494655972794" duration="5899000" />
-      <workItem from="1495696658787" duration="35570000" />
+      <workItem from="1495696658787" duration="54160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162554000" />
+    <option name="totallyTimeSpent" value="181144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -701,6 +742,8 @@
           <caret line="330" column="0" lean-forward="true" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#205#249#0" expanded="true" />
+            <element signature="e#6515#9578#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -729,6 +772,8 @@
           <caret line="314" column="22" lean-forward="false" selection-start-line="314" selection-start-column="22" selection-end-line="314" selection-end-column="22" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#205#249#0" expanded="true" />
+            <element signature="e#6515#9578#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -765,6 +810,8 @@
           <caret line="314" column="22" lean-forward="true" selection-start-line="314" selection-start-column="22" selection-end-line="314" selection-end-column="22" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#205#249#0" expanded="true" />
+            <element signature="e#6515#9578#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -816,6 +863,8 @@
           <caret line="172" column="42" lean-forward="false" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="42" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#205#249#0" expanded="true" />
+            <element signature="e#6515#9578#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -871,13 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/task_manager/DnD.js" />
     <entry file="file://$PROJECT_DIR$/src/componets/navigation/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -899,32 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#1#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="72" lean-forward="false" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -961,48 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2151">
-          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#108#147#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/task_manager.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2074">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/task_manager/task_manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1021,39 +995,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
+    <entry file="file://$PROJECT_DIR$/src/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="135">
+          <caret line="11" column="62" lean-forward="true" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
-            <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/react-sticky/lib/Sticky.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1633">
-          <caret line="193" column="17" lean-forward="true" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
+        <state relative-caret-position="-1506">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-sticky/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-draggable/typings/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/shared_components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/task_manager.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2097">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1560">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="e#3584#3601#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="106" column="14" lean-forward="true" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+        <state relative-caret-position="58">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="397" column="33" lean-forward="false" selection-start-line="397" selection-start-column="33" selection-end-line="397" selection-end-column="33" />
+          <folding>
+            <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#205#249#0" expanded="true" />
+            <element signature="e#6515#9578#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

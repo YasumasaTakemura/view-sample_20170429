@@ -6,35 +6,31 @@ input{
     width:300px;
     outline: none;
 }
-.task-list{
-    display: flex;
-}
-
 
 .task-root{
     /*position: relative;*/
     margin: 0;
-    height: 100vh;
+    height: 100%;
 }
 
-.task-register{
-    padding: 25px 10px 10px 10px;
-    width: 100%;
-
-
-
+.task-manager-navigator{
+    height: 30px;
 }
 
-.task-container{
-    /*display:inline-block;*/
+.task-manager-header{
+    background-color: #2D2D2D;
+    height: 50px;
+}
+
+
+.task-manager-container{
     display: flex;
     justify-content: inherit;
-    /*justify-content: space-around;*/
-    height: 100vh;
-    padding-top: 25px;
+    height: 100%;
+    /*padding-top: 25px;*/
 }
 
-.task-container .left{
+.task-manager-container .task-list-container{
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -47,20 +43,24 @@ input{
 
 }
 
-.task-container .left .task-register{
+.task-manager-container .task-list-container .task-register{
     width: 50%;
 
 }
 
-.task-container .right{
+.task-manager-container .task-log-container{
     flex:7;
     float: right;
     margin-left: auto;
+    background-color: white;
+    width: 60%;
+    /*margin-right: 50px;*/
+    padding-right: 50px;
 
 }
 
 
-.task-container > .left > ul{
+.task-manager-container > .task-list-container > ul{
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     /*margin-top: 3%;*/
@@ -71,6 +71,12 @@ input{
     position: relative;
 }
 
-.console-container.draggable{
+.task-log-container{
+    padding-left: 50px;
+}
 
+.task-manager-sidebar{
+    background-color: #4B5F7C;
+    width: 200px;
+    margin-right: 25px;
 }
