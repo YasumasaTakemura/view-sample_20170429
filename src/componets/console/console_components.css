@@ -35,14 +35,14 @@ a {
     display: flex;
     justify-content: space-between;
     color: #073648;
-    background-color: #2D4150;
+    /*background-color: #2D4150;*/
     background-color: #D1D5DA;
     /*border: 1px solid #073648;*/
     border-radius:5px;
     height: 150px;
     padding: 0;
     /*width: 100%;*/
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px 5px rgba(0,0,0,0.4);
 
 
 }

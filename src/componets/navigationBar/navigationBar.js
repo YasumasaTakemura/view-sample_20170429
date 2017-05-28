@@ -6,9 +6,14 @@ import './navigationBar.css'
 export class NavigationBar extends Component{
 
     container(){
-        const {labels}  = this.props
 
 
+        let path = [
+            {path: 'tasks', icon: "code"},
+            {path: 'apiMarket', icon: "menu"},
+            {path: 'tasks', icon: "mail_outline"},
+            {path: 'navi', icon: "cloud"},
+        ]
 
         return(
             <div className="navigationBar-container">
@@ -17,10 +22,10 @@ export class NavigationBar extends Component{
                     navigate_before
                 </button>
 
-                {labels.map((label)=>{
+                {path.map((path)=>{
                     return <button className="navigationBar-item material-icons">
-                        <Link to={label.path}>
-                        {label.icon}
+                        <Link to={path.path}>
+                        {path.icon}
                         </Link>
                     </button>
                 })}

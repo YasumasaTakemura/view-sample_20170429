@@ -2,11 +2,10 @@
 /*  SHEARED STYLES */
 /*-------------------------------------*/
 
-
-.icon > img{
+.icon > img {
     border-radius: 50%;
-    width:48px;
-    height:48px;
+    width: 48px;
+    height: 48px;
 
 }
 
@@ -38,24 +37,21 @@ li {
     margin-top: 1%;
 }
 
-
-
-
 /*-------------------------------------*/
 /*  TASK LOGs */
 /*-------------------------------------*/
 
-.message-container > .body{
+.message-container > .body {
     background-color: white;
 }
 
-.message-container, .my-message-container{
+.message-container, .my-message-container {
     margin-top: 50px;
     padding-bottom: 25px;
     padding-left: 15px;
 }
 
-.message{
+.message {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -63,43 +59,42 @@ li {
     margin-left: 8px;
     margin-bottom: 5px;
     margin-top: 5px;
-    padding:5px;
-    width:400px;
+    padding: 5px;
+    width: 400px;
     border-radius: 1px 8px 8px 1px /1px 8px 8px 1px;
     background-color: #F6F7F9;
 
 }
 
-.message.with-process{
+.message.with-process {
     border-left: 3px solid #073648;
 }
 
-
-
 /* to make my messages's position on right side */
-.my-message{
+.my-message {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin:1% 3% 1% auto;
-    padding:1%;
-    width:70%;
+    margin: 1% 3% 1% auto;
+    padding: 1%;
+    width: 70%;
     height: 25%;
     border-radius: 8px 1px 1px 8px /8px 1px 1px 8px;
     background-color: #073648;
     color: white;
 }
 
-.my-message.with-process{
+.my-message.with-process {
     border-left: 3px solid white;
 }
 
-.message .header{
+.message .header {
     display: flex;
     margin-top: -48px;
 }
-.my-message .header{
+
+.my-message .header {
     display: flex;
     justify-content: flex-end;
     margin-top: -10%;
@@ -107,32 +102,32 @@ li {
 }
 
 .message.with-process .header .detail .timestamp,
-.my-message.with-process .header .detail .timestamp{
+.my-message.with-process .header .detail .timestamp {
     width: 300px;
 }
 
-.message .header .detail, .my-message .header .detail{
+.message .header .detail, .my-message .header .detail {
     display: flex;
     flex-direction: column;
 }
 
 .message .header .material-icons.toggle,
-.my-message .header .material-icons.toggle{
+.my-message .header .material-icons.toggle {
     float: right;
-    text-align:right;
+    text-align: right;
 }
 
-.my-message .header .detail .username{
+.my-message .header .detail .username {
     color: #000;
 }
-.my-message .header .detail .timestamp{
+
+.my-message .header .detail .timestamp {
     color: black;
 
 }
 
-
 /* Floating button*/
-.edit-icon button{
+.edit-icon button {
     float: right;
     background-color: #073648;
     color: white;
@@ -144,22 +139,25 @@ li {
 /*-------------------------------------*/
 /*  PROCESSES */
 /*-------------------------------------*/
-
-.process{
-    margin-left: 50px;
-    border-left: 2px solid black;
+.process-container {
+    padding: 0;
 }
 
-.process-unit-container{
+.process {
+    margin-left: 50px;
+    border-left: 2px solid #E6EBF1;
+}
+
+.process-unit-container {
     /*padding-bottom: 1%;*/
-    margin-bottom: 1%;
-    margin-top: 2%;
-    /*padding-top:2%;*/
+    /*margin-bottom: 1%;*/
+    /*margin-top: 2%;*/
+    padding-top: 15px;
     width: 600px;
 
 }
 
-.process-unit .icon .material-icons.p-types{
+.process-unit .icon .material-icons.p-types {
     margin-left: -16px;
     background-color: #E6EBF1;
     font-size: 18px;
@@ -172,45 +170,46 @@ li {
     line-height: 30px;
 }
 
-
-.process-unit .icon{
+.process-unit .icon {
     float: left;
     width: 10%;
-
 }
 
-.process-unit .detail{
+.process-unit .detail {
     margin: 0 auto;
     padding: 0;
 
 }
 
 /* for icon "closed" */
-.p-state span{
+.p-state span {
     color: white;
     border: 1px solid #CB2431;
     background-color: #CB2431;
     border-radius: 2px;
-    width:3em;
+    width: 3em;
     height: 50px;
     vertical-align: middle;
 }
 
-.task-description-container{
+.task-description-container {
     height: 200px;
+    height: 100%;
     /*background-color:#EFF7FF;*/
     width: 100%;
     border: solid 1px #D1D5DA;
+    border-radius: 5px;
     margin-left: 25px;
 
 }
 
-.task-description-user-icon{
+.task-description-user-icon {
     /*padding-top: 10px;*/
     margin-left: -50px;
 
 }
-.task-description-user-icon > img{
+
+.task-description-user-icon > img {
     width: 48px;
     height: 48px;
     float: left;
@@ -218,7 +217,7 @@ li {
 
 }
 
-.task-description-header-triangle{
+.task-description-header-triangle {
     width: 0;
     height: 0;
     border-style: solid;
@@ -231,22 +230,38 @@ li {
 }
 
 .task-description-header {
-    border:solid 1px #F6F7F9;
-    height: 50px;
+    height: 40px;
     background-color: #F6F8FA;
-    /*margin-left:-8px;*/
-    /*margin-left: -25px;*/
-
+    border-radius: inherit;
 
 }
 
-.task-description-detail{
-
-    border: solid 1px #D1D5DA;
+.task-description-detail {
+    height: 100%;
+    /*border: solid 1px #D1D5DA;*/
     /*margin-left: -25px;*/
 
 }
 
-.task-log-container-adjustment{
-    /*padding-left: 25px;*/
+.task-description-body a{
+    color: deepskyblue;
+
+}
+
+.task-description-title {
+    font-size: 35px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.task-log-container-adjustment {
+    padding-top: 15px;
+}
+
+.p-photo img{
+    width: 48px;
+    height: 48px;
+    float:right ;
+    /*display: inline-block;*/
 }

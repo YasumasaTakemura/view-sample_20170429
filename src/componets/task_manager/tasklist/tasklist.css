@@ -9,7 +9,6 @@
     border-radius: 50%;
     width:48px;
     height:48px;
-
 }
 
 ul {
@@ -31,120 +30,75 @@ li {
 }
 
 li{
-    margin: 5px;
-}
-li.task-list-item{
-    margin-top: 1%;
-    background-color: dodgerblue;
-    /*border: 1px solid dodgerblue;*/
-    display: block;
-
-    /*margin-bottom: 3%;*/
+    /*margin: 5px;*/
 }
 
-li.task-list-item{
+.task-list-item{
+    padding: 3px;
     background-color: white;
     border-radius: 5px;
     margin-bottom: 2px;
-    width: 340px;
 }
 
-li.task-list-item.on{
-    background-color: #F6F7F9;
-    border: 1px solid black;
-    width: 340px;
-    border-radius: 5px;
-    margin-bottom: 2px;
+.task-list-item:hover{
+    border: solid 1px #F9DF2C;
 }
 
-li.task-list-item:hover{
-    margin-top: 1%;
-    background-color: #F6F7F9;
-    width: 340px;
-    transform: scale(1.1,1.1);
-    z-index: 100;
-    margin-bottom: 5px;
-}
-
-li.task-list-item:active{
-    background-color: #F6F7F9;
-    width: 340px;
+.task-list-item:active{
     transform: scale(0.95,0.95);
-    z-index: auto;
     margin-bottom:4px;
 }
 
-
-li.task-list-item, li.task-list-item.on{
-    /*display: block;*/
-    /*padding: 3px;*/
-    height: 50%;
-}
-
-/* header */
-ul li.task-list-item.on .header,li.task-list-item .task-list-item-header{
+/* parent */
+.task-list-item-header{
     display: inline-block;
     font-size: 12px;
-    padding-top: 4px;
+    padding-top: 6px;
+    float: left;
+
 }
 
-li.task-list-item .detail, li.task-list-item.on .task-list-item-detail{
-    display: block;
+/* parent */
+.task-list-item-detail{
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
-li.task-list-item.on .task-list-item-header .task-list-item-type,
-li.task-list-item .task-list-item-header .task-list-item-type{
+.task-list-item-detail-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list-item-username {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.task-list-item-timestamp {
+    text-align: left;
+}
+
+.task-list-item-title {
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.task-list-item-photo img{
+    width: 34px;
+    height: 34px;
+}
+
+.task-list-item-type{
     float: right;
     text-align: center;
     color: white;
     background-color: #F9DF2C;
     width: 5em;
     border-radius: 5px;
-    /*border: 1px solid black;*/
     margin-left: 3px;
     margin-right: 3px;
 }
-
-li.task-list-item.on .task-list-item-header .task-list-item-username,
-li.task-list-item .task-list-item-header .task-list-item-username {
-    text-align: center;
-    float: right;
-    /*margin-left: 30px;*/
-    background-color: white;
-    width: 10em;
-    border-radius: 5px;
-    /*border: 1px solid black;*/
-    margin-left: 3px;
-    margin-right: 3px;
-}
-
-
-li.task-list-item.on .task-list-item-header .task-list-item-timestamp,
-li.task-list-item .task-list-item-header .task-list-item-timestamp {
-    text-align: center;
-    float: right;
-    /*margin-left: 30px;*/
-    /*background-color: white;*/
-    padding-left: 3px;
-    padding-right: 3px;
-    margin-left: 3px;
-    margin-right: 3px;
-
-}
-
-
-li.task-list-item.on .task-list-item-detail .task-list-item-title,
-li.task-list-item .task-list-item-detail .task-list-item-title {
-    /*text-align: center;*/
-    /*float: right;*/
-    /*margin-left: 30px;*/
-    /*background-color: white;*/
-    padding-left: 3px;
-    padding-right: 3px;
-    margin-left: 3px;
-    margin-right: 3px;
-}
-
-
-

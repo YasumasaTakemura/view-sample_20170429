@@ -8,9 +8,78 @@ import React, {Component} from 'react';
 import './tasklist.css'
 
 
-let TaskListItem = (_item,index,showLogs)=> {
 
-    let item = _item.item;
+
+export class TaskListContainer extends Component {
+
+
+    state={
+    state:'non'
+}
+
+    data = this.props.data;
+    style={
+
+        init:{
+            borderColor:'#f9df2c',
+            borderWidth:'1px',
+            // borderStyle:'solid 1px #f9df2c'
+        },
+        hover:{
+            borderColor:'#f9df2c',
+            borderWidth:'1px',
+            // borderStyle:'solid 1px #f9df2c'
+        },
+        active:{
+            borderColor:'#f9df2c',
+            borderWidth:'1px',
+            // borderStyle:'solid 1px #f9df2c'
+        }
+
+
+    };
+    //
+    // constructor(){
+    //     super();
+    //     this.state={
+    //         state:'non'
+    //     }
+    // }
+
+    toggleState(){
+
+
+    }
+
+    render(){
+        var style ={};
+
+        let state =this.state.state;
+
+        // no keyword inputted
+        if (this.props.input === "" )this.data = this.props.data;
+        else this.data = this.props.filteredList('title');
+
+        switch (state){
+            case 'hover':
+                style = this.style.hover;
+
+            case 'active':
+                style = this.style.hover;
+
+            default:
+                style = this.style.init;
+        }
+
+        return <ul>
+            { this.data.map((item, index) => <TaskListItem index={index} item={item} showLogs={this.props.showLogs} style={this.style}/>)}
+                </ul>
+    }
+}
+
+let TaskListItem = (props)=> {
+    let {index,item,showLogs,style} = props;
+
     return (
         <li
             key={index}
@@ -18,31 +87,39 @@ let TaskListItem = (_item,index,showLogs)=> {
             className="task-list-item">
 
             <div className="task-list-item-header">
-                <div className="task-list-item-timestamp">{item.timestamp}</div>
-                <div className="task-list-item-type">{item.type}</div>
-
+                <div className="task-list-item-photo">
+                    <img className="icon" src={item.photo}/>
+                </div>
             </div>
 
             <div className="task-list-item-detail">
-                <div className="task-list-item-username">@{item.username}</div>
-                <div className="task-list-item-title">{item.title}</div>
+                <div className="task-list-item-detail-top">
+                    <div className="task-list-item-username">@{item.username}</div>
+                    <div className="task-list-item-timestamp">{item.timestamp}</div>
+                </div>
+
+                <div className="task-list-item-detail-bottom">
+                    <div className="task-list-item-title">{item.title}</div>
+                </div>
             </div>
 
         </li>)
 }
 
+let TaskListItemOnHover=()=>{
 
-export class TaskListContainer extends Component {
-    render(){
-        console.log(this.props)
-        console.log(this.props.input)
-        // no filtered data exist
-        if (this.props.input === "" )this.data = this.props.data
-        else this.data = this.props.filteredList('title')
+}
 
-        return <ul>
-            { this.data.map((item, index) => <TaskListItem index={index} item={item} showLogs={this.props.showLogs}/>)}
-                </ul>
 
+class Style{
+    onHover = {
+        borderColor:'',
+        borderWidth:'',
+        borderStyle:'solid 1px #F9DF2C'
     }
+
+    onActive = {
+        marginBottom:'4px',
+    }
+
 }

@@ -8,7 +8,7 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import {Motion, spring} from 'react-motion'
 import SearchInput, {createFilter} from 'react-search-input'
-import './console_components.css'
+import '../console_components.css'
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 import {NavigationBar} from '../../navigationBar/navigationBar'
 import {Sticky} from '../../shared_components/shared_components'
@@ -23,6 +23,7 @@ export let ConsoleContainerSwitcher = (props) => {
 
 export class StickyConsoleContainer extends Component {
     render() {
+        console.log(this.props)
         return (
             <Sticky>
                 <div className="draggable console-container">
@@ -32,7 +33,7 @@ export class StickyConsoleContainer extends Component {
                         open={this.props.open}
                         toggleOpen={this.props.toggleOpen.bind(this)}
                     >
-                        <NavigationBar labels={this.props.labels}/>
+                        <NavigationBar/>
 
                         <ConsoleSwitcher
                             path={this.props.path}
@@ -56,6 +57,7 @@ export class StickyConsoleContainer extends Component {
 export class DraggableConsoleContainer extends Component {
 
     render() {
+        console.log(this.props)
         return (
             <Draggable
                 // axis="x"
@@ -74,7 +76,8 @@ export class DraggableConsoleContainer extends Component {
                         open={this.props.open}
                         toggleOpen={this.props.toggleOpen.bind(this)}
                     >
-                        <NavigationBar labels={this.props.labels}/>
+                        <NavigationBar/>
+
                         <ConsoleSwitcher
                             path={this.props.path}
                             taskListUpdater={this.props.taskListUpdater}
@@ -186,7 +189,7 @@ export class ConsoleSwitcher extends Component {
 // Specified Components
 // ---------------------  //
 
-class NaviConsole extends Component {
+export class NaviConsole extends Component {
     render() {
         const {taskListUpdater} = this.props
 
@@ -200,7 +203,7 @@ class NaviConsole extends Component {
 }
 
 // child component of Console
-class TaskListSearcher extends Component {
+export class TaskListSearcher extends Component {
 
     white = 'white'
     black = 'black'

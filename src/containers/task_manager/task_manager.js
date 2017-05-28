@@ -3,23 +3,18 @@
  */
 import React, {Component} from 'react';
 import Moment from 'moment'
-import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
-import {Motion, spring} from 'react-motion';
-import SearchInput, {createFilter} from 'react-search-input'
-import {NavigationBar} from '../../componets/navigationBar/navigationBar'
-import {TaskList,TaskListContainer} from '../../componets/task_manager/tasklist/tasklist'
+import {TaskListContainer} from '../../componets/task_manager/tasklist/tasklist'
 import {TaskLogTimeLine} from '../../componets/task_manager/tasklog_timeline/tasklog_timeline'
-import { StickyContainer, Sticky } from 'react-sticky';
-import {
-    ConsoleContainerSwitcher,
-    ConsoleSwitcher,
-    DraggableConsoleContainer
-}  from '../../componets/task_manager/console_components/console_components'
+import {ConsoleContainerSwitcher,}  from '../../componets/console/console'
+import {MenuIconContainer} from '../../componets/task_manager/menu_icons/menu_icons'
 import './task_manager.css'
+
 
 let moment = new Moment()
 // let formatForList = "YYYY年MM月DD日 HH:mm:ss dddd"
 let JP_formatForList = "YYYY年MM月DD日 HH:mm"
+
+
 export class TaskManager extends Component {
 
     constructor() {
@@ -44,217 +39,217 @@ export class TaskManager extends Component {
                 x: 0, y: 0
             },
 
+            menuIcons: [
+                {
+                    label: 'info',
+                    img: 'https://image.flaticon.com/icons/svg/118/118793.svg',
+                    content: [
+                        {
+                            timestamp: moment.format(JP_formatForList),
+                            description: '明日より大型UPDATEが開始されます。メンテナンスは13:00-17:00までを予定しております。',
+                            read: false
+                        },
+                        {
+                            timestamp: moment.format(JP_formatForList),
+                            description: '今月のご請求金額は 150,000円となります。',
+                            read: false
+                        },
+                        {
+                            timestamp: moment.format(JP_formatForList),
+                            description: '今月のご請求金額は 200,000円となります。',
+                            read: false
+                        },
+                    ]
+                },
+                {
+                    label: 'alert',
+                    img: 'https://image.flaticon.com/icons/svg/196/196759.svg',
+                    content: [
+                        {
+                            timestamp: moment.format(JP_formatForList),
+                            description: '今月の予算上限に達したため、APIの利用を停止しております。',
+                            read: false
+                        },
+                        {
+                            timestamp: moment.format(JP_formatForList),
+                            description: '＊＊＊ベータ版へのお申し込みが残り３日になっております。',
+                            read: false
+                        },
+                    ]
+                },
+                {
+                    label: 'special',
+                    img: 'https://image.flaticon.com/icons/svg/19/19938.svg',
+                    content: [
+                        {
+                            timestamp: moment.format(JP_formatForList),
+                            description: '6月20日までの間、APIの転送料金が20%オフとなっております。',
+                            read: false
+                        },
+                    ]
+                },
+            ],
+
             data: [
                 {
                     title: 'tasks',
+                    description: '### テスト　勉強　\n\   You can see the progress on https://github.com/fixTypos/fix_typos/ \n\   [https://github.com/client9/misspell](https://github.com/client9/misspell)',
                     username: 'jake',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
                     icon: 'forward',
                     timestamp: moment.format(JP_formatForList),
                     type: 'query',
-                    log: [
-                        {
-                            text: 'this is a test',
-                            timestamp: '2017-0430-00:00'
-                        },
-                        {
-                            text: 'show this text',
-                            timestamp: '2017-0501-00:00'
-                        },
+                    logs: [
 
-                    ],
-                    messages: [
                         {
                             username: 'jake',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
-                            text: 'this is a test message \n multi line',
                             timestamp: moment.format(JP_formatForList),
-                            processes: [
-                                {
-                                    username: 'jake',
-                                    timestamp: moment.format(JP_formatForList),
-                                    types: 'edit',
-                                    message: 'change the 131th line of documentation "Media Guides" ',
-                                    state: 'done',
+                            types: 'edit',
+                            message: 'change the 131th line of documentation "Media Guides" ',
+                            state: 'done',
 
 
-                                }, {
-                                    username: 'ashleyford',
-                                    timestamp: moment.format(JP_formatForList),
-                                    types: 'add',
-                                    message: 'add new documentation',
-                                    state: 'done',
-
-
-                                }, {
-                                    username: 'jake',
-                                    timestamp: moment.format(JP_formatForList),
-                                    types: 'remove_circle_outline',
-                                    message: '',
-                                    state: 'closed',
-
-                                },
-                            ],
-                        }
-                        , {
+                        }, {
                             username: 'ashleyford',
-                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
-                            text: 'this is a test message by ashleyford',
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
                             timestamp: moment.format(JP_formatForList),
-                            processes: [
-                                {
-                                    username: 'jake',
-                                    timestamp: moment.format(JP_formatForList),
-                                    types: 'edit',
-                                    message: 'change the 131th line of documentation "Media Guides" ',
+                            types: 'add',
+                            message: 'add new documentation',
+                            state: 'done',
 
 
-                                }, {
-                                    username: 'ashleyford',
-                                    timestamp: moment.format(JP_formatForList),
-                                    types: 'add',
-                                    message: 'add new documentation',
-
-
-                                }, {
-                                    username: 'jake',
-                                    timestamp: moment.format(JP_formatForList),
-                                    types: 'remove_circle_outline',
-                                    message: '',
-                                    state: 'closed',
-
-                                },
-                            ],
                         }, {
-                            username: 'me',
-                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg',
-                            text: 'i want you to do this',
+                            username: 'jake',
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
                             timestamp: moment.format(JP_formatForList),
-                            documents: '',
-                            attachments: '',
-                            processes: [],
+                            types: 'remove_circle_outline',
+                            message: '',
+                            state: 'closed',
+
+                        },
+                    ],
+                }, {
+                    title: 'tasks2',
+                    description: '',
+                    username: 'jake',
+                    photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
+                    icon: 'forward',
+                    timestamp: moment.format(JP_formatForList),
+                    type: 'query',
+                    logs: [
+
+                        {
+                            username: 'jake',
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
+                            timestamp: moment.format(JP_formatForList),
+                            types: 'edit',
+                            message: 'change the 131th line of documentation "Media Guides" ',
+                            state: 'done',
+
                         }, {
+                            username: 'ashleyford',
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
+                            timestamp: moment.format(JP_formatForList),
+                            types: 'add',
+                            message: 'add new documentation',
+                            state: 'done',
+
+
+                        }, {
+                            username: 'jake',
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
+                            timestamp: moment.format(JP_formatForList),
+                            types: 'remove_circle_outline',
+                            message: '',
+                            state: 'closed',
+
+                        },
+                        {
                             username: 'system',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg',
-                            text: 'system message',
+                            message: 'system message',
+                            types: 'clear',
                             timestamp: moment.format(JP_formatForList),
-                            processes: [],
-                        }]
+                            state: 'done',
+                        }
+                    ],
                 },
                 {
                     title: 'a',
+                    description: '',
                     icon: 'forward',
                     username: 'cathy',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'query',
-                    log: [{
-                        text: 'this is 2',
-                        timestamp: '2017-0430-00:01'
-                    }],
-                    messages: [
+                    logs: [
+
                         {
                             username: 'jake',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
-                            text: 'this is a test message \n multi line',
-                            timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            processes: [
-                                {
-                                    username: 'jake',
-                                    timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                                    types: 'edit',
-                                    message: 'change the 131th line of documentation "Media Guides" ',
+                            timestamp: moment.format(JP_formatForList),
+                            types: 'edit',
+                            message: 'change the 131th line of documentation "Media Guides" ',
+                            state: 'done',
 
-
-                                }, {
-                                    username: 'ashleyford',
-                                    timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                                    types: 'add',
-                                    message: 'add new documentation',
-
-
-                                }, {
-                                    username: 'jake',
-                                    timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                                    types: 'remove_circle_outline',
-                                    message: '',
-                                    state: 'closed',
-
-                                },
-                            ],
-                        }
-                        , {
+                        }, {
                             username: 'ashleyford',
-                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
-                            text: 'this is a test message by ashleyford',
-                            timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            processes: [],
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
+                            timestamp: moment.format(JP_formatForList),
+                            types: 'add',
+                            message: 'add new documentation',
+                            state: 'done',
+
+
                         }, {
-                            username: 'adellecharles',
-                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg',
-                            text: 'this is a test message by adellecharles',
-                            timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            processes: [],
-                        }, {
-                            username: 'me',
-                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg',
-                            text: 'i want you to do this',
-                            timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            processes: [],
-                            documents: '',
-                            attachments: ''
-                        }, {
+                            username: 'jake',
+                            img: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
+                            timestamp: moment.format(JP_formatForList),
+                            types: 'remove_circle_outline',
+                            message: '',
+                            state: 'closed',
+
+                        },
+                        {
                             username: 'system',
                             img: 'https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg',
-                            text: 'system message',
-                            timestamp: moment.format("YYYY年MM月DD日 HH:mm:ss dddd"),
-                            processes: [],
-                        }]
+                            message: 'system message',
+                            types: 'clear',
+                            timestamp: moment.format(JP_formatForList),
+                            state: 'done',
+                        }
+                    ],
                 },
                 {
                     title: 'bb',
+                    description: '',
                     icon: 'forward',
                     username: 'ashleyford',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
-                    messages: [
-                        {processes: [],}
-                    ],
-                    log: [{
-                        text: 'this is 3',
-                        timestamp: '2017-0430-00:02'
-                    }]
+                    logs: []
                 },
                 {
                     title: 'vv',
+                    description: '',
                     icon: 'forward',
                     username: 'devid',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
-                    messages: [
-                        {processes: [],}
-                    ],
-                    log: [{
-                        text: 'this is 4',
-                        timestamp: '2017-0430-00:03'
-                    }]
+                    logs: []
                 },
                 {
                     title: 'ta',
+                    description: '',
                     icon: 'forward',
                     username: 'ashleyford',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
                     timestamp: moment.format(JP_formatForList),
                     type: 'order',
-                    messages: [
-                        {processes: [],}
-                    ],
-                    log: [{
-                        text: 'this is 5',
-                        timestamp: '2017-0430-00:04'
-                    }]
+                    logs: []
                 },
 
             ],
@@ -338,7 +333,6 @@ export class TaskManager extends Component {
 
         // change {item[key]} to what it need to be
         let list = this.state.data.filter((item, index) => item['messages']['username'] === this.state.messageInput)
-
         // [] returns all
         if (list.length === 0) return []
         return list
@@ -351,14 +345,11 @@ export class TaskManager extends Component {
 
         for (let i = 0; i < data.length; i++) {
             let messages = data[index].messages
-            console.log(messages)
             if (messages !== undefined) {
                 list = messages.filter((item, index) => item[key] === this.state.messageInput)
-                console.log(list)
                 return list
             }
         }
-
         // [] returns all
         return list
 
@@ -367,15 +358,9 @@ export class TaskManager extends Component {
 
     render() {
 
-        let path = [
-            {path: 'tasks', icon: "code"},
-            {path: 'navi', icon: "menu"},
-            {path: 'tasks', icon: "mail_outline"},
-            {path: 'navi', icon: "cloud"},
-        ]
-
         return <div className="task-root">
 
+            <MenuIconContainer icons={this.state.menuIcons}/>
 
             {/*<GroupSelectorModal*/}
             {/*slider={this.state.slider}*/}
@@ -383,13 +368,9 @@ export class TaskManager extends Component {
             {/*toggleSliderClose={this.toggleSliderClose.bind(this)}*/}
             {/*/>*/}
 
-            <div className="task-manager-header">
+            <div className="task-manager-header"/>
 
-            </div>
-
-            <div className="task-manager-navigator">
-
-            </div>
+            <div className="task-manager-navigator"/>
 
 
             <div className="task-manager-container">
@@ -436,7 +417,7 @@ export class TaskManager extends Component {
                     toggleOpen={this.toggleOpen.bind(this)}
                     sticky={true}
 
-                    labels={path}
+                    // labels={path}
 
                     path={this.state.path}
                     taskListUpdater={this.searchUpdatedForList.bind(this)}
@@ -448,10 +429,6 @@ export class TaskManager extends Component {
             </div>
 
 
-
-
         </div>
     }
 }
-
-
