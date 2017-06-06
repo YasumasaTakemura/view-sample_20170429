@@ -3,12 +3,12 @@
  */
 
 import React, {Component} from 'react';
-import './console_components.css'
+import './console.css'
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 import {NavigationBar} from '../navigationBar/navigationBar'
 import {Sticky} from '../shared_components/shared_components'
 import {APIMarketConsole} from './api_market/api_market'
-import {TaskListSearcher, NaviConsole} from './task_manager/task_manager'
+import {___, NaviConsole} from './task_manager/task_manager'
 
 
 //----------------------------------------//
@@ -19,11 +19,11 @@ import {TaskListSearcher, NaviConsole} from './task_manager/task_manager'
 //----------------------------------------//
 
 let ConsoleSwitcher = (props) => {
-    let {path,} = props;
+    let {path} = props;
 
     switch (path) {
         case 'tasks':
-            return <TaskListSearcher {...props}/>;
+            return <___ {...props}/>;
         case 'navi':
             return <NaviConsole {...props}/>;
         case 'apiMarket':
@@ -35,7 +35,6 @@ let ConsoleSwitcher = (props) => {
 };
 
 
-
 export let ConsoleContainerSwitcher = (props) => {
     return props.sticky ? <StickyConsoleContainer {...props}/> : <DraggableConsoleContainer {...props}/>;
 };
@@ -43,7 +42,7 @@ export let ConsoleContainerSwitcher = (props) => {
 class StickyConsoleContainer extends Component {
 
     render() {
-        let {component, label} = this.props
+        let {label} = this.props
         return (
             <div className="draggable console-container">
                 <ConsoleContainer
@@ -52,7 +51,7 @@ class StickyConsoleContainer extends Component {
                     {...this.props}
                 >
                     <NavigationBar/>
-                    <ConsoleSwitcher {...this.state} {...this.props} label={label} component={component}/>
+                    <ConsoleSwitcher {...this.state} {...this.props} label={label}/>
                 </ConsoleContainer>
             </div>
         )
@@ -98,7 +97,6 @@ class DraggableConsoleContainer extends Component {
     }
 }
 
-
 class ConsoleContainer extends Component {
 
     // default value for container size
@@ -107,10 +105,10 @@ class ConsoleContainer extends Component {
 
     validateProps() {
         // validate props , if not passed value, set default value
-        if (this.props.width === undefined) this.width
-        if (this.props.height === undefined) this.height
-        this.width = this.props.width;
-        this.height = this.props.height;
+        if (this.props.width !== undefined) this.width = this.props.width;
+        if (this.props.height !== undefined) this.height = this.props.height;
+        // this.width = this.props.width;
+        // this.height = this.props.height;
     }
 
     render() {
@@ -140,7 +138,6 @@ class OpenedConsole extends Component {
 
 class ClosedConsole extends Component {
     render() {
-        console.log(this.props)
         return (
             <div className="console-container closing">
                 <div
@@ -152,30 +149,5 @@ class ClosedConsole extends Component {
 
             </div>
         )
-
     }
-}
-
-
-export function renderComponent(component) {
-    return class RenderComponent extends Component {
-
-        render() {
-            let {path, component} = this.props;
-            if (path === 'tasks') return <TaskListSearcher {...this.props}/>;
-            else if (path === 'navi') return <NaviConsole {...this.props}/>;
-
-            return (
-                <component {...this.props}/>
-            )
-        }
-    }
-}
-
-
-let pathToComponentMapper = {
-    tasks: <TaskListSearcher />,
-    navi: <NaviConsole/>,
-    apiMarket: <APIMarketConsole/>,
-
 }

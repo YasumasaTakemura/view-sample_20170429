@@ -11,7 +11,7 @@ export class NavigationBar extends Component{
         let path = [
             {path: 'tasks', icon: "code"},
             {path: 'apiMarket', icon: "menu"},
-            {path: 'tasks', icon: "mail_outline"},
+            {path: 'apiMarketTop', icon: "mail_outline"},
             {path: 'navi', icon: "cloud"},
         ]
 

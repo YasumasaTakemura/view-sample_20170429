@@ -9,6 +9,28 @@ import PromotionDisplay from '../../componets/api_market/promotion_display'
 import {ConsoleContainerSwitcher} from '../../componets/console/console'
 import {APIMarketConsole} from '../../componets/console/api_market/api_market'
 
+
+let style = {
+    root: {
+        backgroundColor: 'white'
+    },
+    content: {
+        display:'flex',
+    },
+    promotionDisplay: {},
+    offerBoard: {
+        flex:'1'
+    },
+    viewer: {
+        flex:'3'
+    },
+    myHistoryBoard: {
+        flex:'1'
+    },
+    console: {},
+
+}
+
 export default class APIMarket extends Component {
     constructor() {
         super();
@@ -28,11 +50,12 @@ export default class APIMarket extends Component {
         return (
             <div style={style.root}>
 
-                <div style={style.content}>
-                    <div style={style.promotionDisplay}>
-                        <PromotionDisplay/>
-                    </div>
 
+                <div style={style.promotionDisplay}>
+                    <PromotionDisplay/>
+                </div>
+
+                <div style={style.content}>
                     <div style={style.offerBoard}>
                         <OfferBoard/>
                     </div>
@@ -52,6 +75,7 @@ export default class APIMarket extends Component {
                         sticky={true}
                         label={'apiMarket'}
                         toggleOpen={this.toggleOpen.bind(this)}
+                        component={APIMarketConsole}
                         {...this.props} {...this.state}
                     />
                 </div>
@@ -60,17 +84,4 @@ export default class APIMarket extends Component {
 
         )
     }
-}
-
-let style = {
-    root: {
-        backgroundColor:'white'
-    },
-    content:{},
-    promotionDisplay: {},
-    offerBoard: {},
-    viewer: {},
-    myHistoryBoard: {},
-    console: {},
-
 }

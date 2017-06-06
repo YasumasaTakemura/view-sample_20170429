@@ -11,6 +11,7 @@ import {createStore, compose, combineReducers} from 'redux'
 import {data} from '../store/reducer/data'
 import  renderNavigation, {NavigationRoot} from '../containers/navigation/navigation'
 import  APIMarket from '../containers/api_market/api_market'
+import  {Top} from '../componets/api_market/top'
 import  {NavigationBar} from '../componets/navigationBar/navigationBar'
 import  {TaskManager} from '../store/connects'
 
@@ -37,6 +38,7 @@ export default class App extends Component {
                         <Route exact path='/tasks' component={TaskManager}/>
                         <Route exact path='/navi' component={TaskManager}/>
                         <Route exact path='/apiMarket' component={APIMarket}/>
+                        <Route exact path='/apiMarketTop' component={Top}/>
 
                     </NavigationRoot>
 

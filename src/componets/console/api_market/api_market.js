@@ -4,23 +4,23 @@
 import React, {Component} from 'react';
 
 let style ={
-    marginTop:'50px'
-}
+    marginTop:'50px',
+    test:{
+        marginTop:'50px',
+        backgroundColor:'white',
+        height:'50px'
+    },
+};
 
-export function renderComponent(component) {
-   return class RenderComponent extends Component {
-
-        render() {
-            return (
-                <component {...this.props}/>
-            )
-        }
-    }
-}
 
 export class APIMarketConsole extends Component {
 
+    constructor(props){
+        super(props);
+    }
+
     render() {
+        console.log(this.props)
         return (
             <div style={style}>
                 AAAAA

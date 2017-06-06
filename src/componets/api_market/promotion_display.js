@@ -7,27 +7,29 @@ import React, {Component} from 'react';
 
 export default class PromotionDisplay extends Component{
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
 
         }
     }
 
+    style = {
+        container:{
+            height:'100px',
+            backgroundColor:'white',
+            borderBottom:'solid 1px #d1d5da',
+        },
+
+    }
+
+
 
     render(){
 
-        let style = {
-            container:{
-                height:'200px',
-                backgroundColor:'white',
-                borderBottom:'solid 1px #d1d5da',
-            },
-
-        }
 
         return(
-            <div style={style.container}>
+            <div style={this.style.container}>
 
 
 

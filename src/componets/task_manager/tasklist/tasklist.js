@@ -7,11 +7,7 @@
 import React, {Component} from 'react';
 import './tasklist.css'
 
-
-
-
 export class TaskListContainer extends Component {
-
 
     state={
     state:'non'
@@ -35,21 +31,8 @@ export class TaskListContainer extends Component {
             borderWidth:'1px',
             // borderStyle:'solid 1px #f9df2c'
         }
-
-
     };
-    //
-    // constructor(){
-    //     super();
-    //     this.state={
-    //         state:'non'
-    //     }
-    // }
 
-    toggleState(){
-
-
-    }
 
     render(){
         var style ={};

@@ -6,9 +6,10 @@ import Moment from 'moment'
 import {TaskListContainer} from '../../componets/task_manager/tasklist/tasklist'
 import {TaskLogTimeLine} from '../../componets/task_manager/tasklog_timeline/tasklog_timeline'
 import {ConsoleContainerSwitcher,}  from '../../componets/console/console'
+import {TaskListSearcher,}  from '../../componets/console/task_manager/task_manager'
 import {MenuIconContainer} from '../../componets/task_manager/menu_icons/menu_icons'
 import './task_manager.css'
-
+import axios from 'axios'
 
 let moment = new Moment()
 // let formatForList = "YYYY年MM月DD日 HH:mm:ss dddd"
@@ -38,6 +39,8 @@ export class TaskManager extends Component {
             deltaPosition: {
                 x: 0, y: 0
             },
+
+            currentComponent:'task_list',
 
             menuIcons: [
                 {
@@ -274,8 +277,6 @@ export class TaskManager extends Component {
             log: item,
             index: index
         })
-
-
     }
 
     ////////////////////////////
@@ -356,8 +357,30 @@ export class TaskManager extends Component {
 
     }
 
+
+    //////////////////////////////////////
+    // REGISTER
+    //////////////////////////////////////
+    registerTaskList(data) {
+        let endpoint = ''
+        let payload = data
+        axios.post(endpoint, payload)
+        .then((response) => {
+                console.log(response);
+                this.setState(
+                    {data:response.date}
+                )
+            })
+        .catch( (error) => {
+                console.log(error);
+            });
+    }
+
+
     render() {
 
+        let jsonData = JSON.stringify(this.state.data)
+        console.log(jsonData)
         return <div className="task-root">
 
             <MenuIconContainer icons={this.state.menuIcons}/>
@@ -407,23 +430,19 @@ export class TaskManager extends Component {
 
             <div className="console-container">
                 <ConsoleContainerSwitcher
-                    handle=".draggable"
-                    defaultPosition={{x: 0, y: 0}}
-                    position={null}
-                    grid={[1, 1]}
                     width={800}
                     height={150}
                     open={this.state.open}
                     toggleOpen={this.toggleOpen.bind(this)}
                     sticky={true}
-
-                    // labels={path}
-
                     path={this.state.path}
                     taskListUpdater={this.searchUpdatedForList.bind(this)}
                     taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
                     input={this.state.listInput}
                     data={this.state.data}
+                    component={TaskListSearcher}
+                    registerTaskList={this.registerTaskList.bind(this)}
+
 
                 />
             </div>
