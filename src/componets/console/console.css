@@ -27,11 +27,12 @@ a {
     justify-content: space-around;
     width: 800px;
     height: 150px;
-    /*overflow:auto;*/
     resize:horizontal;
+
 }
 
 .console-container-body {
+        overflow:auto;
     display: flex;
     justify-content: space-between;
     color: #073648;

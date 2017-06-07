@@ -1,6 +1,3 @@
-/**
- * Created by YasumasaTakemura on 2017/05/29.
- */
 
 import React, {Component} from 'react';
 import './console.css'
