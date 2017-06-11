@@ -247,7 +247,7 @@ let FocusedCategory = (props) => {
     let styles = {
         container: {
             //  padding:'5px', marginTop:'25px',
-            backgroundColor: 'white',
+            // backgroundColor: 'white',
             width: '100%'
         },
         cell: {},
@@ -288,8 +288,8 @@ let TaskListSwitcher = (props) => {
     let {taskListUpdater, focusedCategory, targetComponent} = props
 
     let styles = {
-        container: {
-            backgroundColor: 'red',
+        container: { 
+            // backgroundColor: 'red',
             width: '100%'
         },
         cell: {},
@@ -300,14 +300,12 @@ let TaskListSwitcher = (props) => {
     switch (targetComponent) {
         case 'search':
             return <div style={styles.container}>
-                <input type='checkbox'/>
                 <TaskListSearcher {...props}/></div>
         case 'register':
             return <div><TaskLog {...props}/></div>
 
         default:
             return <div style={styles.container}>
-                <input type='check-box'/>
                 <TaskListSearcher {...props}/></div>
 
     }
@@ -319,7 +317,7 @@ let ConsoledTaskListRegister = (props) => {
     let styles = {
         container: {
             marginTop: '25px',
-            backgroundColor: 'red',
+            // backgroundColor: 'red',
             width: '100%'
         },
         cell: {},
@@ -339,7 +337,7 @@ let TaskListSearcher = (props) => {
 
     let styles = {
         container: {
-            backgroundColor: 'red',
+            // backgroundColor: 'red',
             width: '100%'
         },
         cell: {},
@@ -349,7 +347,6 @@ let TaskListSearcher = (props) => {
 
     return (
         <div style={styles.container}>
-            XXXXXXXXXXXX
             <input onChange={e => taskListUpdater(e.target.value)}/>
         </div>
     )
@@ -359,7 +356,7 @@ let TaskLog = (props) => {
 
     let styles = {
         container: {
-            backgroundColor: 'yellow',
+            // backgroundColor: 'yellow',
             width: '100%'
         },
         cell: {},

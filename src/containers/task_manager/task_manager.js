@@ -24,6 +24,8 @@ export class TaskManager extends Component {
             path: window.location.href.split('/').slice(-1)[0],
             index: 0,
 
+            containerBoarderStyleID:'taskList',
+
             listInput: '',
             messageInput: '',
 
@@ -379,6 +381,8 @@ export class TaskManager extends Component {
 
     render() {
 
+        const {containerBoarderStyleID } = this.state
+
         let jsonData = JSON.stringify(this.state.data)
         console.log(jsonData)
         return <div className="task-root">
@@ -392,13 +396,9 @@ export class TaskManager extends Component {
             {/*/>*/}
 
             <div className="task-manager-header"/>
-
             <div className="task-manager-navigator"/>
-
-
             <div className="task-manager-container">
-
-                <div className="task-list-container">
+                <div className="task-list-container" style={containerBoarderStyleID==='taskList'?{border:'solid 2px red'}:null}>
                     <TaskListContainer
                         input={this.state.listInput}
                         index={this.state.index}
@@ -407,7 +407,6 @@ export class TaskManager extends Component {
                         filteredList={this.keywordFilterForTaskList.bind(this)}
                     />
                 </div>
-
 
                 <div className="task-log-container">
                     <TaskLogTimeLine
@@ -426,8 +425,6 @@ export class TaskManager extends Component {
                 </div>
 
             </div>
-
-
             <div className="console-container">
                 <ConsoleContainerSwitcher
                     width={800}
@@ -442,12 +439,8 @@ export class TaskManager extends Component {
                     data={this.state.data}
                     component={TaskListSearcher}
                     registerTaskList={this.registerTaskList.bind(this)}
-
-
                 />
             </div>
-
-
         </div>
     }
 }
