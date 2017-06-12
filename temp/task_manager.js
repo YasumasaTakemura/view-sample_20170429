@@ -10,7 +10,7 @@ import {Motion, spring} from 'react-motion'
 import SearchInput, {createFilter} from 'react-search-input'
 import '../console_components.css'
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
-import {NavigationBar} from '../../navigationBar/navigationBar'
+import {NavigationBar} from '../../navigation_bar/navigation_bar'
 import {Sticky} from '../../shared_components/shared_components'
 
 // Bundled Component

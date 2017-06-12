@@ -5,9 +5,8 @@ import React, {Component} from 'react';
 import Moment from 'moment'
 import {TaskListContainer} from '../../componets/task_manager/tasklist/tasklist'
 import {TaskLogTimeLine} from '../../componets/task_manager/tasklog_timeline/tasklog_timeline'
-import {ConsoleContainerSwitcher,}  from '../../componets/console/console'
-import {TaskListSearcher,}  from '../../componets/console/task_manager/task_manager'
-import {MenuIconContainer} from '../../componets/task_manager/menu_icons/menu_icons'
+import {ConsoleContainer}  from '../../componets/chat_like_console/console'
+import {MenuIconContainerSwitcher} from '../../componets/task_manager/menu_icons/menu_icons'
 import './task_manager.css'
 import axios from 'axios'
 
@@ -21,10 +20,16 @@ export class TaskManager extends Component {
     constructor() {
         super();
         this.state = {
+
+            consoleState: true,
+            consoleWidth: 300,
+            alertState: false,
+            popUpState: false,
+
             path: window.location.href.split('/').slice(-1)[0],
             index: 0,
 
-            containerBoarderStyleID:'taskList',
+            containerBoarderStyleID: 'taskList',
 
             listInput: '',
             messageInput: '',
@@ -42,7 +47,7 @@ export class TaskManager extends Component {
                 x: 0, y: 0
             },
 
-            currentComponent:'task_list',
+            currentComponent: 'task_list',
 
             menuIcons: [
                 {
@@ -367,13 +372,13 @@ export class TaskManager extends Component {
         let endpoint = ''
         let payload = data
         axios.post(endpoint, payload)
-        .then((response) => {
+            .then((response) => {
                 console.log(response);
                 this.setState(
-                    {data:response.date}
+                    {data: response.date}
                 )
             })
-        .catch( (error) => {
+            .catch((error) => {
                 console.log(error);
             });
     }
@@ -381,13 +386,39 @@ export class TaskManager extends Component {
 
     render() {
 
-        const {containerBoarderStyleID } = this.state
 
-        let jsonData = JSON.stringify(this.state.data)
-        console.log(jsonData)
+        const {containerBoarderStyleID, consoleState,consoleWidth} = this.state
+        const jsonData = JSON.stringify(this.state.data);
+
+        // for a dynamic style
+        const styles = {
+            taskList: {border: 'solid 2px red'},
+            hidden: {
+                right: '-300px'
+            }
+        }
+
         return <div className="task-root">
 
-            <MenuIconContainer icons={this.state.menuIcons}/>
+            <div className="console-container">
+
+                    <ConsoleContainer
+                        consoleState={consoleState}
+                        consoleWidth={consoleWidth}
+                        open={this.state.open}
+                        toggleOpen={this.toggleOpen.bind(this)}
+                        path={this.state.path}
+                        taskListUpdater={this.searchUpdatedForList.bind(this)}
+                        taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
+                        input={this.state.listInput}
+                        data={this.state.data}
+                        registerTaskList={this.registerTaskList.bind(this)}
+                    />
+                </div>
+
+            <MenuIconContainerSwitcher
+                popUpState={this.state.popUpState}
+                icons={this.state.menuIcons}/>
 
             {/*<GroupSelectorModal*/}
             {/*slider={this.state.slider}*/}
@@ -398,7 +429,8 @@ export class TaskManager extends Component {
             <div className="task-manager-header"/>
             <div className="task-manager-navigator"/>
             <div className="task-manager-container">
-                <div className="task-list-container" style={containerBoarderStyleID==='taskList'?{border:'solid 2px red'}:null}>
+                <div className="task-list-container"
+                     style={containerBoarderStyleID === 'taskList' ? styles.taskList : null}>
                     <TaskListContainer
                         input={this.state.listInput}
                         index={this.state.index}
@@ -421,26 +453,26 @@ export class TaskManager extends Component {
                     />
                 </div>
 
-                <div className="task-manager-sidebar">
-                </div>
+
 
             </div>
-            <div className="console-container">
-                <ConsoleContainerSwitcher
-                    width={800}
-                    height={150}
-                    open={this.state.open}
-                    toggleOpen={this.toggleOpen.bind(this)}
-                    sticky={true}
-                    path={this.state.path}
-                    taskListUpdater={this.searchUpdatedForList.bind(this)}
-                    taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
-                    input={this.state.listInput}
-                    data={this.state.data}
-                    component={TaskListSearcher}
-                    registerTaskList={this.registerTaskList.bind(this)}
-                />
-            </div>
+
+
         </div>
     }
 }
+
+// <ConsoleContainerSwitcher
+//                    width={800}
+//                    height={150}
+//                    open={this.state.open}
+//                    toggleOpen={this.toggleOpen.bind(this)}
+//                    sticky={true}
+//                    path={this.state.path}
+//                    taskListUpdater={this.searchUpdatedForList.bind(this)}
+//                    taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
+//                    input={this.state.listInput}
+//                    data={this.state.data}
+//                    component={TaskListSearcher}
+//                    registerTaskList={this.registerTaskList.bind(this)}
+//                />

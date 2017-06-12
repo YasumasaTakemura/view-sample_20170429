@@ -2,7 +2,7 @@
  * Created by YasumasaTakemura on 2017/05/29.
  */
 import React, {Component} from 'react';
-import {ConsoleContainerSwitcher} from '../../componets/console/console'
+import {ConsoleContainer} from '../../componets/chat_like_console/console'
 
 
 export class Top extends Component {
@@ -79,7 +79,7 @@ export class Top extends Component {
                 </div>
 
                 <div style={this.style.console}>
-                    <ConsoleContainerSwitcher
+                    <ConsoleContainer
                         sticky={true}
                         label={'apiMarket'}
                         toggleOpen={this.toggleOpen.bind(this)}

@@ -6,8 +6,8 @@ import Viewer from '../../componets/api_market/viewer'
 import OfferBoard from '../../componets/api_market/offer_board'
 import MyHistoryBoard from '../../componets/api_market/my_history_board'
 import PromotionDisplay from '../../componets/api_market/promotion_display'
-import {ConsoleContainerSwitcher} from '../../componets/console/console'
-import {APIMarketConsole} from '../../componets/console/api_market/api_market'
+import {ConsoleContainer} from '../../componets/chat_like_console/console'
+import {APIMarketConsole} from '../../componets/chat_like_console/task_app_marketplace/task_app_marketplace'
 
 
 let style = {
@@ -71,11 +71,10 @@ export default class APIMarket extends Component {
 
 
                 <div style={style.console}>
-                    <ConsoleContainerSwitcher
+                    <ConsoleContainer
                         sticky={true}
                         label={'apiMarket'}
                         toggleOpen={this.toggleOpen.bind(this)}
-                        component={APIMarketConsole}
                         {...this.props} {...this.state}
                     />
                 </div>

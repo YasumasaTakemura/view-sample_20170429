@@ -2,7 +2,7 @@
  * Created by YasumasaTakemura on 2017/04/30.
  */
 import React, {Component, PropTypes} from 'react';
-import {container} from '../../componets/navigation/navigation'
+// import {container} from '../../componets/navigation/navigation'
 
 export default class renderNavigation extends Component{
 
@@ -18,7 +18,7 @@ export default class renderNavigation extends Component{
 
     render(){
         return <div style={{backgroundColor:'#435052'}}>
-            {container(this.navItems)}
+            {/*{container(this.navItems)}*/}
             {this.props.children}
             </div>
     }

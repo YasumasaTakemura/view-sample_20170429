@@ -6,9 +6,6 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 import * as css from './navigation.css'
 
-
-
-
 function renderItems(items) {
     return (
         <div className="nav-container">
@@ -35,7 +32,6 @@ function renderItems(items) {
 }
 
 export function container(links) {
-        console.log('here')
     return (
         <div>
             {renderItems(links)}

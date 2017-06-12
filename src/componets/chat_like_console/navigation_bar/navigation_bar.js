@@ -1,13 +1,15 @@
-
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
-import './navigationBar.css'
+import {Link} from 'react-router-dom'
+import './navigation_bar.css'
 
-export class NavigationBar extends Component{
-
-    container(){
+export class NavigationBar extends Component {
 
 
+    render() {
+
+        const {onShowHandler,navigationBarWidth} =this.props
+
+        // this will get from API
         let path = [
             {path: 'tasks', icon: "code"},
             {path: 'apiMarket', icon: "menu"},
@@ -15,17 +17,17 @@ export class NavigationBar extends Component{
             {path: 'navi', icon: "cloud"},
         ]
 
-        return(
-            <div className="navigationBar-container">
+        return (
+            <div style={{width:navigationBarWidth}} onDoubleClick={()=>onShowHandler()} className="navigationBar-container">
 
                 <button className="arrow prev material-icons">
                     navigate_before
                 </button>
 
-                {path.map((path)=>{
+                {path.map((path)=> {
                     return <button className="navigationBar-item material-icons">
                         <Link to={path.path}>
-                        {path.icon}
+                            {path.icon}
                         </Link>
                     </button>
                 })}
@@ -37,9 +39,5 @@ export class NavigationBar extends Component{
 
             </div>
         )
-    }
-
-    render(){
-        return(this.container())
     }
 }

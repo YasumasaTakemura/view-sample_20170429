@@ -4,7 +4,13 @@
 import React, {Component} from 'react';
 import {Sticky} from '../../shared_components/shared_components'
 
-export class MenuIconContainer extends Component {
+export const MenuIconContainerSwitcher = (props) => {
+    let {popUpState} = props;
+    return popUpState?<MenuIconContainer/>:null
+};
+
+
+class MenuIconContainer extends Component {
 
     state = {
         hoverOn: '',
@@ -73,7 +79,7 @@ let style = {
         top: '45px',
         display: 'flex',
         flexDirection: 'column',
-
+        zIndex:100
         // justifyContent: '',
     },
 

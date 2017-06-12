@@ -9,10 +9,9 @@ import {Provider} from 'react-redux'
 import {createStore, compose, combineReducers} from 'redux'
 
 import {data} from '../store/reducer/data'
-import  renderNavigation, {NavigationRoot} from '../containers/navigation/navigation'
+import  {NavigationRoot} from '../containers/navigation/navigation'
 import  APIMarket from '../containers/api_market/api_market'
 import  {Top} from '../componets/api_market/top'
-import  {NavigationBar} from '../componets/navigationBar/navigationBar'
 import  {TaskManager} from '../store/connects'
 
 
@@ -28,13 +27,11 @@ export let store = createStore(reducers,
 
 export default class App extends Component {
     render() {
-        console.log(this.props)
         return (
             <Provider store={store}>
 
                 <Router history={history}>
                     <NavigationRoot>
-                        {/*<Route path='/' component={renderNavigation}/>*/}
                         <Route exact path='/tasks' component={TaskManager}/>
                         <Route exact path='/navi' component={TaskManager}/>
                         <Route exact path='/apiMarket' component={APIMarket}/>
@@ -44,7 +41,7 @@ export default class App extends Component {
 
 
                 </Router>
-            </Provider >
+            </Provider>
         )
     }
 }
