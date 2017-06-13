@@ -53,15 +53,15 @@ export class Details extends Component {
                 overflow: 'auto',
                 height: `${h * 1}`
             },
-            badge:{
-              // backgroundColor:'red',
+            badge: {
+                // backgroundColor:'red',
                 // width:50,
                 // height:50,
                 // borderRadius:'50%',
-                position:'absolute',
-                right:0,
-                top:-10,
-                textAlign:'center',
+                position: 'absolute',
+                right: 0,
+                top: -10,
+                textAlign: 'center',
             },
         };
 
@@ -100,7 +100,11 @@ const Price = (props)=> {
 
     return <div style={props.styles.subContainer}>
 
-        <div style={{ position:'relative',}}>Price<OnSaleBudge {...props}/></div>
+        <div style={{
+            position: 'relative',
+            fontWeight: 500,
+            fontSize: 18,
+        }}>Price<OnSaleBudge {...props}/></div>
 
         <div style={props.styles.price}>
 
@@ -147,13 +151,16 @@ const Price = (props)=> {
 const OnSaleBudge = (props)=> {
     const {styles} = props
     return <span style={styles.badge}>
-       <img style={{width:60,height:60}} src="http://graphichive.net/uploaded/fordesigner/1313333402.jpg"/>
+       <img style={{width: 60, height: 60}} src="http://graphichive.net/uploaded/fordesigner/1313333402.jpg"/>
     </span>
 }
 
 const Description = (props)=> {
     return <div style={props.styles.subContainer}>
-        <div>Description</div>
+        <div style={{
+            fontWeight: 500,
+            fontSize: 18,
+        }}>Description</div>
         <div style={props.styles.description}>{props.app.description}</div>
     </div>
 };

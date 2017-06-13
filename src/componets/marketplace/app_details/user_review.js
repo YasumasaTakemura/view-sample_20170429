@@ -12,6 +12,7 @@ export default class UserReview extends Component {
 
         const styles = {
             container: {
+                overflow:'auto',
                 display:'flex',
                 flexDirection:'column',
                 flexWrap:'wrap',
@@ -20,14 +21,21 @@ export default class UserReview extends Component {
                 margin:20
             },
             subContainer: {
-                margin:'0 0 5px 0',
-                width:width * 0.4
+                margin:'0 15px 10px 0',
+                width:width * 0.2
 
             },
-            // title:{ width:width},
-            // username:{ width:width},
-            // stars:{ width:width},
-            // review:{ width:width},
+            title:{
+                fontWeight:500,
+                fontSize:18,
+            },
+            username:{ },
+            stars:{ },
+            review:{ },
+            timestamp:{
+                backgroundColor:'white',
+                float: 'right',
+            },
         };
 
         return <div style={styles.container}>
@@ -36,10 +44,10 @@ export default class UserReview extends Component {
                 const {username, title, review, stars, timestamp} = item;
 
                 return <div style={styles.subContainer}>
-                    <div style={{float: 'right'}}>{timestamp}</div>
+                    <div style={styles.timestamp}>{timestamp}</div>
                     <div style={styles.title}>{title}</div>
                     <div style={styles.username}>{username}</div>
-                    <div style={styles.stars}><Stars stars={stars}/> ({reviews.length})</div>
+                    <div style={styles.stars}><Stars stars={stars}/> ({stars})</div>
                     <div style={styles.review}>{review}</div>
 
                 </div>

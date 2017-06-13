@@ -10,8 +10,6 @@ export class KPIs extends Component{
             <div>aaaa</div>
             <div>aaaa</div>
             <div>aaaa</div>
-
-
         </div>
     }
 }

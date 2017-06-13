@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {ConsoleContainer}  from '../../componets/chat_like_console/console'
-import {Title, Buy, SS, Details,UserReview} from '../index';
+import {Title, Buy, SS, Details,UserReview,Payment} from '../index';
 import './app_details.css'
 import {w, h} from '../../componets/shared_components/shared_components'
 
@@ -14,6 +14,7 @@ export default class AppDetails extends Component {
         super(props);
         this.state = {
             consoleWidth: 300,
+            payment: false,
             app: {
                 app_id: 0,
                 title: 'teste test test',
@@ -105,11 +106,39 @@ export default class AppDetails extends Component {
                     {
                         user_id: 2,
                         username: 'test_man',
-                        title: 'rev title',
+                        title: 'this is a good app but something is not working',
                         stars: 4.0,
                         review: 'this app is sooo good!',
                         timestamp: '2017/06/12'
                     }, {
+                        user_id: 3,
+                        title: 'rev title',
+                        username: 'takemura',
+                        stars: 4.0,
+                        review: 'この世界の名は「ライブラリ」 物語と言葉が支配する空間。 悲鳴が聞こえる。 嗚咽が聞こえる。 嘲笑が聞こえる。 咆哮が聞こえる。!',
+                        timestamp: '2017/06/13'
+                    }, {
+                        user_id: 4,
+                        title: 'rev title',
+                        username: 'michele',
+                        stars: 4.0,
+                        review: 'this app is sooo good!',
+                        timestamp: '2017/06/14'
+                    }, {
+                        user_id: 5,
+                        title: 'rev title',
+                        username: '$$$$',
+                        stars: 2.0,
+                        review: 'this app is sooo good!',
+                        timestamp: '2017/06/13'
+                    }, {
+                        user_id: 6,
+                        title: 'rev title',
+                        username: 'mr.CC',
+                        stars: 3.0,
+                        review: 'この世界の名は「ライブラリ」 物語と言葉が支配する空間。 悲鳴が聞こえる。 嗚咽が聞こえる。 嘲笑が聞こえる。 咆哮が聞こえる。!',
+                        timestamp: '2017/06/14'
+                    },{
                         user_id: 3,
                         title: 'rev title',
                         username: 'takemura',
@@ -121,6 +150,48 @@ export default class AppDetails extends Component {
                         title: 'rev title',
                         username: 'michele',
                         stars: 4.0,
+                        review: 'この世界の名は「ライブラリ」 物語と言葉が支配する空間。 悲鳴が聞こえる。 嗚咽が聞こえる。 嘲笑が聞こえる。 咆哮が聞こえる。!',
+                        timestamp: '2017/06/14'
+                    }, {
+                        user_id: 5,
+                        title: 'rev title',
+                        username: '$$$$',
+                        stars: 2.0,
+                        review: 'この世界の名は「ライブラリ」 物語と言葉が支配する空間。 悲鳴が聞こえる。 嗚咽が聞こえる。 嘲笑が聞こえる。 咆哮が聞こえる。!',
+                        timestamp: '2017/06/13'
+                    }, {
+                        user_id: 6,
+                        title: 'rev title',
+                        username: 'mr.CC',
+                        stars: 3.0,
+                        review: 'this app is sooo good!',
+                        timestamp: '2017/06/14'
+                    },{
+                        user_id: 3,
+                        title: 'rev title',
+                        username: 'takemura',
+                        stars: 4.0,
+                        review: 'this app is sooo good!',
+                        timestamp: '2017/06/13'
+                    }, {
+                        user_id: 4,
+                        title: 'rev title',
+                        username: 'michele',
+                        stars: 4.0,
+                        review: 'this app is sooo good!',
+                        timestamp: '2017/06/14'
+                    }, {
+                        user_id: 5,
+                        title: 'rev title',
+                        username: '$$$$',
+                        stars: 2.0,
+                        review: 'this app is sooo good!',
+                        timestamp: '2017/06/13'
+                    }, {
+                        user_id: 6,
+                        title: 'rev title',
+                        username: 'mr.CC',
+                        stars: 3.0,
                         review: 'this app is sooo good!',
                         timestamp: '2017/06/14'
                     },
@@ -175,24 +246,25 @@ export default class AppDetails extends Component {
         return sum / app.reviews.length;
     }
 
-    countReviews(app) {
-        let sum = 0;
-
-        for (let i in app.reviews) {
-            sum += i
-        }
-        return sum
+     goPayment() {
+        this.setState({
+            payment:!this.state.payment
+        })
     }
 
+
     render() {
-        const {app, consoleWidth} = this.state;
+        const {app, consoleWidth,payment} = this.state;
 
         const size ={
             width :`${w*0.7}`
         }
 
         const styles = {
-            rootContainer: {},
+            rootContainer: {
+                              overflowX: 'hidden',
+                overflowY: 'hidden',
+            },
             buy: {
                 display: 'flex',
                 borderRadius: 10,
@@ -208,19 +280,32 @@ export default class AppDetails extends Component {
             },
             details: {
                 display: 'flex',
+            },
+            space:{
+               marginBottom:70
+            },
+            payment:{
+
+                backgroundColor:'white',
+                width:700,
+                height:500,
+                borderRadius:10,
+                zIndex:120,
+                margin:'0 auto',
+
             }
         };
 
         return <div style={styles.rootContainer}>
             <div className="console-container">
 
-                <ConsoleContainer
-                    consoleWidth={consoleWidth}
-                    path={this.state.path}
-                />
+                <ConsoleContainer consoleWidth={consoleWidth} path={this.state.path}/>
+
             </div>
 
-            <div style={styles.buy}>
+            <Payment app={app} payment={payment} styles={styles.payment}/>
+
+            <div  onClick={()=>this.goPayment()} style={styles.buy}>
                 <Buy/>
             </div>
 
@@ -231,7 +316,9 @@ export default class AppDetails extends Component {
                 <Details app={app} height={`${h * 0.6}`}/>
             </div>
 
-            <UserReview app={app} width={size.width} height={`${h * 0.4}`}/>
+            <div style={styles.space}/>
+
+            <UserReview app={app} width={size.width} height={`${h * 0.5}`}/>
 
         </div>
     }

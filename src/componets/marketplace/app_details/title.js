@@ -4,7 +4,6 @@
 import React, {Component} from 'react';
 import {Stars} from '../../shared_components/user_review/stars'
 import {KPIs} from './kpis'
-import {Developer} from './developers'
 
 export const Title = (props)=> {
     const {app, getAppIcon, stars, countReviews} = props;
@@ -17,9 +16,7 @@ export const Title = (props)=> {
             height: 80,
             paddingLeft: 50,
             marginBottom:20,
-            // position:'fixed',
-            // width:'100%',
-            // zIndex:80,
+
         },
         icon: {
             flex: 1

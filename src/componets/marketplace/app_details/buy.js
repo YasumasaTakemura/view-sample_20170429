@@ -6,9 +6,6 @@ import {Hover} from '../../shared_components/shared_components';
 
 export default  class Buy extends Component {
 
-    goTransaction() {
-
-    }
 
     render() {
         const styles = {

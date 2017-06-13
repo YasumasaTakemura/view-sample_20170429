@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789b4267-4484-4c8a-9fd4-16e2a7cf0d9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/details.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/user_review/stars.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/marketplace/marketplace.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/description.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/payment.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/objectives.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/target.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/details.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/details.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/screenshot.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/screenshot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/title.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/title.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/rankings.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" afterPath="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/app_details/app_details.css" afterPath="$PROJECT_DIR$/src/containers/app_details/app_details.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/app_details/app_details.js" afterPath="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/index.js" afterPath="$PROJECT_DIR$/src/containers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/router.js" afterPath="$PROJECT_DIR$/src/router/router.js" />
     </list>
     <ignored path="sample_20170429.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,58 +38,30 @@
       <file leaf-file-name="app_details.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="233" column="71" selection-start-line="233" selection-start-column="71" selection-end-line="233" selection-end-column="71" />
+            <state relative-caret-position="822">
+              <caret line="307" column="49" selection-start-line="307" selection-start-column="49" selection-end-line="307" selection-end-column="49" />
               <folding>
                 <element signature="e#54#93#0" expanded="true" />
-                <marker date="1497368462000" expanded="false" signature="6450:6472" ph="..." />
-                <marker date="1497368462000" expanded="true" signature="6472:6945" ph="..." />
-                <marker date="1497368462000" expanded="true" signature="6520:6684" ph="..." />
-                <marker date="1497368462000" expanded="true" signature="6556:6665" ph="..." />
-                <marker date="1497368462000" expanded="false" signature="6710:6722" ph="..." />
-                <marker date="1497368462000" expanded="true" signature="6722:6764" ph="..." />
-                <marker date="1497368462000" expanded="true" signature="6865:6945" ph="..." />
-                <marker date="1497368462000" expanded="false" signature="6891:6907" ph="..." />
-                <marker date="1497368462000" expanded="true" signature="6907:6945" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="9967:9989" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="9989:10514" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="10037:10145" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="10073:10125" ph="..." />
+                <marker date="1497371979000" expanded="false" signature="10279:10291" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="10291:10333" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="10434:10514" ph="..." />
+                <marker date="1497371979000" expanded="false" signature="10460:10476" ph="..." />
+                <marker date="1497371979000" expanded="true" signature="10476:10514" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_review.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js">
+      <file leaf-file-name="payment.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/payment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="240">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#54#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rankings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="264" column="12" selection-start-line="264" selection-start-column="12" selection-end-line="264" selection-end-column="34" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#54#93#0" expanded="true" />
-                <element signature="e#399#3184#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/details.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="e#54#93#0" expanded="true" />
               </folding>
             </state>
@@ -103,10 +71,45 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="270">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#54#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kpis.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="title.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/title.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding>
+                <element signature="e#54#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_review.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#54#93#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.js" />
         <option value="$PROJECT_DIR$/src/componets/console/console.js" />
         <option value="$PROJECT_DIR$/src/componets/console/api_market/api_market.js" />
         <option value="$PROJECT_DIR$/src/componets/api_market/promotion_display.js" />
@@ -208,19 +210,20 @@
         <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/app_details.js" />
         <option value="$PROJECT_DIR$/src/router/router.js" />
         <option value="$PROJECT_DIR$/src/containers/app_details/app_details.css" />
-        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
-        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js" />
-        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/title.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/description.js" />
-        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/details.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
-        <option value="$PROJECT_DIR$/src/containers/index.js" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/user_review/stars.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/screenshot.js" />
-        <option value="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/details.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/title.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js" />
+        <option value="$PROJECT_DIR$/src/containers/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/payment.js" />
       </list>
     </option>
   </component>
@@ -1084,14 +1087,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/componets/console/console.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1355,16 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-          <folding>
-            <element signature="e#55#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_detail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1404,26 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1440,27 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#54#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/title.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="37" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/stars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1471,12 +1415,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/index.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/screenshot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="402">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
           <folding>
-            <element signature="e#54#119#0" expanded="true" />
+            <element signature="e#54#93#0" expanded="false" />
+            <element signature="e#1358#1570#0" expanded="false" />
+            <element signature="e#1595#1806#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/user_review/stars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#54#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1493,62 +1466,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/details.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#54#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/screenshot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-            <element signature="e#1358#1570#0" expanded="false" />
-            <element signature="e#1595#1806#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/user_review/stars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="45">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/title.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="233" column="71" selection-start-line="233" selection-start-column="71" selection-end-line="233" selection-end-column="71" />
+        <state relative-caret-position="-225">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
-            <marker date="1497368462000" expanded="false" signature="6450:6472" ph="..." />
-            <marker date="1497368462000" expanded="true" signature="6472:6945" ph="..." />
-            <marker date="1497368462000" expanded="true" signature="6520:6684" ph="..." />
-            <marker date="1497368462000" expanded="true" signature="6556:6665" ph="..." />
-            <marker date="1497368462000" expanded="false" signature="6710:6722" ph="..." />
-            <marker date="1497368462000" expanded="true" signature="6722:6764" ph="..." />
-            <marker date="1497368462000" expanded="true" signature="6865:6945" ph="..." />
-            <marker date="1497368462000" expanded="false" signature="6891:6907" ph="..." />
-            <marker date="1497368462000" expanded="true" signature="6907:6945" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="327">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#54#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/buy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#54#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="307" column="49" selection-start-line="307" selection-start-column="49" selection-end-line="307" selection-end-column="49" />
+          <folding>
+            <element signature="e#54#93#0" expanded="true" />
+            <marker date="1497371979000" expanded="true" signature="9967:9989" ph="..." />
+            <marker date="1497371979000" expanded="true" signature="9989:10514" ph="..." />
+            <marker date="1497371979000" expanded="true" signature="10037:10145" ph="..." />
+            <marker date="1497371979000" expanded="true" signature="10073:10125" ph="..." />
+            <marker date="1497371979000" expanded="false" signature="10279:10291" ph="..." />
+            <marker date="1497371979000" expanded="true" signature="10291:10333" ph="..." />
+            <marker date="1497371979000" expanded="true" signature="10434:10514" ph="..." />
+            <marker date="1497371979000" expanded="false" signature="10460:10476" ph="..." />
+            <marker date="1497371979000" expanded="true" signature="10476:10514" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/payment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
             <element signature="e#54#93#0" expanded="true" />
           </folding>
         </state>
