@@ -12,6 +12,7 @@ import {data} from '../store/reducer/data'
 import  {NavigationRoot} from '../containers/navigation/navigation'
 import  APIMarket from '../containers/api_market/api_market'
 import  Marketplace from '../containers/marketplace/marketplace'
+import  AppDetails from '../containers/app_details/app_details'
 import  {Top} from '../componets/api_market/top'
 import  {TaskManager} from '../store/connects'
 
@@ -36,7 +37,7 @@ export default class App extends Component {
                         <Route exact path='/tasks' component={TaskManager}/>
                         <Route exact path='/navi' component={TaskManager}/>
                         <Route exact path='/marketplace' component={Marketplace}/>
-                        <Route exact path='/marketplace/:app_id' component={TaskManager}/>
+                        <Route exact path='/marketplace/:app_id' component={AppDetails}/>
                         <Route exact path='/apiMarketTop' component={Top}/>
 
                     </NavigationRoot>

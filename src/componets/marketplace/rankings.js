@@ -3,12 +3,14 @@
  */
 import React, {Component} from 'react';
 import {LoadingComponent} from '../shared_components/loading';
+import {Stars} from '../shared_components/user_review/stars'
 import './rankings.css'
+
 export class Rankings extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hover:false,
+            hover: false,
             apps: [
                 {
                     app_id: 0,
@@ -22,19 +24,19 @@ export class Rankings extends Component {
                         {
                             user_id: 2,
                             username: 'test man',
-                            star: 4,
+                            stars: 4,
                             review: 'this app is sooo good!',
                             timestamp: '2017/06/12'
                         }, {
                             user_id: 3,
                             username: 'test man3',
-                            star: 3,
+                            stars: 3,
                             review: 'this app is sooo good!',
                             timestamp: '2017/06/12'
                         }, {
                             user_id: 4,
                             username: 'test man4',
-                            star: 4,
+                            stars: 4,
                             review: 'this app is sooo good!',
                             timestamp: '2017/06/12'
                         },
@@ -55,19 +57,19 @@ export class Rankings extends Component {
                         {
                             user_id: 2,
                             username: 'test man',
-                            star: 3,
+                            stars: 3,
                             review: 'this app is sooo good!',
                             timestamp: '2017/06/12'
                         }, {
                             user_id: 3,
                             username: 'test man3',
-                            star: 2,
+                            stars: 2,
                             review: 'this app is sooo good!',
                             timestamp: '2017/06/12'
                         }, {
                             user_id: 4,
                             username: 'test man4',
-                            star: 4,
+                            stars: 4,
                             review: 'this app is sooo good!',
                             timestamp: '2017/06/12'
                         },
@@ -90,25 +92,24 @@ export class Rankings extends Component {
     }
 
     countStars(reviews) {
-
         let sum_start = 0;
         for (let review of reviews) {
-            sum_start += review.star
+            sum_start += review.stars
         }
-        const ave_start = sum_start / reviews.length;
-
-        return ave_start
-    }
-
-    onHover(){
-        this.setState({hover:true});
+        return sum_start / reviews.length;
 
     }
+
+    onHover() {
+        this.setState({hover: true});
+
+    }
+
     offHover() {
         this.setState({hover: false})
     }
 
-    checkDetails(app_id){
+    checkDetails(app_id) {
         console.log(app_id)
     }
 
@@ -131,7 +132,7 @@ export class Rankings extends Component {
                 marginRight: '20px'
             },
             appListContainerBGColor: {
-                backgroundColor:'white'
+                backgroundColor: 'white'
             },
         };
 
@@ -186,11 +187,11 @@ const AppListContainer = (props)=> {
 
         {apps.map((item, index)=> {
 
-            const _props={
-                length:apps.length,
-                 app:item,
-                 index:index,
-                 stars:countStars(item.reviews),
+            const _props = {
+                length: apps.length,
+                app: item,
+                index: index,
+                stars: countStars(item.reviews),
             };
 
             if (index + 1 === apps.length) {
@@ -208,10 +209,7 @@ const AppListContainer = (props)=> {
 };
 
 const AppList = (props)=> {
-    const {app, getAppIcon,checkDetails,onHover,offHover,hover, stars, index} = props;
-
-    console.log(hover)
-
+    const {app, getAppIcon, checkDetails,hover, stars, index} = props;
     const styles = {
         container: {
             display: 'flex',
@@ -234,14 +232,14 @@ const AppList = (props)=> {
             margin: 10,
             padding: 5,
             borderRadius: 3,
-            textAlign:'left'
+            textAlign: 'left'
         }, boxWithWhiteBGC: {
             flex: 9,
             width: '100%',
             margin: 10,
             padding: 5,
             borderRadius: 3,
-            textAlign:'left',
+            textAlign: 'left',
             backgroundColor: 'white',
         },
         img: {
@@ -261,97 +259,14 @@ const AppList = (props)=> {
             <img style={styles.img} src={getAppIcon(app.app_id)}/>
         </div>
 
-        <div style={hover?styles.boxWithWhiteBGC:styles.box}>
+        <div style={styles.box}>
             <div>{app.title}</div>
             <div>{app.category}</div>
             <Stars stars={stars}/>
+            <span>({app.reviews.length})</span>
 
         </div>
 
     </div>
 };
 
-const Stars = (props)=> {
-    const {stars} = props;
-    console.log(stars);
-
-    switch (true) {
-        case (stars === 0):
-            return <div><span>☆</span></div>;
-        case stars < 1:
-            return <StartPattern star={0}/>;
-        case 1 <= stars && stars < 2:
-            return <StartPattern star={1}/>;
-        case 2 <= stars && stars < 3:
-            return <StartPattern star={2}/>;
-        case 3 <= stars && stars < 4:
-            return <StartPattern star={3}/>;
-        case 4 <= stars && stars < 5:
-            return <StartPattern star={4}/>;
-        case stars === 5:
-            return <StartPattern star={5}/>;
-        default:
-            return <div> ☆ </div>
-    }
-};
-
-const StartPattern = (props)=> {
-    const styles = {
-        vote:{color: '#FFD700'},
-        notVote:{color: '#ddd'},
-    };
-
-    switch (true) {
-        case props.star === 0:
-            return <div>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-
-            </div>;
-        case props.star === 1:
-            return <div>
-                <span style={styles.vote}>★</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-
-            </div>;
-        case props.star === 2:
-            return <div>
-                <span style={styles.vote}>★</span>
-                <span style={styles.vote}>★</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-
-            </div>;
-        case props.star === 3:
-            return <div>
-                <span style={styles.vote}>★</span>
-                <span style={styles.vote}>★</span>
-                <span style={styles.vote}>★</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-            </div>;
-        case props.star === 4:
-            return <div>
-                <span style={styles.vote}>★</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-                <span style={styles.notVote}>☆</span>
-            </div>;
-        case props.star === 5:
-            return <div>
-                   <span style={styles.vote}>★</span>
-                   <span style={styles.vote}>★</span>
-                   <span style={styles.vote}>★</span>
-                   <span style={styles.vote}>★</span>
-                   <span style={styles.vote}>★</span>
-            </div>;
-    }
-}

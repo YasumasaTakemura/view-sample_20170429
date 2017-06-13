@@ -1,0 +1,11 @@
+
+.console-container{
+    z-index: 100;
+    position: fixed;
+  top: 0;
+  height: 100%;
+  transition: right .5s; /* アニメーション */
+  background-color: white;
+  /*background-color: rgba(86, 86, 86, .7);*/
+
+}

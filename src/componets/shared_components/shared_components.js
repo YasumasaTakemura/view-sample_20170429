@@ -3,6 +3,9 @@
  */
 import React, {Component} from 'react';
 
+export const w = window.innerWidth;
+export const h = window.innerHeight;
+
 export class Sticky extends Component {
     constructor(props) {
         super(props);
@@ -47,3 +50,28 @@ export class Sticky extends Component {
     }
 }
 
+
+export class Hover extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            hover:false,
+        };
+    }
+
+    onHover(){
+        this.setState({hover:true});
+
+    }
+    offHover() {
+        this.setState({hover: false})
+    }
+
+    render(){
+        const {on,off} = this.props
+        const {hover} = this.state
+        return <div style={hover?on:off} onMouseEnter={this.onHover.bind(this)} onMouseLeave={this.offHover.bind(this)}>
+            {this.props.children}
+        </div>
+    }
+}

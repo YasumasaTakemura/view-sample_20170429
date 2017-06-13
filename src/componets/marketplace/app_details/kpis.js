@@ -3,8 +3,15 @@
  */
 import React, {Component} from 'react';
 
-export default class Title extends Component{
+export class KPIs extends Component{
     render(){
-        return<div></div>
+        return <div style={this.props.style}>
+
+            <div>aaaa</div>
+            <div>aaaa</div>
+            <div>aaaa</div>
+
+
+        </div>
     }
 }
