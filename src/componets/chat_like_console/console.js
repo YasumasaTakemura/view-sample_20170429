@@ -21,7 +21,7 @@ let ConsoleSwitcher = (props) => {
             return <TaskManagerConsole {...props}/>;
         // case 'navi':
         //     return <NaviConsole {...props}/>;
-        case 'apiMarket':
+        case 'marketplace':
             return <APIMarketConsole {...props}/>;
         default:
             return <div>aaa</div>
@@ -34,7 +34,7 @@ export class ConsoleContainer extends Component {
     constructor() {
         super();
         this.state = {
-            consoleState: true,
+            consoleState: false,
         }
     }
 
@@ -77,6 +77,7 @@ export class ConsoleContainer extends Component {
                 className="console-container"
             >
                 <NavigationBar
+                    consoleState={this.state.consoleState}
                     navigationBarWidth={styles.navigationBarWidth}
                     onShowHandler={this.onShowHandler.bind(this)}/>
                 <ConsoleSwitcher

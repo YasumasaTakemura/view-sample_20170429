@@ -10,7 +10,7 @@ export default class renderNavigation extends Component{
 
         {name: 'tasks', uri: 'tasks'},
         {name: 'schedule', uri: 'schedule'},
-        {name: 'storage', uri: 'storage'},
+        {name: 'storage', uri: 'marketplace'},
         {name: 'documents', uri: 'docs'},
         {name: 'goals', uri: 'goals'},
     ]

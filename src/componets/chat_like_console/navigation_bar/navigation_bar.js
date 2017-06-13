@@ -13,12 +13,27 @@ export class NavigationBar extends Component {
         let path = [
             {path: 'tasks', icon: "code"},
             {path: 'apiMarket', icon: "menu"},
-            {path: 'apiMarketTop', icon: "mail_outline"},
+            {path: 'marketplace', icon: "mail_outline"},
             {path: 'navi', icon: "cloud"},
         ]
 
+        const styles={
+            container:{
+                display:'flex',
+                justifyContent:'space-between',
+                width:navigationBarWidth,
+            },
+            arrow:{
+                color:'white'
+            }
+        }
+
         return (
-            <div style={{width:navigationBarWidth}} onDoubleClick={()=>onShowHandler()} className="navigationBar-container">
+            <div style={{width:navigationBarWidth}} className="navigationBar-container">
+
+                <div onClick={ ()=>onShowHandler()}>
+                    {this.props.consoleState?<label style={styles.arrow} className="arrow prev material-icons">navigate_before</label>:<label style={styles.arrow} className="arrow next material-icons">navigate_next</label>}
+                </div>
 
                 <button className="arrow prev material-icons">
                     navigate_before

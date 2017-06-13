@@ -2,28 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789b4267-4484-4c8a-9fd4-16e2a7cf0d9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/chat_interface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/console_inner_input.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/console/task_manager/task_manager.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/console/api_market/api_market.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_app_marketplace/task_app_marketplace.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/console/console.css" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/console.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/console/console.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/ad_header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/marketplace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/rankings.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/loading.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/navigation_tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/marketplace/marketplace.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/api_market/top.js" afterPath="$PROJECT_DIR$/src/componets/api_market/top.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/navigation/navigation.js" afterPath="$PROJECT_DIR$/src/componets/navigation/navigation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/shared_components/chat_interface.js" afterPath="$PROJECT_DIR$/src/componets/shared_components/chat_interface.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" afterPath="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/menu_icons/menu_icons.js" afterPath="$PROJECT_DIR$/src/componets/task_manager/menu_icons/menu_icons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/api_market/api_market.js" afterPath="$PROJECT_DIR$/src/containers/api_market/api_market.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/navigation/navigation.js" afterPath="$PROJECT_DIR$/src/containers/navigation/navigation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" afterPath="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/router.js" afterPath="$PROJECT_DIR$/src/router/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/task_manager.js" afterPath="$PROJECT_DIR$/temp/task_manager.js" />
     </list>
     <ignored path="sample_20170429.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,36 +40,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="console.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.js">
+      <file leaf-file-name="navigation_bar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#146#207#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="435">
+              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat_interface.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/componets/shared_components/chat_interface.js">
+      <file leaf-file-name="rankings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="e#54#93#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_manager.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.css">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/router/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="75">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rankings.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ad_header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/ad_header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/shared_components/loading.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="marketplace.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -94,8 +128,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -147,15 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog/tasklog.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/task_manager.js" />
-        <option value="$PROJECT_DIR$/src/db/data.json" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/task_manager.css" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" />
         <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css" />
         <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css" />
         <option value="$PROJECT_DIR$/src/containers/APIMarket/APIMarket.js" />
@@ -178,11 +203,7 @@
         <option value="$PROJECT_DIR$/src/componets/task_manager/menu_icons/menu_icons.js" />
         <option value="$PROJECT_DIR$/src/componets/console/task_manager/task_manager.js" />
         <option value="$PROJECT_DIR$/src/componets/console/console.css" />
-        <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
         <option value="$PROJECT_DIR$/src/componets/navigationBar/navigationBar.css" />
-        <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" />
-        <option value="$PROJECT_DIR$/src/containers/navigation/navigation.js" />
-        <option value="$PROJECT_DIR$/src/router/router.js" />
         <option value="$PROJECT_DIR$/src/componets/api_market/top.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager2.js" />
         <option value="$PROJECT_DIR$/src/containers/api_market/api_market.js" />
@@ -190,14 +211,27 @@
         <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
         <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/console.css" />
-        <option value="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/console_input.js" />
-        <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.css" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/console_inner_input.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js" />
-        <option value="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/AdHeader.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/marketplace.js" />
+        <option value="$PROJECT_DIR$/src/containers/marketplace/marketplace.css" />
+        <option value="$PROJECT_DIR$/src/containers/navigation/navigation.js" />
+        <option value="$PROJECT_DIR$/src/componets/shared_components/loading.js" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/chat_interface.js" />
+        <option value="$PROJECT_DIR$/src/componets/shared_components/navigation_tab.js" />
+        <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
+        <option value="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
+        <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" />
+        <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/ad_header.js" />
+        <option value="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
+        <option value="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.css" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
+        <option value="$PROJECT_DIR$/src/router/router.js" />
       </list>
     </option>
   </component>
@@ -420,6 +454,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="marketplace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="containers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="api_market" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -504,6 +560,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="marketplace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="componets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="chat_like_console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -556,55 +634,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="task_app_marketplace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_20170429" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_20170429" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="componets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chat_like_console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="navigation_bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_20170429" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_20170429" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="componets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api_market" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -646,11 +676,11 @@
       <recent name="$PROJECT_DIR$/src/componets/task_manager" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/componets/marketplace" />
       <recent name="$PROJECT_DIR$/src/componets/chat_like_console" />
       <recent name="$PROJECT_DIR$/src/componets/console" />
       <recent name="$PROJECT_DIR$/src/componets/task_manager/menu_icons" />
       <recent name="$PROJECT_DIR$/src/containers/task_manager" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -973,70 +1003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/json-parse-helpfulerror/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/json-parse-helpfulerror/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/json-schema/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-814">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/loadash/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/task_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/data.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/react-sticky/lib/Sticky.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1506">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-sticky/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-draggable/typings/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1143,16 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <marker date="1497239894000" expanded="true" signature="440:554" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/api_market/viewer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1205,24 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_app_marketplace/task_app_marketplace.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1238,50 +1176,8 @@
         <state relative-caret-position="345">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#54#93#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/connects.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="68" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
-          <folding>
-            <element signature="e#55#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/navigation/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/shared_components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="54" column="79" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,14 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1309,11 +1197,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/console_inner_input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/navigation/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducer/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/connects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/navigation/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="34" column="0" selection-start-line="33" selection-start-column="34" selection-end-line="34" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/marketplace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+          <folding>
+            <element signature="e#207#3093#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/navigation_tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/chat_interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#54#93#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,41 +1317,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+        <state relative-caret-position="74">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding>
-            <element signature="e#54#93#0" expanded="true" />
-            <element signature="e#672#920#0" expanded="false" />
+            <element signature="e#54#93#0" expanded="false" />
+            <element signature="e#649#897#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/console_inner_input.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/shared_components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="705">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/ad_header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <element signature="e#54#93#0" expanded="true" />
+            <marker date="1497325208000" expanded="true" signature="4584:4602" ph="..." />
+            <marker date="1497325208000" expanded="true" signature="4602:5262" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+        <state relative-caret-position="-48">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#146#207#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#54#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/chat_interface.js">
+    <entry file="file://$PROJECT_DIR$/src/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

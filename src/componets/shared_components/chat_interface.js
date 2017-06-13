@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {ConsoleInnerInput} from './console_inner_input'
-
+import {LoadingComponent} from '../shared_components/loading';
 export class Chat extends Component {
     constructor(props) {
         super(props)
@@ -66,9 +66,6 @@ export class Chat extends Component {
         //dynamic style
         const styles = {
             container: {
-                // display: 'flex',
-                // flexDirection: 'column',
-                // justifyContent: 'space-between',
                 height: '100%',
                 overflow:'auto',
                 bottom:50,
@@ -92,11 +89,13 @@ export class Chat extends Component {
 
 
 const MessageContainer = (props)=> {
-    const {messages, styles} = props
-    console.log(messages)
+    const {messages, styles} = props;
 
     return <div style={styles.messageContainer}>
-        {messages.map((item,index)=><MessageBox length={messages.length} message={item} index={ index } {...props}/>)}
+        {messages.map((item,index)=>{
+            if(index+1===messages.length)return <LoadingComponent/>;
+            return <MessageBox length={messages.length} message={item} index={ index } {...props}/>
+        })}
     </div>
 }
 
@@ -113,12 +112,10 @@ const MessageBox = (props)=> {
             width:'100%',
             marginBottom:100,
         },
-
         icon:{
             flex:1,
             alignSelf:'center'
         },
-
         box:{
             flex:9,
             width:'100%',
@@ -129,7 +126,7 @@ const MessageBox = (props)=> {
         }
     };
 
-    return <div style={index+1!==length?styles.container:styles.lastContainer}>
+    return <div style={styles.container}>
         <div style={styles.icon}>
             <img style={{width: 30, height: 30}} src={getUserIcon(message.user_id)}/>
         </div>

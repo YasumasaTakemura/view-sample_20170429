@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import './task_manager.css'
-import {InnerNavigationBar} from '../../shared_components/shared_components'
+import {NavigationTab} from '../../shared_components/navigation_tab'
 import {Chat} from '../../shared_components/chat_interface'
 import {Searcher} from './searcher'
 
@@ -24,7 +24,7 @@ export class TaskManagerConsole extends Component {
     render() {
         const {navigationBarWidth, taskListUpdater} = this.props;
 
-        //for innerNavigator props
+        //for props
         const innerNavigatorBarProps = {
             tabs: 2, mapper: [
                 {
@@ -35,8 +35,9 @@ export class TaskManagerConsole extends Component {
                     text: 'SEARCH'
                 },
             ]
-        }
+        };
 
+        //for dynamic styling
         const styles = {
             container: {
                 paddingLeft: navigationBarWidth,
@@ -44,9 +45,12 @@ export class TaskManagerConsole extends Component {
         };
 
         return <div style={styles.container} className="task-manager container">
-            <InnerNavigationBar
+
+            <NavigationTab
                 changeTab={this.changeTab.bind(this)}
-                innerNavigatorBarProps={innerNavigatorBarProps} {...this.state}/>
+                innerNavigatorBarProps={innerNavigatorBarProps}
+                {...this.state}/>
+
             <Switcher clickedID={this.state.clickedID} {...this.props}/>
         </div>
     }

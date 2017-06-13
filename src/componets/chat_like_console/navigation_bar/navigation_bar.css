@@ -9,7 +9,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .navigationBar-item .material-icons a{
