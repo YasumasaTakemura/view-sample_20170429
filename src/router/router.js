@@ -35,8 +35,8 @@ export default class App extends Component {
                     <NavigationRoot>
                         <Route exact path='/tasks' component={TaskManager}/>
                         <Route exact path='/navi' component={TaskManager}/>
-                        <Route exact path='/marketplace/:app_id' component={Marketplace}/>
                         <Route exact path='/marketplace' component={Marketplace}/>
+                        <Route exact path='/marketplace/:app_id' component={TaskManager}/>
                         <Route exact path='/apiMarketTop' component={Top}/>
 
                     </NavigationRoot>

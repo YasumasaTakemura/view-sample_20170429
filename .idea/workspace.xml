@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789b4267-4484-4c8a-9fd4-16e2a7cf0d9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/ad_header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_detail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/marketplace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/rankings.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/loading.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/shared_components/navigation_tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/marketplace/marketplace.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/description.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/developers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/kpis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/objectives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/screenshot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/stars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/target.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/marketplace/app_details/user_review.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/app_details/app_details.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/shared_components/chat_interface.js" afterPath="$PROJECT_DIR$/src/componets/shared_components/chat_interface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" afterPath="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/navigation/navigation.js" afterPath="$PROJECT_DIR$/src/containers/navigation/navigation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/router.js" afterPath="$PROJECT_DIR$/src/router/router.js" />
     </list>
     <ignored path="sample_20170429.iws" />
@@ -40,84 +35,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="navigation_bar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rankings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#54#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/router/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rankings.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ad_header.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/ad_header.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loading.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/shared_components/loading.js">
+      <file leaf-file-name="app_details.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="29" />
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="marketplace.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.css">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console_inner_input.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/shared_components/console_inner_input.js">
+      <file leaf-file-name="title.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/title.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="60">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -128,8 +70,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -181,11 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/console_components/console_components.css" />
-        <option value="$PROJECT_DIR$/src/containers/APIMarket/APIMarket.js" />
-        <option value="$PROJECT_DIR$/src/componets/api_market/promotion.js" />
-        <option value="$PROJECT_DIR$/src/componets/api_market/viewer.js" />
         <option value="$PROJECT_DIR$/src/componets/api_market/my_history.js" />
         <option value="$PROJECT_DIR$/src/componets/console_components/console_components.js" />
         <option value="$PROJECT_DIR$/src/componets/console_components/api_market.js" />
@@ -225,13 +162,18 @@
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" />
-        <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/ad_header.js" />
         <option value="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.css" />
+        <option value="$PROJECT_DIR$/src/containers/app_details/app_details.css" />
         <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
+        <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
         <option value="$PROJECT_DIR$/src/router/router.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/app_details.js" />
+        <option value="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/title.js" />
+        <option value="$PROJECT_DIR$/src/containers/index.js" />
       </list>
     </option>
   </component>
@@ -409,6 +351,24 @@
               <option name="myItemId" value="containers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="containers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="task_manager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -455,6 +415,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="marketplace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="containers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_details" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,6 +564,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="marketplace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_details" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="componets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="chat_like_console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -676,11 +684,11 @@
       <recent name="$PROJECT_DIR$/src/componets/task_manager" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/componets/marketplace/app_details" />
       <recent name="$PROJECT_DIR$/src/componets/marketplace" />
       <recent name="$PROJECT_DIR$/src/componets/chat_like_console" />
       <recent name="$PROJECT_DIR$/src/componets/console" />
       <recent name="$PROJECT_DIR$/src/componets/task_manager/menu_icons" />
-      <recent name="$PROJECT_DIR$/src/containers/task_manager" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1003,28 +1011,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/tasklog_timeline.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="261" column="13" selection-start-line="261" selection-start-column="13" selection-end-line="261" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/task_manager/menu_icons/menu_icons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/console/console_components.css" />
     <entry file="file://$PROJECT_DIR$/src/componets/task_manager/tasklog_timeline/popup.js" />
     <entry file="file://$PROJECT_DIR$/temp/task_manager.js" />
     <entry file="file://$PROJECT_DIR$/src/componets/navigationBar/navigationBar.js">
@@ -1350,14 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/marketplace/ad_header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1394,10 +1372,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="203" column="31" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="31" />
+        <state relative-caret-position="1815">
+          <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#54#93#0" expanded="true" />
@@ -1405,10 +1391,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/title.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding />
         </state>
       </provider>
