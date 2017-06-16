@@ -14,7 +14,7 @@ export class NavigationBar extends Component {
                 img: false
             },
             {
-                path: 'myapps',
+                path: 'my_apps',
                 icon: "https://cdn2.iconfinder.com/data/icons/web-icons/512/Gear-512.png",
                 img: true
             },
@@ -23,7 +23,7 @@ export class NavigationBar extends Component {
                 icon: "http://lab.appa.pe/wp-content/uploads/2015-06/flea-market-recommend/jp.co.crooz.android.snaps.png",
                 img: true
             },
-            {path: 'navi', icon: "cloud", img: false},
+            {path: 'my_api', icon:require('../../../../img/my_api.svg'), img: true},
         ];
 
 

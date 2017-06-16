@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 
 export const ConsoleInnerInput = (props)=>{
 
-    const {defaultInputStyle,label,consoleWidth} = props
+    const {defaultInputStyle,label,consoleWindowSize} = props
     const styles={
         space:{
             marginTop:10,
@@ -15,8 +15,8 @@ export const ConsoleInnerInput = (props)=>{
     }
     return <div style={defaultInputStyle}>
                 <div style={styles.space}/>
-                <input style={{width:'inherit'}} onChange={(e) => props.taskListUpdater(e.target.value)}/>
-                <label style={{marginLeft:20}}> {label} </label>
+                <input style={{width:consoleWindowSize*0.7}} onChange={(e) => props.taskListUpdater(e.target.value)}/>
+                <label style={{margin:'0 0 0 20px',padding:'0 10x 0 0'}}> {label} </label>
             </div>
 
 }

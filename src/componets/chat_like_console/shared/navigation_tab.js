@@ -22,7 +22,7 @@ export class NavigationTab extends Component {
     }
 
     render() {
-        const {clickedID, innerNavigatorBarProps, changeTab} = this.props;
+        const {clickedID, innerNavigatorBarProps,tab, changeTab,path} = this.props;
         const {_id} = this.state;
         const tabs = innerNavigatorBarProps.tabs;
         const mapper = innerNavigatorBarProps.mapper;
@@ -51,8 +51,10 @@ export class NavigationTab extends Component {
             }
         };
 
+        console.log(tab)
+
         return <div style={styles.container}>
-            {mapper.map((item)=> <Link to={`/tasks/${item.id}`}
+            {tab.map((item)=> <Link to={`/${path}/${item.id}`}
                                        onClick={()=>this.updateFocus(item.id)}
                                        style={_id === item.id ? styles.clicked : styles.unClicked }>{item.text}</Link>)}
 

@@ -47,16 +47,17 @@ export default class KPIs extends Component {
 
 
     render() {
-        const {apps, styles,currency} = this.props;
+        const {apps, currency, styles} = this.props;
+
         return <div style={styles}>
-            <Item apps={apps} currency={currency}aggregate={this.aggregate}/>
+            <Row apps={apps} currency={currency} aggregate={this.aggregate}/>
         </div>
     }
 
 }
 
-const Item = (props)=> {
-    const {apps, aggregate,currency} = props;
+const Row = (props)=> {
+    const {apps, aggregate, currency} = props;
     const styles = {
         container: {
             display: 'flex',
@@ -64,7 +65,6 @@ const Item = (props)=> {
             alignItems: 'center',
             margin: '0 0 20px 0',
             borderBottom: 'solid 1px gray',
-            backgroundColor: '#21B8F0',
             color: 'white'
         },
         icon: {},
@@ -85,7 +85,6 @@ const Item = (props)=> {
 
     let sums = aggregate(apps);
 
-    console.log(sums)
     return <div style={styles.container}>
 
         <div style={styles.title}>
@@ -94,15 +93,15 @@ const Item = (props)=> {
         </div>
         <div style={styles.price}>
             <div>Cost</div>
-            <div>{utils.convertCurrency(currency,sums.price)}</div>
+            <div>{utils.convertCurrency(currency, sums.price)}</div>
         </div>
         <div style={styles.monthly}>
             <div>monthly</div>
-            <div>{utils.convertCurrency(currency,sums.month)}</div>
+            <div>{utils.convertCurrency(currency, sums.month)}</div>
         </div>
         <div style={styles.t_fee}>
             <div>t/fee</div>
-            <div>{utils.convertCurrency(currency,sums.t_fee)}</div>
+            <div>{utils.convertCurrency(currency, sums.t_fee)}</div>
         </div>
 
     </div>

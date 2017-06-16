@@ -4,19 +4,25 @@
 
 import React, {Component} from 'react';
 import axios from 'axios'
-import './resister/resister.css'
-import pickerMapper from './resister/picker_options'
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
+import pickerMapper from '../shared/picker_options'
+import Input from '../shared/input'
+import Picker from '../shared/picker'
+import Selector from '../shared/selector'
+import Scheduler from '../shared/scheduler'
+import Submit from '../shared/submit'
+
 
 class Resister extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
+            templates:'',
             title:'',
             app:'',
             description:'',
             member:'',
+            to:'',
             trigger:'',
             loop:'',
             status:'',
@@ -28,56 +34,9 @@ class Resister extends Component {
         this.payload = this.state;
     }
 
-
-    resisterTasks() {
-        console.log(this.state)
-        console.log(this.payload)
-        // axios.post()
-    }
-
     getAppID() {
 
     }
-
-    // inputTitle(e) {
-    //     this.payload.title = e
-    // }
-    //
-    // inputApps(e) {
-    //     this.payload.apps = e
-    // }
-    //
-    // inputDescription(e) {
-    //     this.payload.destination = e
-    // }
-    //
-    // inputMember(e) {
-    //     this.payload.member = e
-    // }
-    //
-    // inputTrigger(e) {
-    //     this.payload.title = e
-    // }
-    //
-    // inputLoop(e) {
-    //     this.payload.loop = e
-    // }
-    //
-    // inputStatus(e) {
-    //     this.payload.status = e
-    // }
-    //
-    // inputCategory(e) {
-    //     this.payload.category = e
-    // }
-    //
-    // inputPeriod(e) {
-    //     this.payload.period = e
-    // }
-    //
-    // inputSchedule(e) {
-    //     this.payload.schedule = e
-    // }
 
     getOptions(options) {
         switch (options) {
@@ -93,18 +52,10 @@ class Resister extends Component {
         }
     }
 
-    updateInputValue(keyName,obj){
-        const OBJ = {}
-        OBJ[keyName] = obj
-        console.log(OBJ)
-        this.setState(OBJ)
-        this.payload =Object.assign({},this.payload,OBJ)
-    }
-
-    updatePickerValue(keyName,obj){
-        const OBJ = {}
-        OBJ[keyName] = obj.label
-        this.setState(OBJ)
+    updateValue(keyName,obj){
+        const OBJ = {};
+        OBJ[keyName] = obj;
+        this.setState(OBJ);
         this.payload =Object.assign({},this.payload,OBJ)
     }
 
@@ -112,30 +63,29 @@ class Resister extends Component {
         const label = 'resister';
 
         const {
+            templates,
             title,
             app,
             description,
             member,
+            to,
             trigger,
             loop,
             status,
             category,
             period,
-            schedule,} = this.state;
+            schedule,
+        } = this.state;
+
+        const {consoleWindowSize}= this.props;
 
         //dynamic style
         const styles = {
             container: {
-                height: '100%',
+                 height: '100%',
                 overflow: 'auto',
-                bottom: 50,
-                width: '100%',
-                padding:'10px 0 10px 10px'
-                // position:'relative'
-            },
-            subContainer: {
-                width: '90%',
-                margin:'5px 0 5px 0'
+                width:consoleWindowSize,
+
             },
             header: {
                 width: '90%',
@@ -153,38 +103,41 @@ class Resister extends Component {
                 color: 'white',
                 borderRadius: 5,
                 textAlign: 'center',
-                position: 'absolute',
-                bottom: 0,
-                margin: '0 auto',
-                width: '70%',
-                padding: '0 10 0 10'
+                bottom: 5,
+                width: consoleWindowSize * 0.9,
+                padding: 5,
+
             },
+            space:{
+                height:70,
+            }
 
         };
 
         const input_props = {
-            update: this.updateInputValue.bind(this),
+            update: this.updateValue.bind(this),
             styles: styles
         };
 
         const picker_props = {
              getOptions: this.getOptions,
-             update: this.updatePickerValue.bind(this),
+             update: this.updateValue.bind(this),
             styles: styles,
             ...this.state
         };
 
         const selector_props = {
-            update: this.updateInputValue.bind(this),
+            update: this.updateValue.bind(this),
             styles: styles
         };
 
         return <div style={styles.container}>
 
-            {/*<Title _input={this.inputTitle.bind(this)} styles={styles}/>*/}
+            <Picker name={'Templates'} keyName={'templates'} stateVal={templates} {...selector_props}/>
             <Input name={'Title'} keyName={'title'} {...input_props}/>
             <Input name={'Description'} ml={true} keyName={'description'} {...input_props}/>
             <Selector name={'Apps'} keyName={'app'} {...selector_props}/>
+            <Selector name={'To'} keyName={'to'} {...selector_props}/>
             <Selector name={'Member'} keyName={'member'} {...selector_props}/>
             <Picker name={'Trigger'} keyName={'trigger'} clearable={false} stateVal={trigger} {...picker_props} />
             <Picker name={'Loop'} keyName={'loop'} stateVal={loop} {...picker_props}/>
@@ -192,63 +145,64 @@ class Resister extends Component {
             <Picker name={'Category'} keyName={'category'} stateVal={category} {...picker_props}/>
             <Scheduler name={'Schedule'} {...input_props}/>
             <Scheduler name={'Period'} {...input_props}/>
-            <Submit resisterTasks={this.resisterTasks.bind(this)} styles={styles}/>
+            <div style={styles.space}/>
 
-            {/*<Trigger _input={this.inputTrigger.bind(this)} styles={styles} />*/}
-            {/*<Loop _input={this.inputLoop.bind(this)} styles={styles} />*/}
-            {/*<Status _input={this.inputStatus.bind(this)} styles={styles} />*/}
-            {/*<Category _input={this.inputCategory.bind(this)} styles={styles} />*/}
-            {/*<Schedule _input={this.inputSchedule.bind(this)} styles={styles} />*/}
-            {/*<Period _input={this.inputPeriod.bind(this)} styles={styles} />*/}
-
-
+            <Submit name={'Submit'} domain='submit/tasks' styles={styles}/>
         </div>
     }
 
 }
 
 
-const Input = (props)=> {
-    const {styles, update, name,keyName,ml=false} = props;
-    return <div style={styles.subContainer}>
-        <div style={styles.header}>{name}</div>
-        {ml?
-            <textarea style={styles.mlInput} onChange={(e)=>update(keyName,e.target.value)}/>:
-                <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>}
+// const Input = (props)=> {
+//     const {styles, update, name,keyName,ml=false} = props;
+//     return <div style={styles.subContainer}>
+//         <div style={styles.header}>{name}</div>
+//         {ml?
+//             <textarea style={styles.mlInput} onChange={(e)=>update(keyName,e.target.value)}/>:
+//                 <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>}
+//
+//     </div>
+// };
 
-    </div>
-};
+// const Selector = (props)=> {
+//     const {styles, update, name,keyName} = props;
+//     return <div style={styles.subContainer}>
+//         <div style={styles.header}>{name}</div>
+//         <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>
+//     </div>
+// };
+//
+// const Picker = (props)=> {
+//     const {styles, getOptions, update,stateVal,name, keyName} = props;
+//     const options = getOptions(keyName);
+//
+//     return <div style={styles.subContainer}>
+//         <div style={styles.header}>{name}</div>
+//         <Select value={stateVal || options[0].value} onChange={(e)=>update(keyName,e.label)} options={options}/>
+//     </div>
+// };
+//
+// const Scheduler = (props)=> {
+//     const {styles, _input, name} = props;
+//     return <div style={styles.subContainer}>
+//         <div style={styles.header}>{name}</div>
+//         <input style={styles.input} onChange={(e)=>_input(e.target.value)}/>
+//     </div>
+// };
+//
+// const Submit = (props)=> {
+//     const {styles,resisterTasks} = props;
+//     return <div onClick={()=>resisterTasks()} style={styles.submit}>SUBMIT</div>
+// };
+//
 
-const Selector = (props)=> {
-    const {styles, update, name,keyName} = props;
-    return <div style={styles.subContainer}>
-        <div style={styles.header}>{name}</div>
-        <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>
-    </div>
-};
 
-const Picker = (props)=> {
-    const {styles, getOptions, update,stateVal,name, keyName} = props;
-    const options = getOptions(keyName);
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
 
-    return <div style={styles.subContainer}>
-        <div style={styles.header}>{name}</div>
-        <Select value={stateVal || options[0].value} onChange={(e)=>update(keyName,e)} options={options}/>
-    </div>
-};
 
-const Scheduler = (props)=> {
-    const {styles, _input, name} = props;
-    return <div style={styles.subContainer}>
-        <div style={styles.header}>{name}</div>
-        <input style={styles.input} onChange={(e)=>_input(e.target.value)}/>
-    </div>
-};
-
-const Submit = (props)=> {
-    const {styles,resisterTasks} = props;
-    return <div onClick={()=>resisterTasks()} style={styles.submit}>SUBMIT</div>
-};
 
 
 const Title = (props)=> {

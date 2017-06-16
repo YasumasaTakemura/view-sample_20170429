@@ -6,8 +6,16 @@ import React, {Component} from 'react';
 export default class AppList extends Component {
 
     render() {
-        const {apps, styles,toggleQuitModal} = this.props
-        return <div style={styles}>
+        const {apps,toggleQuitModal} = this.props;
+
+        const styles = {
+            container: {
+                width: '90%',
+                margin: '0 auto'
+            },
+        };
+
+        return <div style={styles.container}>
             {apps.map((item,index)=> <Item app={item} index={index} toggleQuitModal={toggleQuitModal}/>)}
         </div>
     }

@@ -90,6 +90,8 @@ export class Chat extends Component {
     render() {
         const label = 'send';
 
+        const { consoleWindowSize } = this.props
+
         //dynamic style
         const styles = {
             container: {
@@ -97,7 +99,7 @@ export class Chat extends Component {
                 overflow: 'auto',
                 bottom: 50,
                 paddingBottom: 50,
-                // width:'100%'
+                width:consoleWindowSize
             },
             messageContainer: {
                 display: 'flex',

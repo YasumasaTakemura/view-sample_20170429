@@ -2,10 +2,9 @@
  * Created by YasumasaTakemura on 2017/06/12.
  */
 import React, {Component} from 'react';
-import './task_manager.css'
 import {NavigationTab} from '../shared/navigation_tab'
 import {Chat} from '../shared/chat_interface'
-import Resister from '../../chat_like_console/task_manager/resister'
+import Resister from './resister'
 import {Searcher} from './searcher'
 import {
   BrowserRouter as Router, Switch, Route, Redirect,  Link, NavLink, withRouter

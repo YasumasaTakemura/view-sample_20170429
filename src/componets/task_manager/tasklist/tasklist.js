@@ -175,10 +175,6 @@ const Icons = (props)=> {
         <div style={styles.category}>
             {category.length >0?<Category styles={styles.category} category={item.category}/>:null}
         </div>
-
-        {/*{status? <div style={styles.status}><Status styles={styles.status} status={item.status}/></div> : null}*/}
-        {/*{category.length >0?*/}
-            {/*<div style={styles.category}><Category styles={styles.category} category={item.category}/></div> : null}*/}
     </div>
 
 };

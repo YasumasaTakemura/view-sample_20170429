@@ -1,18 +1,18 @@
 /**
- * Created by YasumasaTakemura on 2017/06/14.
+ * Created by YasumasaTakemura on 2017/06/16.
  */
+
 import React, {Component} from 'react';
 import axios from 'axios'
+import {ConsoleContainer as Console, AppList, KPIs, Graph, QuitModal} from '../index';
 
-import {ConsoleContainer, AppList, KPIs, Graph, QuitModal} from '../index';
-
-export default class MyApps extends Component {
+class MyAPI extends Component {
     constructor() {
         super();
         this.state = {
             quit: false,
             currency: 'usd',
-                        consoleWidth: 350,
+            consoleWidth: 350,
             apps: [
                 {
                     app_id: 0,
@@ -69,19 +69,19 @@ export default class MyApps extends Component {
 
     render() {
         const {apps, quit,currency,consoleWidth} = this.state;
+
         const styles = {
             container: {
                 width: '90%',
                 margin: '0 auto'
             },
-
             kpiContainer:{
-                backgroundColor:'red'
+                backgroundColor:'pink'
             }
         };
 
         return <div>
-            <ConsoleContainer {...this.props} consoleWidth={consoleWidth}/>
+            <Console {...this.props} consoleWidth={consoleWidth}/>
             <KPIs apps={apps} currency={currency} styles={styles.kpiContainer}/>
             {/*<Graph apps={apps}/>*/}
             <AppList apps={apps} toggleQuitModal={this.toggleQuitModal.bind(this)} styles={styles.container}/>
@@ -92,3 +92,5 @@ export default class MyApps extends Component {
     }
 
 }
+
+export default MyAPI

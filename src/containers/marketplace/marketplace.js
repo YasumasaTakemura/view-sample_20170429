@@ -15,8 +15,7 @@ export default class Marketplace extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            consoleWidth: 300,
-            path: window.location.href.split('/').slice(-1)[0],
+            // consoleWidth: 300,
             apps: [
                 {
                     app_id: 0,
@@ -142,10 +141,7 @@ export default class Marketplace extends Component {
         return <div style={styles.container}>
             <div className="console-container">
 
-                <ConsoleContainer
-                    consoleWidth={consoleWidth}
-                    path={this.state.path}
-                />
+                <ConsoleContainer{...this.props}/>
             </div>
             <AdHeaderContainer {...this.props}/>
             <div style={styles.rankingContainer}>

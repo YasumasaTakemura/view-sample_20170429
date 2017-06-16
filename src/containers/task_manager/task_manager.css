@@ -3,8 +3,7 @@ body {
 }
 
 input {
-    /*width: 300px;*/
-    /*outline: none;*/
+    outline: none;
 }
 
 /* ----------------- */
@@ -39,9 +38,9 @@ input {
     padding-right: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    flex: 3;
+    /*flex: 3;*/
     overflow: auto;
-    width: 100%;
+    width: 300px;
 
 }
 

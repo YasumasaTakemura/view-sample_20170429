@@ -22,11 +22,9 @@ export class TaskManager extends Component {
         this.state = {
 
             consoleState: true,
-            consoleWidth: 300,
+            consoleWidth: 350,
             alertState: false,
             popUpState: false,
-
-            // path: window.location.href.split('/').slice(-1)[0],
             index: 0,
 
             containerBoarderStyleID: 'taskList',
@@ -405,14 +403,16 @@ export class TaskManager extends Component {
 
         // for a dynamic style
         const styles = {
-            taskList: {border: 'solid 2px red'},
+            taskList: {
+                border: 'solid 2px red'
+            },
             hidden: {
                 right: '-300px'
             },
             space: {
                 marginBottom: 20
             },
-        }
+        };
 
         return <div className="task-root">
 
@@ -446,6 +446,7 @@ export class TaskManager extends Component {
 
             <div style={styles.space}/>
             <div className="task-manager-container">
+
                 <div className="task-list-container">
                     <TaskListContainer
                         input={this.state.listInput}

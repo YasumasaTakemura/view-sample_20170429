@@ -12,6 +12,7 @@ import {data} from '../store/reducer/data'
 import  Marketplace from '../containers/marketplace/marketplace'
 import  AppDetails from '../containers/app_details/app_details'
 import  MyApps from '../containers/my_apps/my_apps'
+import  MyAPI from '../containers/my_api/my_api'
 import  Top from '../componets/api_market/top'
 import  {TaskManager} from '../store/connects'
 
@@ -35,7 +36,8 @@ const App = ()=> {
                     <Route exact path='/tasks' component={TaskManager}/>
                     <Route path='/marketplace/:app_id' component={AppDetails}/>
                     <Route exact path='/marketplace' component={Marketplace}/>
-                    <Route path='/myapps' component={MyApps}/>
+                    <Route path='/my_apps' component={MyApps}/>
+                    <Route path='/my_api' component={MyAPI}/>
                 </Switch>
             </Router>
         </Provider>
