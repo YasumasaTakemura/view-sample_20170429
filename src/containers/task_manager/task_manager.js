@@ -26,7 +26,7 @@ export class TaskManager extends Component {
             alertState: false,
             popUpState: false,
 
-            path: window.location.href.split('/').slice(-1)[0],
+            // path: window.location.href.split('/').slice(-1)[0],
             index: 0,
 
             containerBoarderStyleID: 'taskList',
@@ -103,6 +103,8 @@ export class TaskManager extends Component {
             data: [
                 {
                     title: 'tasks',
+                    status: 'immediately',
+                    category: ['input', 'check'],
                     description: '### テスト　勉強　\n\   You can see the progress on https://github.com/fixTypos/fix_typos/ \n\   [https://github.com/client9/misspell](https://github.com/client9/misspell)',
                     username: 'jake',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
@@ -141,6 +143,8 @@ export class TaskManager extends Component {
                     ],
                 }, {
                     title: 'tasks2',
+                    status: 'immediately',
+                    category: ['input', 'check'],
                     description: '',
                     username: 'jake',
                     photo: 'https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg',
@@ -187,6 +191,8 @@ export class TaskManager extends Component {
                 },
                 {
                     title: 'a',
+                    status: '',
+                    category: ['input', 'check'],
                     description: '',
                     icon: 'forward',
                     username: 'cathy',
@@ -233,6 +239,8 @@ export class TaskManager extends Component {
                 },
                 {
                     title: 'bb',
+                    status: 'hurry',
+                    category: ['input', 'check'],
                     description: '',
                     icon: 'forward',
                     username: 'ashleyford',
@@ -243,6 +251,8 @@ export class TaskManager extends Component {
                 },
                 {
                     title: 'vv',
+                    status: '',
+                    category: ['input', 'check'],
                     description: '',
                     icon: 'forward',
                     username: 'devid',
@@ -253,6 +263,8 @@ export class TaskManager extends Component {
                 },
                 {
                     title: 'ta',
+                    status:'',
+                    category: ['input', 'check'],
                     description: '',
                     icon: 'forward',
                     username: 'ashleyford',
@@ -386,8 +398,9 @@ export class TaskManager extends Component {
 
     render() {
 
+        console.log(this.props.match.params.tabs,)
 
-        const {containerBoarderStyleID, consoleState,consoleWidth} = this.state
+        const {containerBoarderStyleID, consoleState, consoleWidth} = this.state
         const jsonData = JSON.stringify(this.state.data);
 
         // for a dynamic style
@@ -395,26 +408,26 @@ export class TaskManager extends Component {
             taskList: {border: 'solid 2px red'},
             hidden: {
                 right: '-300px'
-            }
+            },
+            space: {
+                marginBottom: 20
+            },
         }
 
         return <div className="task-root">
 
-            <div className="console-container">
-
-                    <ConsoleContainer
-                        consoleState={consoleState}
-                        consoleWidth={consoleWidth}
-                        open={this.state.open}
-                        toggleOpen={this.toggleOpen.bind(this)}
-                        path={this.state.path}
-                        taskListUpdater={this.searchUpdatedForList.bind(this)}
-                        taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
-                        input={this.state.listInput}
-                        data={this.state.data}
-                        registerTaskList={this.registerTaskList.bind(this)}
-                    />
-                </div>
+            <ConsoleContainer
+                {...this.props}
+                consoleState={consoleState}
+                consoleWidth={consoleWidth}
+                open={this.state.open}
+                toggleOpen={this.toggleOpen.bind(this)}
+                taskListUpdater={this.searchUpdatedForList.bind(this)}
+                taskLogUpdater={this.searchUpdatedForMessages.bind(this)}
+                input={this.state.listInput}
+                data={this.state.data}
+                registerTaskList={this.registerTaskList.bind(this)}
+            />
 
             <MenuIconContainerSwitcher
                 popUpState={this.state.popUpState}
@@ -426,11 +439,14 @@ export class TaskManager extends Component {
             {/*toggleSliderClose={this.toggleSliderClose.bind(this)}*/}
             {/*/>*/}
 
-            <div className="task-manager-header"/>
-            <div className="task-manager-navigator"/>
+            {/*<div className="task-manager-header"/>*/}
+            {/*<div className="task-manager-navigator"/>*/}
+
+            {/*style={containerBoarderStyleID === 'taskList' ? styles.taskList : null}*/}
+
+            <div style={styles.space}/>
             <div className="task-manager-container">
-                <div className="task-list-container"
-                     style={containerBoarderStyleID === 'taskList' ? styles.taskList : null}>
+                <div className="task-list-container">
                     <TaskListContainer
                         input={this.state.listInput}
                         index={this.state.index}
@@ -452,12 +468,7 @@ export class TaskManager extends Component {
 
                     />
                 </div>
-
-
-
             </div>
-
-
         </div>
     }
 }

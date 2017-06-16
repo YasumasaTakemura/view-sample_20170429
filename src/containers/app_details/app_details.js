@@ -3,16 +3,19 @@
  */
 import React, {Component} from 'react';
 import {ConsoleContainer}  from '../../componets/chat_like_console/console'
-import {Title, Buy, SS, Details,UserReview,Payment} from '../index';
+import {GetAppData} from '../../utils/app_data'
+import {Title, Buy, SS, Details, UserReview, PaymentModal} from '../index';
 import './app_details.css'
 import {w, h} from '../../componets/shared_components/shared_components'
 
+const appData = new GetAppData();
 
 export default class AppDetails extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            app_id: this.props.match.params.app_id,
             consoleWidth: 300,
             payment: false,
             app: {
@@ -138,7 +141,7 @@ export default class AppDetails extends Component {
                         stars: 3.0,
                         review: 'この世界の名は「ライブラリ」 物語と言葉が支配する空間。 悲鳴が聞こえる。 嗚咽が聞こえる。 嘲笑が聞こえる。 咆哮が聞こえる。!',
                         timestamp: '2017/06/14'
-                    },{
+                    }, {
                         user_id: 3,
                         title: 'rev title',
                         username: 'takemura',
@@ -166,7 +169,7 @@ export default class AppDetails extends Component {
                         stars: 3.0,
                         review: 'this app is sooo good!',
                         timestamp: '2017/06/14'
-                    },{
+                    }, {
                         user_id: 3,
                         title: 'rev title',
                         username: 'takemura',
@@ -205,6 +208,7 @@ export default class AppDetails extends Component {
                     discount: 0.1,
                     refund: false,
                     onSale: true,
+                    trial: true,
                     campaign: {
                         condition: 'for now',
                         from: '2017/06/10',
@@ -225,17 +229,9 @@ export default class AppDetails extends Component {
     }
 
     componentWillMount() {
-        this.getAppID()
+        appData.getAppData(this.state.app_id)
     }
 
-    getAppID() {
-        const params = window.location.href.split('/').slice(-1)[0];
-        return params
-    }
-
-    getAppIcon(app_id) {
-        return 'https://image.flaticon.com/icons/svg/118/118793.svg'
-    }
 
 
     countStars(app) {
@@ -246,23 +242,23 @@ export default class AppDetails extends Component {
         return sum / app.reviews.length;
     }
 
-     goPayment() {
+    goPayment() {
         this.setState({
-            payment:!this.state.payment
+            payment: !this.state.payment
         })
     }
 
 
     render() {
-        const {app, consoleWidth,payment} = this.state;
+        const {app, consoleWidth, payment} = this.state;
 
-        const size ={
-            width :`${w*0.7}`
+        const size = {
+            width: `${w * 0.7}`
         }
 
         const styles = {
             rootContainer: {
-                              overflowX: 'hidden',
+                overflowX: 'hidden',
                 overflowY: 'hidden',
             },
             buy: {
@@ -281,35 +277,33 @@ export default class AppDetails extends Component {
             details: {
                 display: 'flex',
             },
-            space:{
-               marginBottom:70
+            space: {
+                marginBottom: 70
             },
-            payment:{
+            payment: {
 
-                backgroundColor:'white',
-                width:700,
-                height:500,
-                borderRadius:10,
-                zIndex:120,
-                margin:'0 auto',
+                backgroundColor: 'white',
+                width: 700,
+                height: 500,
+                borderRadius: 10,
+                zIndex: 120,
+                margin: '0 auto',
 
             }
         };
 
         return <div style={styles.rootContainer}>
-            <div className="console-container">
 
-                <ConsoleContainer consoleWidth={consoleWidth} path={this.state.path}/>
 
-            </div>
+            <ConsoleContainer/>
 
-            <Payment app={app} payment={payment} styles={styles.payment}/>
+            <PaymentModal app={app} payment={payment} styles={styles.payment}/>
 
-            <div  onClick={()=>this.goPayment()} style={styles.buy}>
+            <div onClick={()=>this.goPayment()} style={styles.buy}>
                 <Buy/>
             </div>
 
-            <Title app={app} getAppIcon={this.getAppIcon.bind(this)} stars={this.countStars(app)}/>
+            <Title app={app} getAppIcon={appData.getAppIcon.bind(this)} stars={this.countStars(app)}/>
 
             <div style={styles.details}>
                 <SS app={app} width={size.width} height={`${h * 0.6}`}/>

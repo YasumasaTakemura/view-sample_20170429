@@ -2,7 +2,6 @@
  * Created by YasumasaTakemura on 2017/05/28.
  */
 import React, {Component} from 'react';
-import {Sticky} from '../../shared_components/shared_components'
 
 export const MenuIconContainerSwitcher = (props) => {
     let {popUpState} = props;
@@ -55,7 +54,6 @@ let MenuIconItem = (props) => {
 };
 
 let MenuIconItemPopUpContainer = (props) => {
-    console.log(props.content)
     return <div style={style.popup}>
         {props.content.map((item,index)=> <MenuIconItemPopUpDescription key={index} item={item}/>)}
     </div>

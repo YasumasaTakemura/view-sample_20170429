@@ -1,28 +1,8 @@
-
 a {
     color: inherit;
     text-decoration: none;
 }
 .material-icons {
  line-height: 1;
-    /*background-color: #black;*/
 }
-
-.console-container{
-    position: fixed;
-  top: 0;
-  height: 100%;
-  transition: right .5s; /* アニメーション */
-  background-color: white;
-  /*background-color: rgba(86, 86, 86, .7);*/
-
-}
-
-/*-------------------------------------*/
-/* --- Main Components--- */
-/*-------------------------------------*/
-/* --- task console--- */
-/*-------------------------------------*/
-/* --- opening--- */
-/*-------------------------------------*/
 

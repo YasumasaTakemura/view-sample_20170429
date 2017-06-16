@@ -7,9 +7,19 @@ export class KPIs extends Component{
     render(){
         return <div style={this.props.style}>
 
-            <div>aaaa</div>
-            <div>aaaa</div>
-            <div>aaaa</div>
+            <div>
+                <div>Users</div>
+                <div>1074</div>
+            </div>
+            <div>
+                <div>aaaa</div>
+                <div>aaaa</div>
+            </div>
+            <div>
+                <div>aaaa</div>
+                <div>aaaa</div>
+            </div>
+
         </div>
     }
 }

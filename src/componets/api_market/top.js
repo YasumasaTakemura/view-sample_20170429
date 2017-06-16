@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import {ConsoleContainer} from '../../componets/chat_like_console/console'
 
 
-export class Top extends Component {
+class Top extends Component {
     constructor() {
         super();
         this.state = {
@@ -78,16 +78,10 @@ export class Top extends Component {
                     </div>
                 </div>
 
-                <div style={this.style.console}>
-                    <ConsoleContainer
-                        sticky={true}
-                        label={'apiMarket'}
-                        toggleOpen={this.toggleOpen.bind(this)}
-                        {...this.props} {...this.state}
-                    />
-                </div>
+                <ConsoleContainer/>
 
             </div>
         )
     }
 }
+export default Top

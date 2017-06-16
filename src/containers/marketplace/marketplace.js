@@ -8,6 +8,9 @@ import {AdHeaderContainer} from '../../componets/marketplace/ad_header'
 import {ConsoleContainer}  from '../../componets/chat_like_console/console'
 import './marketplace.css'
 
+
+
+
 export default class Marketplace extends Component {
     constructor(props) {
         super(props)
@@ -120,13 +123,8 @@ export default class Marketplace extends Component {
         //dynamic style
         const styles = {
             container: {
-
                 height: '100%',
                 overflow: 'auto',
-                // bottom: 50,
-                // paddingBottom: 50,
-
-
             },
             messageContainer: {
                 display: 'flex',

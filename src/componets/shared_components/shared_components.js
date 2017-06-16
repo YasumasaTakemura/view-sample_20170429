@@ -68,8 +68,8 @@ export class Hover extends Component{
     }
 
     render(){
-        const {on,off} = this.props
-        const {hover} = this.state
+        const {on,off} = this.props;
+        const {hover} = this.state;
         return <div style={hover?on:off} onMouseEnter={this.onHover.bind(this)} onMouseLeave={this.offHover.bind(this)}>
             {this.props.children}
         </div>

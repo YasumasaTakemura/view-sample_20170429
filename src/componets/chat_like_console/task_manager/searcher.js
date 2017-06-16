@@ -2,7 +2,7 @@
  * Created by YasumasaTakemura on 2017/06/12.
  */
 import React, {Component} from 'react';
-import {ConsoleInnerInput} from '../../shared_components/console_inner_input'
+import {ConsoleInnerInput} from '../shared/console_inner_input'
 
 export const Searcher = (props)=> {
 

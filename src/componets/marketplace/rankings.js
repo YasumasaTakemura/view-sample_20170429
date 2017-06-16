@@ -2,9 +2,14 @@
  * Created by YasumasaTakemura on 2017/06/13.
  */
 import React, {Component} from 'react';
+import {GetAppData} from '../../utils/app_data'
+import Utils from '../../utils/utils'
 import {LoadingComponent} from '../shared_components/loading';
 import {Stars} from '../shared_components/user_review/stars'
 import './rankings.css'
+
+const appData = new GetAppData();
+const utils = new Utils();
 
 export class Rankings extends Component {
     constructor(props) {
@@ -87,27 +92,6 @@ export class Rankings extends Component {
         // get data via API
     }
 
-    getAppIcon() {
-        return 'https://game.boom-app.com/itunesicon/is5.mzstatic.com/image/thumb/Purple127/v4/df/f2/c9/dff2c9ec-8779-d015-0026-687ffcc35d74/source/512x512bb.jpg'
-    }
-
-    countStars(reviews) {
-        let sum_start = 0;
-        for (let review of reviews) {
-            sum_start += review.stars
-        }
-        return sum_start / reviews.length;
-
-    }
-
-    onHover() {
-        this.setState({hover: true});
-
-    }
-
-    offHover() {
-        this.setState({hover: false})
-    }
 
     checkDetails(app_id) {
         console.log(app_id)
@@ -141,12 +125,9 @@ export class Rankings extends Component {
             <AppListContainer
                 hover={hover}
                 checkDetails={this.checkDetails.bind(this)}
-                onHover={this.onHover.bind(this)}
-                offHover={this.offHover.bind(this)}
                 styles={styles}
                 apps={this.state.apps}
-                countStars={this.countStars}
-                getAppIcon={this.getAppIcon}/>
+                countStars={this.countStars}/>
         </div>
     }
 
@@ -171,7 +152,7 @@ const AppListLabel = (props)=> {
 };
 
 const AppListContainer = (props)=> {
-    const {apps, countStars} = props;
+    const {apps} = props;
 
     //dynamic style
     const styles = {
@@ -191,7 +172,7 @@ const AppListContainer = (props)=> {
                 length: apps.length,
                 app: item,
                 index: index,
-                stars: countStars(item.reviews),
+                stars: utils.countStars(item.reviews),
             };
 
             if (index + 1 === apps.length) {
@@ -209,7 +190,7 @@ const AppListContainer = (props)=> {
 };
 
 const AppList = (props)=> {
-    const {app, getAppIcon, checkDetails,hover, stars, index} = props;
+    const {app, checkDetails, stars, index} = props;
     const styles = {
         container: {
             display: 'flex',
@@ -256,7 +237,7 @@ const AppList = (props)=> {
         <div style={styles.index}>{index}</div>
 
         <div style={styles.icon}>
-            <img style={styles.img} src={getAppIcon(app.app_id)}/>
+            <img style={styles.img} src={appData.getAppIcon(app.app_id)}/>
         </div>
 
         <div style={styles.box}>
