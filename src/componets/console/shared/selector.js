@@ -10,10 +10,10 @@ const _styles = {
 
 
 const Selector = (props)=> {
-    const {styles, update, name,keyName} = props;
-    return <div style={_styles.subContainer}>
+    const {styles, update, name,keyName,modalHandler} = props;
+    return <div onClick={()=>modalHandler(name)} style={_styles.subContainer}>
         <div style={styles.header}>{name}</div>
-        <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>
+
     </div>
 };
 

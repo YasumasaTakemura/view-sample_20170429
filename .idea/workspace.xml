@@ -2,37 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789b4267-4484-4c8a-9fd4-16e2a7cf0d9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/my_api/container.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/my_api/depoloy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/scheduler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/selector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/submit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/my_api/my_api.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister/resister.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister/title.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister/picker_options.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/picker_options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/componets/footer/footer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/my_api/container.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/console.css" afterPath="$PROJECT_DIR$/src/componets/console/console.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" afterPath="$PROJECT_DIR$/src/componets/console/console.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/my_api/depoloy.js" afterPath="$PROJECT_DIR$/src/componets/console/my_api/depoloy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css" afterPath="$PROJECT_DIR$/src/componets/console/navigation_bar/navigation_bar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" afterPath="$PROJECT_DIR$/src/componets/console/navigation_bar/navigation_bar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/chat_interface.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/chat_interface.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/console_inner_input.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/console_inner_input.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/input.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/input.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/navigation_tab.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/navigation_tab.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/picker.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/picker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/picker_options.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/picker_options.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/scheduler.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/scheduler.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/selector.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/selector.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/submit.js" afterPath="$PROJECT_DIR$/src/componets/console/shared/submit.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_app_marketplace/task_app_marketplace.js" afterPath="$PROJECT_DIR$/src/componets/console/task_app_marketplace/task_app_marketplace.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister.js" afterPath="$PROJECT_DIR$/src/componets/console/task_manager/resister.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js" afterPath="$PROJECT_DIR$/src/componets/console/task_manager/searcher.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/componets/console/task_manager/task_manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/console.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/chat_interface.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/chat_interface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/console_inner_input.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/console_inner_input.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/shared/navigation_tab.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/shared/navigation_tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/my_apps/app_list.js" afterPath="$PROJECT_DIR$/src/componets/my_apps/app_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/my_apps/kpis.js" afterPath="$PROJECT_DIR$/src/componets/my_apps/kpis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" afterPath="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/api_market/top.js" afterPath="$PROJECT_DIR$/src/componets/api_market/top.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/componets/marketplace/rankings.js" afterPath="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/app_details/app_details.js" afterPath="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/index.js" afterPath="$PROJECT_DIR$/src/containers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" afterPath="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/my_apps/my_apps.js" afterPath="$PROJECT_DIR$/src/containers/my_apps/my_apps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" afterPath="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" afterPath="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/router.js" afterPath="$PROJECT_DIR$/src/router/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/utils.js" afterPath="$PROJECT_DIR$/src/utils/utils.js" />
     </list>
     <ignored path="sample_20170429.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,49 +51,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="console.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.js">
+      <file leaf-file-name="my_apps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/my_apps/my_apps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searcher.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js">
+      <file leaf-file-name="app_details.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="118" column="50" selection-start-line="118" selection-start-column="50" selection-end-line="118" selection-end-column="50" />
+            <state relative-caret-position="282">
+              <caret line="297" column="35" selection-start-line="297" selection-start-column="35" selection-end-line="297" selection-end-column="35" />
               <folding>
                 <element signature="e#54#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resister.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="135" column="19" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="19" />
-              <folding>
-                <element signature="e#55#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="depoloy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/my_api/depoloy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-              <folding>
-                <element signature="e#54#93#0" expanded="true" />
+                <marker date="1497626429000" expanded="true" signature="9951:9973" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,21 +77,80 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="330">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="11" />
+              <folding>
+                <element signature="e#55#117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="112" />
+              <folding>
+                <element signature="e#55#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="marketplace.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="68" />
+              <folding>
+                <element signature="e#54#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resister.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/console/task_manager/resister.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+              <folding>
+                <element signature="e#55#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/console/console.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-333">
+              <caret line="154" column="57" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#146#207#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scheduler.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/scheduler.js">
+      <file leaf-file-name="selector.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/componets/console/shared/selector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-              <folding>
-                <element signature="e#54#93#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -181,14 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/componets/my_apps/quit.js" />
-        <option value="$PROJECT_DIR$/src/componets/my_apps/quit_modal.js" />
-        <option value="$PROJECT_DIR$/src/utils/utils.js" />
-        <option value="$PROJECT_DIR$/src/componets/api_market/top.js" />
-        <option value="$PROJECT_DIR$/src/componets/marketplace/app_details/payment.js" />
-        <option value="$PROJECT_DIR$/src/containers/index.js" />
-        <option value="$PROJECT_DIR$/src/componets/task_manager/menu_icons/menu_icons.js" />
-        <option value="$PROJECT_DIR$/src/componets/shared_components/shared_components.js" />
         <option value="$PROJECT_DIR$/img/index.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -201,16 +225,13 @@
         <option value="$PROJECT_DIR$/src/componets/shared_components/chat/chat_interface.js" />
         <option value="$PROJECT_DIR$/src/componets/shared_components/navigation_tab.js" />
         <option value="$PROJECT_DIR$/src/utils/app_data.js" />
-        <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/shared/console_inner_input.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js" />
         <option value="$PROJECT_DIR$/src/componets/task_manager/tasklist/tasklist.js" />
         <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.css" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/shared/chat_interface.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister/container.js" />
-        <option value="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js" />
-        <option value="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/shared/navigation_tab.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/my_api/container.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/shared/input.js" />
@@ -219,8 +240,6 @@
         <option value="$PROJECT_DIR$/src/componets/my_apps/kpis.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/shared/submit.js" />
         <option value="$PROJECT_DIR$/src/containers/my_apps/my_apps.js" />
-        <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
-        <option value="$PROJECT_DIR$/src/router/router.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/my_api/depoloy.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/seacher/container.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister/resister_container.js" />
@@ -232,6 +251,19 @@
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js" />
         <option value="$PROJECT_DIR$/src/componets/chat_like_console/shared/scheduler.js" />
+        <option value="$PROJECT_DIR$/src/containers/task_manager/task_manager.js" />
+        <option value="$PROJECT_DIR$/src/componets/console/my_api/depoloy.js" />
+        <option value="$PROJECT_DIR$/src/componets/console/shared/chat_interface.js" />
+        <option value="$PROJECT_DIR$/src/containers/app_details/app_details.js" />
+        <option value="$PROJECT_DIR$/src/componets/marketplace/rankings.js" />
+        <option value="$PROJECT_DIR$/src/componets/console/console.js" />
+        <option value="$PROJECT_DIR$/src/utils/utils.js" />
+        <option value="$PROJECT_DIR$/src/componets/console/shared/selector.js" />
+        <option value="$PROJECT_DIR$/src/componets/console/task_manager/resister.js" />
+        <option value="$PROJECT_DIR$/src/router/router.js" />
+        <option value="$PROJECT_DIR$/src/componets/footer/footer.js" />
+        <option value="$PROJECT_DIR$/src/containers/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/marketplace/marketplace.js" />
       </list>
     </option>
   </component>
@@ -617,7 +649,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chat_like_console" />
+              <option name="myItemId" value="marketplace" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -639,7 +671,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chat_like_console" />
+              <option name="myItemId" value="footer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="componets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_20170429" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="componets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -665,7 +741,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chat_like_console" />
+              <option name="myItemId" value="console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -683,19 +759,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="componets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chat_like_console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_api" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -709,7 +773,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1022,9 +1086,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26009694" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26009694" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1066,24 +1130,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/componets/my_apps/quit_modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="107" column="55" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
-          <folding>
-            <element signature="e#54#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/api_market/top.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="85" column="1" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_details/payment_modal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1112,16 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/shared_components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
-          <folding>
-            <element signature="n#Sticky#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1132,7 +1168,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.css">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/navigation_bar/navigation_bar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
@@ -1158,7 +1194,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_app_marketplace/task_app_marketplace.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/task_app_marketplace/task_app_marketplace.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1184,39 +1220,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/app_data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding>
-            <element signature="e#547#3332#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1244,7 +1252,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.css">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/console.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1295,7 +1303,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/console_inner_input.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/console_inner_input.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
@@ -1303,17 +1311,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/chat_interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/navigation_bar/navigation_bar.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/navigation_bar/navigation_bar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-360">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
@@ -1321,17 +1319,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/navigation_tab.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/navigation_tab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="687">
           <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
@@ -1341,28 +1329,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="297" column="20" selection-start-line="297" selection-start-column="20" selection-end-line="297" selection-end-column="20" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-            <marker date="1497594778000" expanded="true" signature="9961:9983" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/my_api/container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#54#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/input.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/input.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
@@ -1386,35 +1353,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/submit.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/submit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#54#93#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/my_apps/my_apps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="83" column="72" selection-start-line="83" selection-start-column="72" selection-end-line="83" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#55#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/picker_options.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/picker_options.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="29" column="67" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
@@ -1429,20 +1378,12 @@
         <state relative-caret-position="-603">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="e#55#94#0" expanded="true" />
+            <element signature="e#55#94#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="418" column="24" selection-start-line="418" selection-start-column="24" selection-end-line="418" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/task_manager.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/task_manager/task_manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
@@ -1450,55 +1391,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/picker.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/picker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding>
-            <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#54#93#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/selector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/my_api/depoloy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding>
-            <element signature="e#54#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/searcher.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/task_manager/searcher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="118" column="50" selection-start-line="118" selection-start-column="50" selection-end-line="118" selection-end-column="50" />
@@ -1508,20 +1411,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/task_manager/resister.js">
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/scheduler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="135" column="19" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="19" />
+        <state relative-caret-position="672">
+          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+          <folding>
+            <element signature="e#54#93#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/app_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/console/my_api/container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/chat_interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#54#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/console/my_api/depoloy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/app_details/app_details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="297" column="35" selection-start-line="297" selection-start-column="35" selection-end-line="297" selection-end-column="35" />
+          <folding>
+            <element signature="e#54#93#0" expanded="true" />
+            <marker date="1497626429000" expanded="true" signature="9951:9973" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/my_apps/quit_modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="110" column="16" selection-start-line="91" selection-start-column="15" selection-end-line="110" selection-end-column="16" />
+          <folding>
+            <element signature="e#54#93#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/task_manager/task_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="418" column="24" selection-start-line="418" selection-start-column="24" selection-end-line="418" selection-end-column="24" />
+          <folding>
+            <element signature="e#54#93#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/shared_components/shared_components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="n#Sticky#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/marketplace/rankings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+          <folding>
+            <element signature="e#54#93#0" expanded="true" />
+            <element signature="e#691#3476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/console/shared/selector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/console/console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="154" column="57" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#146#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/console/task_manager/resister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
           <folding>
             <element signature="e#55#94#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/componets/chat_like_console/shared/scheduler.js">
+    <entry file="file://$PROJECT_DIR$/src/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state relative-caret-position="522">
+          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="112" />
+          <folding>
+            <element signature="e#55#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/componets/footer/footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="e#55#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/my_apps/my_apps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/marketplace/marketplace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="68" />
           <folding>
             <element signature="e#54#93#0" expanded="true" />
           </folding>

@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import Moment from 'moment'
 import {TaskListContainer} from '../../componets/task_manager/tasklist/tasklist'
 import {TaskLogTimeLine} from '../../componets/task_manager/tasklog_timeline/tasklog_timeline'
-import {ConsoleContainer}  from '../../componets/chat_like_console/console'
+import {ConsoleContainer}  from '../../componets/console/console'
 import {MenuIconContainerSwitcher} from '../../componets/task_manager/menu_icons/menu_icons'
 import './task_manager.css'
 import axios from 'axios'

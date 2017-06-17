@@ -2,7 +2,7 @@
  * Created by YasumasaTakemura on 2017/06/12.
  */
 import React, {Component} from 'react';
-import {ConsoleInnerInput} from '../../chat_like_console/shared/console_inner_input'
+import {ConsoleInnerInput} from '../../console/shared/console_inner_input'
 import {LoadingComponent} from '../../../componets/shared_components/loading';
 import {GetAppData} from '../../../utils/app_data';
 export class Chat extends Component {

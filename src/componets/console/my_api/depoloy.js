@@ -2,10 +2,10 @@
  * Created by YasumasaTakemura on 2017/06/16.
  */
 import React, {Component} from 'react';
-import Input from '../../chat_like_console/shared/input';
-import Picker from '../../chat_like_console/shared/picker';
-import Selector from '../../chat_like_console/shared/selector';
-import Submit from '../../chat_like_console/shared/submit';
+import Input from '../../console/shared/input';
+import Picker from '../../console/shared/picker';
+import Selector from '../../console/shared/selector';
+import Submit from '../../console/shared/submit';
 
 
 class Deploy extends Component {

@@ -4,6 +4,10 @@
 import axios from 'axios'
 import {accounting} from 'accounting';
 
+export const w = window.innerWidth;
+export const h = window.innerHeight;
+
+
 export default class Utils {
 
     countStars(reviews) {

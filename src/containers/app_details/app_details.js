@@ -2,7 +2,7 @@
  * Created by YasumasaTakemura on 2017/06/13.
  */
 import React, {Component} from 'react';
-import {ConsoleContainer as Console}  from '../../componets/chat_like_console/console'
+import {ConsoleContainer as Console}  from '../../componets/console/console'
 import {GetAppData} from '../../utils/app_data'
 import {Title, Buy, SS, Details, UserReview, PaymentModal} from '../index';
 import './app_details.css'
@@ -295,7 +295,7 @@ export default class AppDetails extends Component {
         return <div style={styles.rootContainer}>
 
 
-            <Console/>
+            <Console {...this.props}/>
 
             <PaymentModal app={app} payment={payment} styles={styles.payment}/>
 

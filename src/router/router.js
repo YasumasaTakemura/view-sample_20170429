@@ -38,8 +38,12 @@ const App = ()=> {
                     <Route exact path='/marketplace' component={Marketplace}/>
                     <Route path='/my_apps' component={MyApps}/>
                     <Route path='/my_api' component={MyAPI}/>
+                    <Route path='/' render={()=> <div style={{height:100,backgroundColor:'white'}}> Footer</div>}/>
+
                 </Switch>
+
             </Router>
+
         </Provider>
     )
 };

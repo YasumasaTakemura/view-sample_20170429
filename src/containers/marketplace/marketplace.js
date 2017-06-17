@@ -3,9 +3,10 @@
  */
 import React, {Component} from 'react';
 import axios from 'axios'
+import {ConsoleContainer,Footer} from '../index';
 import {Rankings} from '../../componets/marketplace/rankings'
 import {AdHeaderContainer} from '../../componets/marketplace/ad_header'
-import {ConsoleContainer}  from '../../componets/chat_like_console/console'
+// import {ConsoleContainer}  from '../../componets/console/console'
 import './marketplace.css'
 
 
@@ -150,6 +151,8 @@ export default class Marketplace extends Component {
                 <Rankings flex={1} rankingName={'campaign'} {...this.props}/>
                 <Rankings flex={1} rankingName={'reservation'} {...this.props}/>
             </div>
+
+            <Footer/>
         </div>
     }
 

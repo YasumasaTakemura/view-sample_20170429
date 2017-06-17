@@ -2,7 +2,9 @@
  * Created by YasumasaTakemura on 2017/06/13.
  */
 
-import {ConsoleContainer}  from '../componets/chat_like_console/console'
+import {ConsoleContainer}  from '../componets/console/console'
+
+import Footer from '../componets/footer/footer'
 
 import {Title} from '../componets/marketplace/app_details/title';
 import Buy from '../componets/marketplace/app_details/buy';
@@ -20,6 +22,7 @@ import QuitModal from '../componets/my_apps/quit_modal'
 
 module.exports={
     ConsoleContainer,
+     Footer,
 
     Title,
     Buy,
@@ -32,5 +35,6 @@ module.exports={
     KPIs,
     Graph,
     QuitModal,
+
 };
 

@@ -7,7 +7,8 @@ import Utils from '../../utils/utils'
 import {LoadingComponent} from '../shared_components/loading';
 import {Stars} from '../shared_components/user_review/stars'
 import './rankings.css'
-
+import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory'
 const appData = new GetAppData();
 const utils = new Utils();
 
@@ -92,14 +93,9 @@ export class Rankings extends Component {
         // get data via API
     }
 
-
-    checkDetails(app_id) {
-        console.log(app_id)
-    }
-
     render() {
         const {rankingName, flex} = this.props;
-        const {hover} = this.state;
+        const {hover,apps} = this.state;
         const label = 'send';
 
         //dynamic style
@@ -124,9 +120,8 @@ export class Rankings extends Component {
             <AppListLabel rankingName={rankingName}/>
             <AppListContainer
                 hover={hover}
-                checkDetails={this.checkDetails.bind(this)}
                 styles={styles}
-                apps={this.state.apps}
+                apps={apps}
                 countStars={this.countStars}/>
         </div>
     }
@@ -228,8 +223,8 @@ const AppList = (props)=> {
         }
     };
 
-    return <div
-        onClick={()=>checkDetails(app.app_id)}
+    return <Link
+        to={`/marketplace/${app.app_id}` }
         style={styles.container}
         className="app-list-container"
     >
@@ -248,6 +243,6 @@ const AppList = (props)=> {
 
         </div>
 
-    </div>
+    </Link>
 };
 

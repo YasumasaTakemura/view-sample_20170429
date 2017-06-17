@@ -183,8 +183,6 @@ export class ConsoleContainer extends Component {
 const Switcher = (props)=> {
     const {tabProps,location} = props;
     const path = location.pathname.split('/')[1];
-    console.log(props);
-    // {alertLeavingHere()}
     return <ConsoleContent tab={tabProps[path]} path={path} {...props}/>;
 };
 

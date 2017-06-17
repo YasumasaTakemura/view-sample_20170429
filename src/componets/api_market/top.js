@@ -2,7 +2,7 @@
  * Created by YasumasaTakemura on 2017/05/29.
  */
 import React, {Component} from 'react';
-import {ConsoleContainer} from '../../componets/chat_like_console/console'
+import {ConsoleContainer} from '../console/console'
 
 
 class Top extends Component {

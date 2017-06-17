@@ -11,27 +11,31 @@ import Selector from '../shared/selector'
 import Scheduler from '../shared/scheduler'
 import Submit from '../shared/submit'
 
+import {w,h} from '../../../utils/utils';
 
 class Resister extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
-            templates:'',
-            title:'',
-            app:'',
-            description:'',
-            member:'',
-            to:'',
-            trigger:'',
-            loop:'',
-            status:'',
-            category:'',
-            period:'',
-            schedule:'',
+            modalOpen:false,
+            templates: '',
+            title: '',
+            app: '',
+            description: '',
+            member: '',
+            to: '',
+            trigger: '',
+            loop: '',
+            status: '',
+            category: '',
+            period: '',
+            schedule: '',
+            dataStart: '',
+            dataEnd: '',
         };
 
         this.payload = this.state;
+        this.modalHandler = this.modalHandler.bind(this);
     }
 
     getAppID() {
@@ -52,17 +56,24 @@ class Resister extends Component {
         }
     }
 
-    updateValue(keyName,obj){
+    updateValue(keyName, obj) {
         const OBJ = {};
         OBJ[keyName] = obj;
         this.setState(OBJ);
-        this.payload =Object.assign({},this.payload,OBJ)
+        this.payload = Object.assign({}, this.payload, OBJ)
     }
 
+    modalHandler(element){
+        console.log('>>>>>>')
+        console.log(element)
+        console.log(this.refs)
+        this.setState({modalOpen:!this.state.modalOpen})
+
+    }
     render() {
-        const label = 'resister';
 
         const {
+            modalOpen,
             templates,
             title,
             app,
@@ -75,16 +86,18 @@ class Resister extends Component {
             category,
             period,
             schedule,
+            dateStart,
+            dateEnd,
         } = this.state;
 
-        const {consoleWindowSize}= this.props;
+        const {consoleWindowSize,consoleWidth}= this.props;
 
         //dynamic style
         const styles = {
             container: {
-                 height: '100%',
+                height: '100%',
                 overflow: 'auto',
-                width:consoleWindowSize,
+                width: consoleWindowSize,
 
             },
             header: {
@@ -108,8 +121,8 @@ class Resister extends Component {
                 padding: 5,
 
             },
-            space:{
-                height:70,
+            space: {
+                height: 70,
             }
 
         };
@@ -120,8 +133,8 @@ class Resister extends Component {
         };
 
         const picker_props = {
-             getOptions: this.getOptions,
-             update: this.updateValue.bind(this),
+            getOptions: this.getOptions,
+            update: this.updateValue.bind(this),
             styles: styles,
             ...this.state
         };
@@ -131,14 +144,16 @@ class Resister extends Component {
             styles: styles
         };
 
-        return <div style={styles.container}>
+
+
+        return <div style={styles.container} ref='temp'>
 
             <Picker name={'Templates'} keyName={'templates'} stateVal={templates} {...selector_props}/>
             <Input name={'Title'} keyName={'title'} {...input_props}/>
             <Input name={'Description'} ml={true} keyName={'description'} {...input_props}/>
-            <Selector name={'Apps'} keyName={'app'} {...selector_props}/>
+            <Selector name={'Apps'} keyName={'app'} modalHandler={this.modalHandler} {...selector_props}/>
             <Selector name={'To'} keyName={'to'} {...selector_props}/>
-            <Selector name={'Member'} keyName={'member'} {...selector_props}/>
+            <Selector name={'Member'} keyName={'member'} modalHandler={this.modalHandler} {...selector_props}/>
             <Picker name={'Trigger'} keyName={'trigger'} clearable={false} stateVal={trigger} {...picker_props} />
             <Picker name={'Loop'} keyName={'loop'} stateVal={loop} {...picker_props}/>
             <Picker name={'Status'} keyName={'status'} stateVal={status} {...picker_props}/>
@@ -148,67 +163,81 @@ class Resister extends Component {
             <div style={styles.space}/>
 
             <Submit name={'Submit'} domain='submit/tasks' styles={styles}/>
+
+            <FindMemberModal title={'Submit'} modalOpen={modalOpen} modalHandler={this.modalHandler} {...this.props}/>
         </div>
     }
 
 }
 
 
-// const Input = (props)=> {
-//     const {styles, update, name,keyName,ml=false} = props;
-//     return <div style={styles.subContainer}>
-//         <div style={styles.header}>{name}</div>
-//         {ml?
-//             <textarea style={styles.mlInput} onChange={(e)=>update(keyName,e.target.value)}/>:
-//                 <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>}
-//
-//     </div>
-// };
-
-// const Selector = (props)=> {
-//     const {styles, update, name,keyName} = props;
-//     return <div style={styles.subContainer}>
-//         <div style={styles.header}>{name}</div>
-//         <input style={styles.input} onChange={(e)=>update(keyName,e.target.value)}/>
-//     </div>
-// };
-//
-// const Picker = (props)=> {
-//     const {styles, getOptions, update,stateVal,name, keyName} = props;
-//     const options = getOptions(keyName);
-//
-//     return <div style={styles.subContainer}>
-//         <div style={styles.header}>{name}</div>
-//         <Select value={stateVal || options[0].value} onChange={(e)=>update(keyName,e.label)} options={options}/>
-//     </div>
-// };
-//
-// const Scheduler = (props)=> {
-//     const {styles, _input, name} = props;
-//     return <div style={styles.subContainer}>
-//         <div style={styles.header}>{name}</div>
-//         <input style={styles.input} onChange={(e)=>_input(e.target.value)}/>
-//     </div>
-// };
-//
-// const Submit = (props)=> {
-//     const {styles,resisterTasks} = props;
-//     return <div onClick={()=>resisterTasks()} style={styles.submit}>SUBMIT</div>
-// };
-//
-
-
 //////////////////////////////
 //////////////////////////////
 //////////////////////////////
 
 
+const FindMemberModal = (props)=> {
+    const {styles, title,_input,consoleWidth,modalOpen,modalHandler} = props;
 
+    const modal = {
+        container: {},
+        show: {
+            position: 'fixed',
+            height: h,
+            transition: 'bottom .3s',
+            backgroundColor: 'rgba(200,200,200,0.9)',
+            // backgroundColor: 'white',
+            width: consoleWidth,
+            bottom:0,
+            // opacity:0.7
+        },
 
-const Title = (props)=> {
-    const {styles, _input} = props;
-    return <div style={styles.subContainer}>
-        <div style={styles.header}>Title</div>
+        hidden: {
+
+            // zIndex: 200,
+            position: 'fixed',
+            height: h,
+            transition: 'bottom .3s',
+            backgroundColor: '#F6F8FA',
+            width: consoleWidth,
+            bottom: -h,
+        }
+    };
+
+    const modal2 = {
+        container: {},
+        show: {
+            zIndex: -10,
+            position: 'fixed',
+            top: 0,
+            height: '100%',
+            transition: 'right .5s',
+            backgroundColor: 'white',
+            width: consoleWidth*1.5,
+            right: 0,
+            borderLeft:'solid 5px #4B5F7C',
+
+        },
+
+        hidden: {
+
+            zIndex: -10,
+            position: 'fixed',
+            top: 0,
+            height: '100%',
+            transition: 'right .5s',
+            backgroundColor: 'white',
+            width: consoleWidth*1.5,
+            right: -consoleWidth*1.5,
+        }
+    };
+
+    return <div style={modalOpen?modal.show:modal.hidden}>
+        <div style={{backgroundColor:'white'}}>{title}</div>
+      content of the modal
+
+        <div style={{position:'absolute',right:50,top:0,marignRight:10}} onClick={()=>modalHandler()}>close</div>
+        <input/>
         <input style={styles.input} onChange={(e)=>_input(e.target.value)}/>
     </div>
 };
