@@ -2,8 +2,8 @@
  * Created by YasumasaTakemura on 2017/06/12.
  */
 import React, {Component} from 'react';
-import {ConsoleInnerInput} from '../../console/shared/console_inner_input'
-import {LoadingComponent} from '../../../componets/shared_components/loading';
+import {ConsoleInnerInput} from '../shared/console_inner_input'
+import {LoadingComponent} from '../../shared_components/loading';
 import {GetAppData} from '../../../utils/app_data';
 export class Chat extends Component {
     constructor(props) {

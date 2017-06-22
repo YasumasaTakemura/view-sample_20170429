@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {NavigationTab} from '../shared/navigation_tab'
-import {Chat} from '../shared/chat_interface'
+import {Chat} from '../chat/chat_interface'
 import Resister from './resister'
 import {Searcher} from './searcher'
 import {

@@ -76,14 +76,18 @@ export default class MyApps extends Component {
             },
 
             kpiContainer:{
-                backgroundColor:'red'
+                backgroundColor:'red',
+                position:'fixed',
+                width:'100%',
+                top:0,
             }
         };
 
-        return <div>
+        return <div style={{position:'relative'}}>
             <ConsoleContainer {...this.props} consoleWidth={consoleWidth}/>
             <KPIs apps={apps} currency={currency} styles={styles.kpiContainer}/>
             {/*<Graph apps={apps}/>*/}
+            <div style={{marginTop:100}}/>
             <AppList apps={apps} toggleQuitModal={this.toggleQuitModal.bind(this)} styles={styles.container}/>
 
             <QuitModal show={quit} toggleQuitModal={this.toggleQuitModal.bind(this)}/>

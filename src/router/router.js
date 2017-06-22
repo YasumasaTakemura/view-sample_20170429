@@ -13,7 +13,7 @@ import  Marketplace from '../containers/marketplace/marketplace'
 import  AppDetails from '../containers/app_details/app_details'
 import  MyApps from '../containers/my_apps/my_apps'
 import  MyAPI from '../containers/my_api/my_api'
-import  Top from '../componets/api_market/top'
+import  LoggingPage from '../containers/logging_page/logging_page'
 import  {TaskManager} from '../store/connects'
 
 
@@ -31,7 +31,7 @@ const App = ()=> {
         <Provider store={store}>
             <Router history={history}>
                 <Switch>
-                    <Route exact path='/' component={Top}/>
+                    <Route exact path='/top' component={LoggingPage}/>
                     <Route path='/tasks/:tab' component={TaskManager}/>
                     <Route exact path='/tasks' component={TaskManager}/>
                     <Route path='/marketplace/:app_id' component={AppDetails}/>

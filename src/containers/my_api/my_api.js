@@ -76,13 +76,17 @@ class MyAPI extends Component {
                 margin: '0 auto'
             },
             kpiContainer:{
-                backgroundColor:'pink'
+                backgroundColor:'pink',
+                position:'fixed',
+                width:'100%',
+                top:0,
             }
         };
 
         return <div>
             <Console {...this.props} consoleWidth={consoleWidth}/>
             <KPIs apps={apps} currency={currency} styles={styles.kpiContainer}/>
+            <div style={{marginTop:100}}/>
             {/*<Graph apps={apps}/>*/}
             <AppList apps={apps} toggleQuitModal={this.toggleQuitModal.bind(this)} styles={styles.container}/>
 

@@ -3,13 +3,13 @@ import './console.css'
 import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 import {NavigationBar} from './navigation_bar/navigation_bar'
 import Deploy from './my_api/depoloy'
-import {TaskManagerConsole} from './task_manager/task_manager'
-import { CSSTransitionGroup } from 'react-transition-group'
+import ConsoleRouter from '../../router/console'
+import {CSSTransitionGroup} from 'react-transition-group'
 import {
     BrowserRouter as Router, Switch, Route, Redirect, Link, NavLink, withRouter
 } from 'react-router-dom'
 
-import {Chat} from './shared/chat_interface'
+import {Chat} from './chat/chat_interface'
 import {NavigationTab} from './shared/navigation_tab'
 import Resister from './task_manager/resister'
 import Searcher from './task_manager/searcher'
@@ -21,8 +21,8 @@ export class ConsoleContainer extends Component {
             consoleState: this.props.consoleState ? this.props.consoleState : false,
         };
 
-        this.navigationBarWidth =35;
-        this.consoleWidth =this.props.consoleWidth ? this.props.consoleWidth : 300;
+        this.navigationBarWidth = 35;
+        this.consoleWidth = this.props.consoleWidth ? this.props.consoleWidth : 300;
     }
 
     onShowHandler() {
@@ -105,12 +105,16 @@ export class ConsoleContainer extends Component {
 
         // const {consoleWidth,} = this.props;
         const {consoleState} = this.state;
+        const {location} = this.props;
+        const path = location.pathname.split('/')[1];
+
+        console.log(path)
 
         // bar width
+        // THIS IS FOR GET WIDTH FROM PARENT CONTAINER
         // if you change this number , the bandwidth of the navigation bar is changed
         const navigationBarWidth = this.navigationBarWidth;
         const consoleWidth = this.consoleWidth;
-
         const consoleWindowSize = consoleWidth - navigationBarWidth;
 
 
@@ -164,24 +168,34 @@ export class ConsoleContainer extends Component {
                     navigationBarWidth={styles.navigationBarWidth}
                     onShowHandler={this.onShowHandler.bind(this)}/>
 
-                <Switcher
-                    tabProps={tabProps}
-                    styles={styles}
-                    innerNavigatorBarProps={innerNavigatorBarProps}
-                    consoleWindowSize={consoleWindowSize}
-                    navigationBarWidth={styles.navigationBarWidth}
-                    defaultInputStyle={styles.defaultInputStyle}
-                    {...this.state}
-                    {...this.props}
-                />
+                <div style={styles.container}>
+                    <NavigationTab
+                        innerNavigatorBarProps={innerNavigatorBarProps}
+                        path={path}
+                        tab={tabProps[path]} {...this.props}/>
+
+                    <ConsoleRouter {...this.props}/>
+
+                </div>
 
             </div>
         )
     }
 }
 
+// <Switcher
+//                        tabProps={tabProps}
+//                        styles={styles}
+//                        innerNavigatorBarProps={innerNavigatorBarProps}
+//                        consoleWindowSize={consoleWindowSize}
+//                        navigationBarWidth={styles.navigationBarWidth}
+//                        defaultInputStyle={styles.defaultInputStyle}
+//                        {...this.state}
+//                        {...this.props}
+//                    />
+
 const Switcher = (props)=> {
-    const {tabProps,location} = props;
+    const {tabProps, location} = props;
     const path = location.pathname.split('/')[1];
     return <ConsoleContent tab={tabProps[path]} path={path} {...props}/>;
 };
@@ -195,7 +209,7 @@ const Switcher = (props)=> {
 //----------------------------------------//
 
 function alertLeavingHere() {
-    if(!confirm('leave here?')) return null
+    if (!confirm('leave here?')) return null
 }
 
 const ConsoleContent = (props) => {

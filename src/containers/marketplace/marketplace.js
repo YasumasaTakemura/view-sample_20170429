@@ -14,7 +14,7 @@ import './marketplace.css'
 
 export default class Marketplace extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             // consoleWidth: 300,
             apps: [

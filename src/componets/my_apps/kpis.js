@@ -63,9 +63,12 @@ const Row = (props)=> {
             display: 'flex',
             justifyContent: 'space-around',
             alignItems: 'center',
-            margin: '0 0 20px 0',
-            borderBottom: 'solid 1px gray',
-            color: 'white'
+            // margin: '0 0 20px 0',
+            // borderBottom: 'solid 3px gray',
+            color: 'white',
+            boxShadow:'0 0 10px black',
+            height:70
+
         },
         icon: {},
         img: {

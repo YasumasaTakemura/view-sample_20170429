@@ -433,17 +433,6 @@ export class TaskManager extends Component {
                 popUpState={this.state.popUpState}
                 icons={this.state.menuIcons}/>
 
-            {/*<GroupSelectorModal*/}
-            {/*slider={this.state.slider}*/}
-            {/*toggleSliderOpen={this.toggleSliderOpen.bind(this)}*/}
-            {/*toggleSliderClose={this.toggleSliderClose.bind(this)}*/}
-            {/*/>*/}
-
-            {/*<div className="task-manager-header"/>*/}
-            {/*<div className="task-manager-navigator"/>*/}
-
-            {/*style={containerBoarderStyleID === 'taskList' ? styles.taskList : null}*/}
-
             <div style={styles.space}/>
             <div className="task-manager-container">
 

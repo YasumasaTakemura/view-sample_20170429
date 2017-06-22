@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import {
   BrowserRouter as Router, Switch, Route, Redirect,  Link, NavLink, withRouter
 } from 'react-router-dom'
-import {Chat} from './chat_interface'
+import {Chat} from '../chat/chat_interface'
 import Resister from '../task_manager/resister'
 import {Searcher} from '../task_manager/searcher'
 
