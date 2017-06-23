@@ -108,8 +108,6 @@ export class ConsoleContainer extends Component {
         const {location} = this.props;
         const path = location.pathname.split('/')[1];
 
-        console.log(path)
-
         // bar width
         // THIS IS FOR GET WIDTH FROM PARENT CONTAINER
         // if you change this number , the bandwidth of the navigation bar is changed

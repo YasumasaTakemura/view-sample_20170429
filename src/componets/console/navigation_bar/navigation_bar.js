@@ -23,7 +23,7 @@ export class NavigationBar extends Component {
                 icon: "http://lab.appa.pe/wp-content/uploads/2015-06/flea-market-recommend/jp.co.crooz.android.snaps.png",
                 img: true
             },
-            {path: 'my_api', icon:require('../../../../img/my_api.svg'), img: true},
+            {path: 'my_api', icon: require('../../../../img/my_api.svg'), img: true},
         ];
 
 
@@ -32,7 +32,10 @@ export class NavigationBar extends Component {
                 display: 'flex',
                 justifyContent: 'space-between',
                 width: navigationBarWidth,
-
+                backgroundColor: '#FAFAFA',
+                height: '100%',
+                position: 'absolute',
+                flexDirection: 'column',
             },
             arrow: {
                 color: 'white'
@@ -51,12 +54,14 @@ export class NavigationBar extends Component {
             }
         };
 
-        const renderLinkButtons = path.map((path, index)=> path.img ? <ImgButton k={index + 1} path={path} styles={styles}/> :
+        const renderLinkButtons = path.map((path, index)=> path.img ?
+            <ImgButton k={index + 1} path={path} styles={styles}/> :
             <MDButton k={index + 1} path={path}/>);
 
+        //className="navigationBar-container">
 
         return (
-            <div style={{width: navigationBarWidth}} className="navigationBar-container">
+            <div style={styles.container} >
 
                 {/* arrow for Open or Close console*/}
                 <SwitchButton onShowHandler={onShowHandler} consoleState={consoleState} styles={styles}/>

@@ -9,10 +9,12 @@ import {ConsoleContainer}  from '../../componets/console/console'
 import {MenuIconContainerSwitcher} from '../../componets/task_manager/menu_icons/menu_icons'
 import './task_manager.css'
 import axios from 'axios'
+import APIEndpoint from '../../api/api'
 
-let moment = new Moment()
+const api = new APIEndpoint();
+let moment = new Moment();
 // let formatForList = "YYYY年MM月DD日 HH:mm:ss dddd"
-let JP_formatForList = "YYYY年MM月DD日 HH:mm"
+let JP_formatForList = "YYYY年MM月DD日 HH:mm";
 
 
 export class TaskManager extends Component {
@@ -277,6 +279,10 @@ export class TaskManager extends Component {
         }
     }
 
+    componentWillMount(){
+        api.getData()
+
+    }
     ////////////////////////////
     // -- input updater -- //
     ////////////////////////////

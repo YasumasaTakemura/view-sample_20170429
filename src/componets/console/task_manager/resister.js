@@ -11,13 +11,13 @@ import Selector from '../shared/selector'
 import Scheduler from '../shared/scheduler'
 import Submit from '../shared/submit'
 
-import {w,h} from '../../../utils/utils';
+import {w, h} from '../../../utils/utils';
 
 class Resister extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalOpen:false,
+            modalOpen: false,
             templates: '',
             title: '',
             app: '',
@@ -36,6 +36,7 @@ class Resister extends Component {
 
         this.payload = this.state;
         this.modalHandler = this.modalHandler.bind(this);
+        this.updateValue = this.updateValue.bind(this);
     }
 
     getAppID() {
@@ -63,13 +64,14 @@ class Resister extends Component {
         this.payload = Object.assign({}, this.payload, OBJ)
     }
 
-    modalHandler(element){
+    modalHandler(element) {
         console.log('>>>>>>')
         console.log(element)
         console.log(this.refs)
-        this.setState({modalOpen:!this.state.modalOpen})
+        this.setState({modalOpen: !this.state.modalOpen})
 
     }
+
     render() {
 
         const {
@@ -90,7 +92,7 @@ class Resister extends Component {
             dateEnd,
         } = this.state;
 
-        const {consoleWindowSize,consoleWidth}= this.props;
+        const {consoleWindowSize, consoleWidth}= this.props;
 
         //dynamic style
         const styles = {
@@ -145,7 +147,6 @@ class Resister extends Component {
         };
 
 
-
         return <div style={styles.container} ref='temp'>
 
             <Picker name={'Templates'} keyName={'templates'} stateVal={templates} {...selector_props}/>
@@ -164,7 +165,9 @@ class Resister extends Component {
 
             <Submit name={'Submit'} domain='submit/tasks' styles={styles}/>
 
-            <FindMemberModal title={'Submit'} modalOpen={modalOpen} modalHandler={this.modalHandler} {...this.props}/>
+            <FindMemberModal title={'Submit'} updateValue={this.updateValue} modalOpen={modalOpen}
+                             styles={styles}
+                             modalHandler={this.modalHandler} {...this.props}/>
         </div>
     }
 
@@ -177,7 +180,7 @@ class Resister extends Component {
 
 
 const FindMemberModal = (props)=> {
-    const {styles, title,_input,consoleWidth,modalOpen,modalHandler} = props;
+    const {styles, title, updateValue, consoleWidth, modalOpen, modalHandler} = props;
 
     const modal = {
         container: {},
@@ -188,7 +191,7 @@ const FindMemberModal = (props)=> {
             backgroundColor: 'rgba(200,200,200,0.9)',
             // backgroundColor: 'white',
             width: consoleWidth,
-            bottom:0,
+            bottom: 0,
             // opacity:0.7
         },
 
@@ -213,9 +216,9 @@ const FindMemberModal = (props)=> {
             height: '100%',
             transition: 'right .5s',
             backgroundColor: 'white',
-            width: consoleWidth*1.5,
+            width: consoleWidth * 1.5,
             right: 0,
-            borderLeft:'solid 5px #4B5F7C',
+            borderLeft: 'solid 5px #4B5F7C',
 
         },
 
@@ -227,18 +230,19 @@ const FindMemberModal = (props)=> {
             height: '100%',
             transition: 'right .5s',
             backgroundColor: 'white',
-            width: consoleWidth*1.5,
-            right: -consoleWidth*1.5,
+            width: consoleWidth * 1.5,
+            right: -consoleWidth * 1.5,
         }
     };
 
-    return <div style={modalOpen?modal.show:modal.hidden}>
-        <div style={{backgroundColor:'white'}}>{title}</div>
-      content of the modal
+    return <div style={modalOpen ? modal.show : modal.hidden}>
+        <div style={{backgroundColor: 'white'}}>{title}</div>
+        content of the modal
 
-        <div style={{position:'absolute',right:50,top:0,marignRight:10}} onClick={()=>modalHandler()}>close</div>
-        <input/>
-        <input style={styles.input} onChange={(e)=>_input(e.target.value)}/>
+        <div style={{position: 'absolute', right: 50, top: 0, marignRight: 10}} onClick={()=>modalHandler()}>close</div>
+        <div style={styles.input}>
+            <input style={styles.input} onChange={(e)=>updateValue(e.target.value)}/>
+        </div>
     </div>
 };
 

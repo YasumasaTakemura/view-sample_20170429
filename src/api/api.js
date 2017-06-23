@@ -3,14 +3,25 @@
  */
 import axios from 'axios'
 
-class APIEndpoint {
-    constructor(){
-        this.domain = 'https://my-app-20170621.appspot.com/api/get';
-        this.version = 'v1';
-    };
+const domain = 'https://my-app-20170621.appspot.com/api';
+const version = 'v1';
 
-    getData(){
-        axios.get()
+class APIEndpoint {
+    constructor() {
+    }
+
+    getData() {
+        const endpoint = 'get';
+        const url = `${domain}/${version}/${endpoint}`;
+        console.log(url)
+        axios.get(url).then((data)=> {
+            console.log(data);
+            console.log(data.data.data);
+            return data.data.data
+        }
+        ).catch((e)=>console.log(e))
     }
 
 }
+
+export default APIEndpoint
